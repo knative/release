@@ -1,0 +1,11 @@
+* @knative/technical-oversight-committee
+
+* @knative/client-writers
+* @knative/doc-writers
+* @knative/eventing-writers
+* @knative/productivity-writers
+* @knative/serving-writers
+* @knative/security-writers
+
+# Last match takes precedence for reviews
+* @knative/knative-release-leads
