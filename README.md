@@ -38,7 +38,6 @@ This roster is seeded with all approvers from Eventing workgroups.
 
 - evankanderson
 - grantr
-- Harwayne
 - lionelvillard
 - matzew
 - n3wscott
