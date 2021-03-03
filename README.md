@@ -1,4 +1,4 @@
-# Knative Release 
+# Knative Release
 
 This document includes the roster, instructions and timetable to perform a
 Knative release.
@@ -399,6 +399,9 @@ releases existing. **Skip these**. Special cases are:
 | [knative.dev/website](https://github.com/knative/website)   | N/A                                                                                                                                     | N/A                                                                                     | N/A                                                                                   |
 
 ## After the release
+
+Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
+to enable dot releases on the new releases and approve it.
 
 Send a PR like [this one](https://github.com/knative/community/pull/209) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
