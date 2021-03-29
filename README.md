@@ -269,6 +269,8 @@ next round of workflow syncs.
 
 Announce on **#general** that `pkg` will be cut in a week.
 
+## 7 days prior to the release
+
 ### Cut release branches of supporting repos
 
 The supporting repos are the base repos where we have common code and common
@@ -301,8 +303,6 @@ few cycles. The goal is to have the first wave of repo releases (**serving**,
 **eventing**, etc) to become "releasabile" by the end of the week. This is
 signaled via the Slack report of releasability posted to the **release-`#`**
 channel every morning (5am PST, M-F).
-
-## 7 days prior to the release
 
 ### Announce the imminent release cut
 
