@@ -73,8 +73,8 @@ paragraph.
 Releasing a repository includes:
 
 - Aligning the `knative.dev` dependencies to the other release versions on
-  master
-- Creating a new branch starting from master for the release (e.g.
+  main
+- Creating a new branch starting from main for the release (e.g.
   `release-0.20`)
 - Execute the job on Prow that builds the code from the release branch, tags the
   revision, publishes the images, publishes the yaml artifacts and generates the
@@ -83,7 +83,7 @@ Releasing a repository includes:
 Most of the above steps are automated, although in some situations it might be
 necessary to perform some of them manually.
 
-### Check the build on master pass
+### Check the build on main passes
 
 Before beginning, check if the repository is in a good shape and the builds pass
 consistently. **This is required** because the Prow job that builds the release
@@ -106,7 +106,7 @@ If no dependency bump PR is available, you can:
 - Manually trigger the generation of these PRs starting the
   [Knobots Auto Updates workflow](https://github.com/knative-sandbox/knobots/actions?query=workflow%3A%22Auto+Updates%22)
   and wait for the PR to pop in the repo you need.
-- Execute the script below on your machine and PR the result to master:
+- Execute the script below on your machine and PR the result to main:
 
 ```shell
 RELEASE=0.20
@@ -138,7 +138,7 @@ hence you need to go back to the previous step and check the dependencies,
 otherwise, you're ready to proceed.
 
 You can execute the releasability check locally using
-[**buoy**](https://github.com/knative/test-infra/tree/master/buoy):
+[**buoy**](https://github.com/knative/test-infra/tree/main/buoy):
 
 ```bash
 RELEASE=0.20
@@ -244,8 +244,8 @@ release.
 ### Make sure you have the right permission
 
 Check to make sure you already are in the "Knative Release Leads" team in
-https://github.com/knative/community/blob/master/peribolos/knative.yaml and
-https://github.com/knative/community/blob/master/peribolos/knative-sandbox.yaml
+https://github.com/knative/community/blob/main/peribolos/knative.yaml and
+https://github.com/knative/community/blob/main/peribolos/knative-sandbox.yaml
 . If not, send a PR like
 [this one](https://github.com/knative/community/pull/209) to grant yourself some
 super power.
@@ -318,7 +318,7 @@ eventing) to fill in. Coordinate with both serving and eventing leads.
 Each repo has a `Release Notes` GitHub Action workflow. This can be used to
 generate the starting point for the release notes. See an example in
 [Eventing](https://github.com/knative/eventing/actions?query=workflow%3A%22Release+Notes%22).
-The default starting and ending SHAs will work if running out of the `master`
+The default starting and ending SHAs will work if running out of the `main`
 branch, or you can determine the correct starting and ending SHAs for the script
 to run.
 
