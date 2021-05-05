@@ -394,6 +394,7 @@ releases existing. **Skip these**. Special cases are:
 | [knative.dev/operator](https://github.com/knative/operator) | [![Releases](https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver)](https://github.com/knative/operator/releases) | ![Releasability](https://github.com/knative/operator/workflows/Releasability/badge.svg) | N/A                                                                                   |
 | [knative.dev/website](https://github.com/knative/website)   | N/A                                                                                                                                     | N/A                                                                                     | N/A                                                                                   |
 
+
 ## After the release
 
 Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
@@ -405,3 +406,10 @@ Include the next release leads in the PR as a reminder.
 
 Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/18) to
 bump knobots auto release workflow to the next release.
+
+## Release docs
+To release the documentation for the release follow [docs release process](https://knative.dev/help/maintainer/docs-release-process/)
+The current process can be summarize in the following:
+- Generate the API specification and merge via PR into `main` branch
+- Cut a branch for the release on the `docs` repository
+- Update the `website` repository toml files to add the new version and drop the oldest version from the website
