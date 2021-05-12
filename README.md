@@ -73,7 +73,7 @@ paragraph.
 Releasing a repository includes:
 
 - Aligning the `knative.dev` dependencies to the other release versions on
-  main
+  main (except hack, which has no dependencies)
 - Creating a new branch starting from main for the release (e.g.
   `release-0.20`)
 - Execute the job on Prow that builds the code from the release branch, tags the
@@ -101,11 +101,13 @@ In order to align the `knative.dev` dependencies, knobots will perform PRs like
 the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all
 the content.
 
-If no dependency bump PR is available, you can:
+If no dependency bump PR is available, you can either:
 
 - Manually trigger the generation of these PRs starting the
-  [Knobots Auto Updates workflow](https://github.com/knative-sandbox/knobots/actions?query=workflow%3A%22Auto+Updates%22)
-  and wait for the PR to pop in the repo you need.
+  [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml)
+  and wait for the PR to pop in the repo you need. Note you have to change the
+  field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.`
+  to true, because in some cases there no code changes in the vendor.
 - Execute the script below on your machine and PR the result to main:
 
 ```shell
@@ -175,7 +177,7 @@ configured:
 
 ### Cut the branch
 
-Now you're ready to create the `release-v.y` branch. This can be done by using
+Now you're ready to create the `release-x.y` branch. This can be done by using
 the GitHub UI:
 
 1. Click on the branch selection box at the top level page of the repository.
@@ -261,8 +263,9 @@ used to help manage this release.
 
 Update the defaults in
 [knative-releasability.yaml](https://github.com/knative-sandbox/.github/blob/1e4e31edfb2181220db744ad0fcb135629e1cb8e/workflow-templates/knative-releasability.yaml#L37-L41)
-to this release. These changes will be propagated to the rest of Knative in the
-next round of workflow syncs.
+to this release [sample PR](https://github.com/knative-sandbox/.github/pull/102).
+These changes will be propagated to the rest of Knative in the next round of
+workflow syncs.
 
 ### Announce the imminent `pkg` cut
 
@@ -273,23 +276,29 @@ Announce on **#general** that `pkg` will be cut in a week.
 ### Cut release branches of supporting repos
 
 The supporting repos are the base repos where we have common code and common
-scripts. For these repos, we follow the same release process as explained in
-[release a repository](#release-a-repository), but no prow job is executed,
-hence no git tag and Github release are produced.
+scripts. For these repos (except **hack**), we follow the same release process as
+explained in [release a repository](#release-a-repository), but no prow job is
+executed, hence no git tag and Github release are produced.
 
-Follow the [release a repository](#release-a-repository) guide, skipping the
-prow job part, starting with the **hack** repo:
+First repo that needs to be released is **hack**. As mentioned, **hack** is
+special because it has no dependencies and hence there's no releasability
+checks, just ensure there are no outstanding PRs and
+[create a release branch](#cut-the-branch).
 
 - [knative/hack](https://github.com/knative/hack)
 
-After **hack**:
+After **hack** release branch has been cut, follow the
+[release a repository](#release-a-repository) guide for the following repos
+skipping the prow job part:
 
 | Repo                                                            | Releasability                                                                             |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | [knative.dev/pkg](https://github.com/knative/pkg)               | ![Releasability](https://github.com/knative/pkg/workflows/Releasability/badge.svg)        |
 | [knative.dev/test-infra](https://github.com/knative/test-infra) | ![Releasability](https://github.com/knative/test-infra/workflows/Releasability/badge.svg) |
 
-After **pkg**:
+After **pkg** and **test-infra** repos have their release branches cut, follow
+the [release a repository](#release-a-repository) guide for the following repos
+skipping the prow job part:
 
 | Repo                                                                              | Releasability                                                                                          |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -297,9 +306,10 @@ After **pkg**:
 | [knative.dev/caching](https://github.com/knative/caching)                         | ![Releasability](https://github.com/knative/caching/workflows/Releasability/badge.svg)                 |
 | [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test) | ![Releasability](https://github.com/knative-sandbox/reconciler-test/workflows/Releasability/badge.svg) |
 
+**TODO** So, will we need to run manual auto-updates again for these? 
 Automation will propagate these updates to all the downstream repos in the next
 few cycles. The goal is to have the first wave of repo releases (**serving**,
-**eventing**, etc) to become "releasabile" by the end of the week. This is
+**eventing**, etc) to become "releasable" by the end of the week. This is
 signaled via the Slack report of releasability posted to the **release-`#`**
 channel every morning (5am PST, M-F).
 
