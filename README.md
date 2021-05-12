@@ -306,7 +306,6 @@ skipping the prow job part:
 | [knative.dev/caching](https://github.com/knative/caching)                         | ![Releasability](https://github.com/knative/caching/workflows/Releasability/badge.svg)                 |
 | [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test) | ![Releasability](https://github.com/knative-sandbox/reconciler-test/workflows/Releasability/badge.svg) |
 
-**TODO** So, will we need to run manual auto-updates again for these? 
 Automation will propagate these updates to all the downstream repos in the next
 few cycles. The goal is to have the first wave of repo releases (**serving**,
 **eventing**, etc) to become "releasable" by the end of the week. This is
