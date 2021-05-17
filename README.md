@@ -133,7 +133,7 @@ For some repositories some extra manual validation needs to be performed before 
 
 #### knative/client
 
-* Check that in [version.go](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go) the variavle [apiVersions](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go#L32) points to the versions of `knative-serving` and `knative-eventing` that is about to be released. You can verify that that the version is picked up properly by calling `./hack/build.sh` from within the client repository.
+* Check that in [version.go](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go) that the variable [apiVersions](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go#L32) points to the versions of `knative-serving` and `knative-eventing` that are about to be released.
 * (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
 
 If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
