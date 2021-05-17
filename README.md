@@ -73,6 +73,7 @@ Releasing a repository includes:
 
 - Aligning the `knative.dev` dependencies to the other release versions on
   main (except hack, which has no dependencies)
+- For some repositories some additional validation need to be performed before a release can be cut. Check [special repository checks](#special-repository-checks) for which repository extra steps needs to be performed.
 - Creating a new branch starting from main for the release (e.g.
   `release-0.20`)
 - Execute the job on Prow that builds the code from the release branch, tags the
@@ -125,6 +126,17 @@ cd "$(basename "${REPO}" .git)"
 # Otherwise, commit all the changes
 git status
 ```
+
+### Special repository checks
+
+For some repositories some extra manual validation needs to be performed before the release branch is cut:
+
+#### knative/client
+
+* Check that in [version.go](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go) that the variable [apiVersions](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go#L32) points to the versions of `knative-serving` and `knative-eventing` that are about to be released.
+* (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
+
+If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
 ### Releasability
 
@@ -231,6 +243,31 @@ repo in this order:
 1. Remove the git tag (if any) using `git push --delete origin v0.20.0`
    (assuming `origin` is the `knative.dev` repo)
 1. Remove the git branch (if any) from the Github UI
+
+### Post-release work
+
+#### Client Homebrew repo
+
+After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
+
+* Copy `kn.rb` to the `kn@${PREV_RELEASE}.rb` with `$PREV_RELEASE` to be replace with the latest release (e.g. `0.19`).
+* In `kn@${PREV_RELEASE}.rb` replace `class Kn` with `class KnAT${PREV_RELEASE_DIGITS}`, e.g `class KnAT019` for an previous release `0.19`.
+* In `kn.rb`
+  - Replace the old version number in `v` with the released version (e.g. `v = "v0.20.0"`)
+  - Replace the `sha256` checksums with the values from the [client release page](https://github.com/knative/client/releases). The checksums have been released, too (e.g. [checksums.txt](https://github.com/knative/client/releases/download/v0.22.0/checksums.txt))
+
+Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
+
+#### Client Plugins Homebrew repo
+
+Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated for the the plugins supported.
+
+Currently the following plugins are available with their own formulas:
+
+* [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
+* [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
+
+The artifact checksums can be found on the respective release pages
 
 ---
 
@@ -381,6 +418,7 @@ After both **eventing** and **serving**:
 
 | Repo                                                                              | Release                                                                                                                                                               | Releasability                                                                                          | Nightly                                                                                                |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| [knative.dev/client](https://github.com/knative/client)     | [![Releases](https://img.shields.io/github/release-pre/knative/client.svg?sort=semver)](https://github.com/knative/client/releases)     | ![Releasability](https://github.com/knative/client/workflows/Releasability/badge.svg)   | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-client-nightly-release) |
 | [knative.dev/eventing-redis](https://github.com/knative-sandbox/eventing-redis)   | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-redis.svg?sort=semver)](https://github.com/knative-sandbox/eventing-redis/releases)   | ![Releasability](https://github.com/knative-sandbox/eventing-redis/workflows/Releasability/badge.svg)  | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-eventing-redis-nightly-release)  |
 | [knative.dev/eventing-github](https://github.com/knative-sandbox/eventing-github) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-github.svg?sort=semver)](https://github.com/knative-sandbox/eventing-github/releases) | ![Releasability](https://github.com/knative-sandbox/eventing-github/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-eventing-github-nightly-release) |
 | [knative.dev/eventing-gitlab](https://github.com/knative-sandbox/eventing-gitlab) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-gitlab.svg?sort=semver)](https://github.com/knative-sandbox/eventing-gitlab/releases) | ![Releasability](https://github.com/knative-sandbox/eventing-gitlab/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-eventing-gitlab-nightly-release) |
@@ -390,6 +428,8 @@ Lastly:
 | Repo                                                                                                | Release                                                                                                                                                                                 | Releasability                                                                                                   | Nightly                                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | [knative.dev/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-autoscaler-keda.svg?sort=semver)](https://github.com/knative-sandbox/eventing-autoscaler-keda/releases) | ![Releasability](https://github.com/knative-sandbox/eventing-autoscaler-keda/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-eventing-autoscaler-keda-nightly-release) |
+| [knative.dev/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-admin.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-admin/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-admin/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-admin-nightly-release) |
+| [knative.dev/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kafka.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-source-kafka/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-source-kafka/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-source-kafka-nightly-release) |
 
 We have a few repos inside of Knative that are not handled in the standard
 process at the moment. They might have additional dependencies or depend on the
@@ -397,7 +437,6 @@ releases existing. **Skip these**. Special cases are:
 
 | Repo                                                        | Release                                                                                                                                 | Releasability                                                                           | Nightly                                                                               |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [knative.dev/client](https://github.com/knative/client)     | [![Releases](https://img.shields.io/github/release-pre/knative/client.svg?sort=semver)](https://github.com/knative/client/releases)     | ![Releasability](https://github.com/knative/client/workflows/Releasability/badge.svg)   | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-client-nightly-release) |
 | [knative.dev/docs](https://github.com/knative/docs)         | [![Releases](https://img.shields.io/github/release-pre/knative/docs.svg?sort=semver)](https://github.com/knative/docs/releases)         | ![Releasability](https://github.com/knative/docs/workflows/Releasability/badge.svg)     | N/A                                                                                   |
 | [knative.dev/operator](https://github.com/knative/operator) | [![Releases](https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver)](https://github.com/knative/operator/releases) | ![Releasability](https://github.com/knative/operator/workflows/Releasability/badge.svg) | N/A                                                                                   |
 | [knative.dev/website](https://github.com/knative/website)   | N/A                                                                                                                                     | N/A                                                                                     | N/A                                                                                   |
