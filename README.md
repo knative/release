@@ -108,7 +108,7 @@ If no dependency bump PR is available, you can either:
   and wait for the PR to pop in the repo you need. Note you have to change the
   field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.`
   to true, because in some cases there no code changes in the vendor.
-- Execute the script below on your machine and PR the result to main:
+- Execute the script below on your machine:
 
 ```shell
 RELEASE=0.20
@@ -126,15 +126,18 @@ cd "$(basename "${REPO}" .git)"
 # Otherwise, commit all the changes
 git status
 ```
+- Commit the changes and send a PR against the `main` branch. Before doing so, check whether some additional, manual updates are required, that you can also add to this PR (to save some roundtrips). Section [Special repository actions](#special-repository-actions) contains the repository specific instructions (if any).
 
-### Special repository checks
+### Special repository actions
 
-For some repositories some extra manual validation needs to be performed before the release branch is cut:
+For some repositories some extra manual validation and updates need to be performed before the release branch is cut:
 
 #### knative/client
 
 * Check that in [version.go](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go) that the variable [apiVersions](https://github.com/knative/client/blob/main/pkg/kn/commands/version/version.go#L32) points to the versions of `knative-serving` and `knative-eventing` that are about to be released.
+* Update the version numbers of Serving and Eventing in [test/presubmit-integration-tests-latest-release.sh](https://github.com/knative/client/blob/main/test/presubmit-integration-tests-latest-release.sh#L20-L21) so that the integration test is already running against the just released serving and eventing versions.
 * (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
+
 
 If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
