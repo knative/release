@@ -460,7 +460,7 @@ releases existing. **Skip these**. Special cases are:
 Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
 to enable dot releases on the new releases and approve it.
 
-Send a PR like [this one](https://github.com/knative/community/pull/209) to
+Send a PR like [this one](https://github.com/knative/community/pull/619) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
