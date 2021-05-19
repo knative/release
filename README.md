@@ -298,7 +298,7 @@ We release the components of Knative every 6 weeks. All of these components must
 be moved to the latest "release" of all shared dependencies prior to each
 release.
 
-The docs are released after serving and eventing are released. 
+The docs are released after serving and eventing are released, see [Release docs](#release-docs)
 
 ## First week of the rotation
 
