@@ -41,20 +41,26 @@ This roster is seeded with all approvers from Eventing workgroups.
 - slinkydeveloper
 - vaikas
 
+## Docs roster
+
+- csantanapr
+- omerbensaadon
+- julz
+
 ## Schedule
 
-| Release | Release Date | Serving        | Eventing        | Unpin repos | PKG cut    |
-| ------- | ------------ | -------------- | --------------- | ----------- | ---------- |
-| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | -           | 2020-08-11 |
-| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-08-19  | 2020-09-22 |
-| v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-09-30  | 2020-11-03 |
-| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | 2020-11-11  | 2021-01-07 |
-| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | 2021-01-13  | 2021-02-16 |
-| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-02-24  | 2021-03-30 |
-| v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-04-07  | 2021-05-11 |
-| v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-05-19  | 2021-06-22 |
-| v0.25   | 2021-08-10   | JRBANCEL       | ...             | 2021-06-30  | 2021-08-03 |
-| v0.26   | 2021-09-21   | ...            | ...             | 2021-08-11  | 2021-09-14 |
+| Release | Release Date | Serving        | Eventing        | Docs          | Unpin repos | PKG cut    |
+| ------- | ------------ | -------------- | --------------- | -----------   | ----------- | ---------- |
+| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | richieescarez | -           | 2020-08-11 |
+| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | richieescarez | 2020-08-19  | 2020-09-22 |
+| v0.19   | 2020-11-10   | julz           | n3wscott        | richieescarez | 2020-09-30  | 2020-11-03 |
+| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | richieescarez | 2020-11-11  | 2021-01-07 |
+| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | csantanapr    | 2021-01-13  | 2021-02-16 |
+| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | omerbensaadon | 2021-02-24  | 2021-03-30 |
+| v0.23   | 2021-05-18   | tcnghia        | vaikas          | csantanapr    | 2021-04-07  | 2021-05-11 |
+| v0.24   | 2021-06-29   | dprotaso       | matzew          | julz          | 2021-05-19  | 2021-06-22 |
+| v0.25   | 2021-08-10   | JRBANCEL       | grantr          | automation    | 2021-06-30  | 2021-08-03 |
+| v0.26   | 2021-09-21   | ...            | ...             | automation    | 2021-08-11  | 2021-09-14 |
 
 **NOTE:** v0.20 is moved by 3 weeks for end of year holidays
 
@@ -62,7 +68,7 @@ This roster is seeded with all approvers from Eventing workgroups.
 
 # Instructions
 
-Below you'll find the instructions to release a `knative.dev` repository.
+Below you'll find the instructions to release the docs repository see [Release docs](#release-docs)
 
 For more information on the timetable, jump to the [Timetable](#timetable)
 paragraph.
@@ -275,6 +281,15 @@ The artifact checksums can be found on the respective release pages. Once the
 PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
 this, so you're done here.
 
+## Release docs
+To release the documentation for the release follow [docs release process](https://knative.dev/help/maintainer/docs-release-process/)
+The current process can be summarize in the following:
+1. Wait for dependent repos to release (today thats /serving and /eventing)
+2. Generate the API specification and merge via PR into `main` branch https://github.com/knative/docs/pull/3426
+3. Create the new relase branch on the `docs` repository https://knative.dev/help/maintainer/docs-release-process/#create-branch-from-updated-main
+4. Update the `website` repository toml files to add the new version and drop the oldest version from the website https://github.com/knative/website/pull/287
+5. Sync the staging branch in `website` repository to include all the same commits as `main` branch https://github.com/knative/website/pull/297 
+
 ---
 
 # Timetable
@@ -282,6 +297,8 @@ this, so you're done here.
 We release the components of Knative every 6 weeks. All of these components must
 be moved to the latest "release" of all shared dependencies prior to each
 release.
+
+The docs are released after serving and eventing are released. 
 
 ## First week of the rotation
 
