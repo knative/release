@@ -345,6 +345,14 @@ skipping the prow job part:
 | [knative.dev/caching](https://github.com/knative/caching)                         | ![Releasability](https://github.com/knative/caching/workflows/Releasability/badge.svg)                 |
 | [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test) | ![Releasability](https://github.com/knative-sandbox/reconciler-test/workflows/Releasability/badge.svg) |
 
+After **reconciler-test** repo has been cut, follow the
+[release a repository](#release-a-repository) guide for the following repos
+skipping the prow job part:
+
+| Repo                                                                                | Releasability                                                                                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol) | ![Releasability](https://github.com/knative-sandbox/control-protocol/workflows/Releasability/badge.svg) |
+
 Automation will propagate these updates to all the downstream repos in the next
 few cycles. The goal is to have the first wave of repo releases (**serving**,
 **eventing**, etc) to become "releasable" by the end of the week. This is
@@ -380,10 +388,10 @@ green light.
 ## Day of the release
 
 Follow the [release a repository](#release-a-repository) instructions for each
-repo. Wait for release automation to kick in (runs on a 2 hour interval). Once
-the release automation passed, it will create a release tag in the repository.
-Enhance the respective tags with the collected release-notes using the GitHub
-UI.
+repo. Wait for [release automation](#the-prow-job)? to kick in (runs on a 2 hour
+interval). Once the release automation passed, it will create a release tag in
+the repository. Enhance the respective tags with the collected release-notes
+using the GitHub UI.
 
 In general the release dependency order is something like the following (as of
 v0.20). Note: `buoy check` will fail if the dependencies are not yet ready.
