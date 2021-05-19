@@ -391,7 +391,7 @@ green light.
 ## Day of the release
 
 Follow the [release a repository](#release-a-repository) instructions for each
-repo. Wait for [release automation](#the-prow-job)? to kick in (runs on a 2 hour
+repo. Wait for [release automation](#the-prow-job) to kick in (runs on a 2 hour
 interval). Once the release automation passed, it will create a release tag in
 the repository. Enhance the respective tags with the collected release-notes
 using the GitHub UI.
