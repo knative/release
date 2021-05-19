@@ -263,14 +263,17 @@ Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so
 
 #### Client Plugins Homebrew repo
 
-Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated for the the plugins supported.
+Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
+for the the plugins supported after their repos have successfully created a release.
 
 Currently the following plugins are available with their own formulas:
 
 * [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
 * [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
 
-The artifact checksums can be found on the respective release pages
+The artifact checksums can be found on the respective release pages. Once the
+PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
+this, so you're done here.
 
 ---
 
@@ -345,6 +348,14 @@ skipping the prow job part:
 | [knative.dev/caching](https://github.com/knative/caching)                         | ![Releasability](https://github.com/knative/caching/workflows/Releasability/badge.svg)                 |
 | [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test) | ![Releasability](https://github.com/knative-sandbox/reconciler-test/workflows/Releasability/badge.svg) |
 
+After **reconciler-test** repo has been cut, follow the
+[release a repository](#release-a-repository) guide for the following repos
+skipping the prow job part:
+
+| Repo                                                                                | Releasability                                                                                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol) | ![Releasability](https://github.com/knative-sandbox/control-protocol/workflows/Releasability/badge.svg) |
+
 Automation will propagate these updates to all the downstream repos in the next
 few cycles. The goal is to have the first wave of repo releases (**serving**,
 **eventing**, etc) to become "releasable" by the end of the week. This is
@@ -380,10 +391,10 @@ green light.
 ## Day of the release
 
 Follow the [release a repository](#release-a-repository) instructions for each
-repo. Wait for release automation to kick in (runs on a 2 hour interval). Once
-the release automation passed, it will create a release tag in the repository.
-Enhance the respective tags with the collected release-notes using the GitHub
-UI.
+repo. Wait for [release automation](#the-prow-job) to kick in (runs on a 2 hour
+interval). Once the release automation passed, it will create a release tag in
+the repository. Enhance the respective tags with the collected release-notes
+using the GitHub UI.
 
 In general the release dependency order is something like the following (as of
 v0.20). Note: `buoy check` will fail if the dependencies are not yet ready.
@@ -449,9 +460,9 @@ releases existing. **Skip these**. Special cases are:
 Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
 to enable dot releases on the new releases and approve it.
 
-Send a PR like [this one](https://github.com/knative/community/pull/209) to
+Send a PR like [this one](https://github.com/knative/community/pull/619) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
-Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/18) to
+Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
