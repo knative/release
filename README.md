@@ -263,14 +263,17 @@ Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so
 
 #### Client Plugins Homebrew repo
 
-Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated for the the plugins supported.
+Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
+for the the plugins supported after their repos have successfully created a release.
 
 Currently the following plugins are available with their own formulas:
 
 * [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
 * [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
 
-The artifact checksums can be found on the respective release pages
+The artifact checksums can be found on the respective release pages. Once the
+PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
+this, so you're done here.
 
 ---
 
