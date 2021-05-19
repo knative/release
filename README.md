@@ -464,5 +464,5 @@ Send a PR like [this one](https://github.com/knative/community/pull/209) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
-Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/18) to
+Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
