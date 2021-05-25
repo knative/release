@@ -26,7 +26,6 @@ This roster is seeded with all approvers from Serving workgroups.
 - JRBANCEL
 - markusthoemmes
 - nak3
-- tcnghia
 - yanweiguo
 - ZhiminXiang
 
