@@ -465,3 +465,5 @@ Include the next release leads in the PR as a reminder.
 
 Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
+
+Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
