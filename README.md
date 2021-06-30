@@ -17,7 +17,7 @@ workgroups, excluding productivity. If you are no longer active in Knative, or
 if you are contributing on personal capacity and do not have time to contribute
 in the rotation, feel free to send a PR to remove yourself.
 
-## Serving roster
+## Serving
 
 This roster is seeded with all approvers from Serving workgroups.
 
@@ -28,7 +28,7 @@ This roster is seeded with all approvers from Serving workgroups.
 - yanweiguo
 - ZhiminXiang
 
-## Eventing roster
+## Eventing
 
 This roster is seeded with all approvers from Eventing workgroups.
 
@@ -429,7 +429,9 @@ releases existing. **Skip these**. Special cases are:
 
 ## Post-release work
 
-#### Updating Homebrew repositories
+### Homebrew updates
+
+#### homebrew-client
 
 After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
 
@@ -441,7 +443,7 @@ After the client release, the [Homebrew tap](https://github.com/knative/homebrew
 
 Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
 
-#### Client Plugins Homebrew repo
+#### homebrew-kn-plugins
 
 Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
 for the the plugins supported after their repos have successfully created a release.
@@ -455,18 +457,18 @@ The artifact checksums can be found on the respective release pages. Once the
 PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
 this, so you're done here.
 
-#### Final checks & transition to the next release leads
+### Final checks & transition to the next release leads
 
-Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
+1. Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
 
-Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
+1. Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
 to enable dot releases on the new releases and approve it. These are create by the Prow
 https://prow.knative.dev/?job=ci-knative-prow-jobs-syncer
 
-Send a PR like [this one](https://github.com/knative/community/pull/619) to
+1. Send a PR like [this one](https://github.com/knative/community/pull/619) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
-Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
+1. Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
 
