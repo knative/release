@@ -41,20 +41,20 @@ This roster is seeded with all approvers from Eventing workgroups.
 
 ## Schedule
 
-| Release | Release Date | Serving        | Eventing        | Unpin repos | PKG cut    |
-| ------- | ------------ | -------------- | --------------- | ----------- | ---------- |
-| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | -           | 2020-08-11 |
-| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-08-19  | 2020-09-22 |
-| v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-09-30  | 2020-11-03 |
-| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | 2020-11-11  | 2021-01-07 |
-| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | 2021-01-13  | 2021-02-16 |
-| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-02-24  | 2021-03-30 |
-| v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-04-07  | 2021-05-11 |
-| v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-05-19  | 2021-06-22 |
-| v0.25   | 2021-08-10   | yanweiguo      | ...             | 2021-06-30  | 2021-08-03 |
-| v0.26   | 2021-09-21   | ZhiminXiang    | ...             | 2021-08-11  | 2021-09-14 |
-| v0.27   | 2021-11-02   | julz           | ...             | 2021-09-22  | 2021-10-26 |
-| v0.28   | 2021-12-14   | nak3           | ...             | 2021-11-03  | 2021-12-07 |
+| Release | Release Date | Serving        | Eventing        | PKG cut    | Unpin repos 
+| ------- | ------------ | -------------- | --------------- | ---------- | ----------- 
+| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | 2020-08-11 | 2020-08-19
+| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-09-22 | 2020-09-30
+| v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-11-03 | 2020-11-11
+| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | 2021-01-07 | 2021-01-13
+| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | 2021-02-16 | 2021-02-24
+| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-03-30 | 2021-04-07
+| v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-05-11 | 2021-05-19
+| v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-06-22 | 2021-06-30
+| v0.25   | 2021-08-10   | yanweiguo      | ...             | 2021-08-03 | 2021-08-11
+| v0.26   | 2021-09-21   | ZhiminXiang    | ...             | 2021-09-14 | 2021-09-22
+| v0.27   | 2021-11-02   | julz           | ...             | 2021-10-26 | 2021-11-03
+| v0.28   | 2021-12-14   | nak3           | ...             | 2021-12-07 | 2021-12-15
 
 **NOTE:** v0.20 is moved by 3 weeks for end of year holidays
 
