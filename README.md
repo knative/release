@@ -38,6 +38,13 @@ This roster is seeded with all approvers from Eventing workgroups.
 - n3wscott
 - vaikas
 
+## Client roster
+
+This roster is seeded with approvers from the Client workgroups.
+
+- dsimansk
+- rhuss
+
 ## Schedule
 
 | Release | Release Date | Serving        | Eventing        | Unpin repos | PKG cut    |
@@ -55,8 +62,6 @@ This roster is seeded with all approvers from Eventing workgroups.
 | v0.27   | 2021-11-02   | julz           | evankanderson   | 2021-09-22  | 2021-10-26 |
 | v0.28   | 2021-12-14   | nak3           | vaikas          | 2021-11-03  | 2021-12-07 |
 | v0.29   | 2022-01-25   | markusthoemmes | matzew          | 2021-12-15  | 2022-01-18 |
-
-**NOTE:** v0.20 is moved by 3 weeks for end of year holidays
 
 ---
 
