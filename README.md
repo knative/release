@@ -36,7 +36,6 @@ This roster is seeded with all approvers from Eventing workgroups.
 - lionelvillard
 - matzew
 - n3wscott
-- slinkydeveloper
 - vaikas
 
 ## Schedule
@@ -51,10 +50,11 @@ This roster is seeded with all approvers from Eventing workgroups.
 | v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-03-30 | 2021-04-07
 | v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-05-11 | 2021-05-19
 | v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-06-22 | 2021-06-30
-| v0.25   | 2021-08-10   | yanweiguo      | ...             | 2021-08-03 | 2021-08-11
-| v0.26   | 2021-09-21   | ZhiminXiang    | ...             | 2021-09-14 | 2021-09-22
-| v0.27   | 2021-11-02   | julz           | ...             | 2021-10-26 | 2021-11-03
-| v0.28   | 2021-12-14   | nak3           | ...             | 2021-12-07 | 2021-12-15
+| v0.25   | 2021-08-10   | yanweiguo      | lionelvillard   | 2021-08-03 | 2021-08-11
+| v0.26   | 2021-09-21   | ZhiminXiang    | n3wscott        | 2021-09-14 | 2021-09-22
+| v0.27   | 2021-11-02   | julz           | evankanderson   | 2021-10-26 | 2021-11-03
+| v0.28   | 2021-12-14   | nak3           | vaikas          | 2021-12-07 | 2021-12-15
+| v0.29   | 2021-12-14   | markusthoemmes | matzew          | 2021-12-07 | 2021-12-15
 
 **NOTE:** v0.20 is moved by 3 weeks for end of year holidays
 
