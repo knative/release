@@ -17,7 +17,7 @@ workgroups, excluding productivity. If you are no longer active in Knative, or
 if you are contributing on personal capacity and do not have time to contribute
 in the rotation, feel free to send a PR to remove yourself.
 
-## Serving roster
+## Serving
 
 This roster is seeded with all approvers from Serving workgroups.
 
@@ -28,7 +28,7 @@ This roster is seeded with all approvers from Serving workgroups.
 - yanweiguo
 - ZhiminXiang
 
-## Eventing roster
+## Eventing
 
 This roster is seeded with all approvers from Eventing workgroups.
 
@@ -40,21 +40,21 @@ This roster is seeded with all approvers from Eventing workgroups.
 
 ## Schedule
 
-| Release | Release Date | Serving        | Eventing        | Unpin repos | PKG cut    |
-| ------- | ------------ | -------------- | --------------- | ----------- | ---------- |
-| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | -           | 2020-08-11 |
-| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-08-19  | 2020-09-22 |
-| v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-09-30  | 2020-11-03 |
-| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | 2020-11-11  | 2021-01-07 |
-| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | 2021-01-13  | 2021-02-16 |
-| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-02-24  | 2021-03-30 |
-| v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-04-07  | 2021-05-11 |
-| v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-05-19  | 2021-06-22 |
-| v0.25   | 2021-08-10   | yanweiguo      | lionelvillard   | 2021-06-30  | 2021-08-03 |
-| v0.26   | 2021-09-21   | ZhiminXiang    | n3wscott        | 2021-08-11  | 2021-09-14 |
-| v0.27   | 2021-11-02   | julz           | evankanderson   | 2021-09-22  | 2021-10-26 |
-| v0.28   | 2021-12-14   | nak3           | vaikas          | 2021-11-03  | 2021-12-07 |
-| v0.29   | 2022-01-25   | markusthoemmes | matzew          | 2021-12-15  | 2022-01-18 |
+| Release | Release Date | Serving        | Eventing        | PKG cut    | Unpin repos 
+| ------- | ------------ | -------------- | --------------- | ---------- | ----------- 
+| v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | 2020-08-11 | 2020-08-19
+| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-09-22 | 2020-09-30
+| v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-11-03 | 2020-11-11
+| v0.20   | 2021-01-12   | nak3           | slinkydeveloper | 2021-01-07 | 2021-01-13
+| v0.21   | 2021-02-23   | mattmoor       | lionelvillard   | 2021-02-16 | 2021-02-24
+| v0.22   | 2021-04-06   | markusthoemmes | evankanderson   | 2021-03-30 | 2021-04-07
+| v0.23   | 2021-05-18   | tcnghia        | vaikas          | 2021-05-11 | 2021-05-19
+| v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-06-22 | 2021-06-30
+| v0.25   | 2021-08-10   | yanweiguo      | lionelvillard   | 2021-08-03 | 2021-08-11
+| v0.26   | 2021-09-21   | ZhiminXiang    | n3wscott        | 2021-09-14 | 2021-09-22
+| v0.27   | 2021-11-02   | julz           | evankanderson   | 2021-10-26 | 2021-11-03
+| v0.28   | 2021-12-14   | nak3           | vaikas          | 2021-12-07 | 2021-12-15
+| v0.29   | 2021-12-14   | markusthoemmes | matzew          | 2021-12-07 | 2021-12-15
 
 **NOTE:** v0.20 is moved by 3 weeks for end of year holidays
 
@@ -247,33 +247,6 @@ repo in this order:
    (assuming `origin` is the `knative.dev` repo)
 1. Remove the git branch (if any) from the Github UI
 
-### Post-release work
-
-#### Client Homebrew repo
-
-After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
-
-* Copy `kn.rb` to the `kn@${PREV_RELEASE}.rb` with `$PREV_RELEASE` to be replace with the latest release (e.g. `0.19`).
-* In `kn@${PREV_RELEASE}.rb` replace `class Kn` with `class KnAT${PREV_RELEASE_DIGITS}`, e.g `class KnAT019` for an previous release `0.19`.
-* In `kn.rb`
-  - Replace the old version number in `v` with the released version (e.g. `v = "v0.20.0"`)
-  - Replace the `sha256` checksums with the values from the [client release page](https://github.com/knative/client/releases). The checksums have been released, too (e.g. [checksums.txt](https://github.com/knative/client/releases/download/v0.22.0/checksums.txt))
-
-Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
-
-#### Client Plugins Homebrew repo
-
-Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
-for the the plugins supported after their repos have successfully created a release.
-
-Currently the following plugins are available with their own formulas:
-
-* [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
-* [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
-
-The artifact checksums can be found on the respective release pages. Once the
-PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
-this, so you're done here.
 
 ---
 
@@ -454,16 +427,48 @@ releases existing. **Skip these**. Special cases are:
 | [knative.dev/operator](https://github.com/knative/operator) | [![Releases](https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver)](https://github.com/knative/operator/releases) | ![Releasability](https://github.com/knative/operator/workflows/Releasability/badge.svg) | N/A                                                                                   |
 | [knative.dev/website](https://github.com/knative/website)   | N/A                                                                                                                                     | N/A                                                                                     | N/A                                                                                   |
 
-## After the release
+## Post-release work
 
-Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
-to enable dot releases on the new releases and approve it.
+### Homebrew updates
 
-Send a PR like [this one](https://github.com/knative/community/pull/619) to
+#### homebrew-client
+
+After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
+
+* Copy `kn.rb` to the `kn@${PREV_RELEASE}.rb` with `$PREV_RELEASE` to be replace with the latest release (e.g. `0.19`).
+* In `kn@${PREV_RELEASE}.rb` replace `class Kn` with `class KnAT${PREV_RELEASE_DIGITS}`, e.g `class KnAT019` for an previous release `0.19`.
+* In `kn.rb`
+  - Replace the old version number in `v` with the released version (e.g. `v = "v0.20.0"`)
+  - Replace the `sha256` checksums with the values from the [client release page](https://github.com/knative/client/releases). The checksums have been released, too (e.g. [checksums.txt](https://github.com/knative/client/releases/download/v0.22.0/checksums.txt))
+
+Create a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
+
+#### homebrew-kn-plugins
+
+Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
+for the the plugins supported after their repos have successfully created a release.
+
+Currently the following plugins are available with their own formulas:
+
+* [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
+* [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
+
+The artifact checksums can be found on the respective release pages. Once the
+PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
+this, so you're done here.
+
+### Final checks & transition to the next release leads
+
+1. Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
+
+1. Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
+to enable dot releases on the new releases and approve it. These are create by the Prow
+https://prow.knative.dev/?job=ci-knative-prow-jobs-syncer
+
+1. Send a PR like [this one](https://github.com/knative/community/pull/619) to
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
-Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
+1. Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
 
-Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
