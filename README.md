@@ -61,7 +61,7 @@ This roster is seeded with approvers from the Client workgroups.
 | v0.26   | 2021-09-21   | ZhiminXiang    | n3wscott        | 2021-09-14 | 2021-09-22
 | v0.27   | 2021-11-02   | julz           | evankanderson   | 2021-10-26 | 2021-11-03
 | v0.28   | 2021-12-14   | nak3           | vaikas          | 2021-12-07 | 2021-12-15
-| v0.29   | 2021-12-14   | markusthoemmes | matzew          | 2021-12-07 | 2021-12-15
+| v0.29   | 2022-01-25   | markusthoemmes | matzew          | 2022-01-18 | 2022-01-26
 
 ---
 
