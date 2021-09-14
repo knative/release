@@ -77,7 +77,7 @@ Releasing a repository includes:
 
 - Aligning the `knative.dev` dependencies to the other release versions on
   main (except hack, which has no dependencies)
-- For some repositories some additional validation need to be performed before a release can be cut. Check [special repository checks](#special-repository-checks) for which repository extra steps needs to be performed.
+- For some repositories some additional validation need to be performed before a release can be cut. Check [special repository checks](#special-repository-actions) for which repository extra steps needs to be performed.
 - Creating a new branch starting from main for the release (e.g.
   `release-0.20`)
 - Execute the job on Prow that builds the code from the release branch, tags the
