@@ -46,8 +46,8 @@ This roster is seeded with approvers from the Client workgroups.
 
 ## Schedule
 
-| Release | Release Date | Serving        | Eventing        | PKG cut    | Unpin repos 
-| ------- | ------------ | -------------- | --------------- | ---------- | ----------- 
+| Release | Release Date | Serving        | Eventing        | PKG cut    | Unpin repos
+| ------- | ------------ | -------------- | --------------- | ---------- | -----------
 | v0.17   | 2020-08-18   | yanweiguo      | Harwayne        | 2020-08-11 | 2020-08-19
 | v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott        | 2020-09-22 | 2020-09-30
 | v0.19   | 2020-11-10   | julz           | n3wscott        | 2020-11-03 | 2020-11-11
@@ -421,6 +421,7 @@ Lastly:
 | [knative.dev/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-autoscaler-keda.svg?sort=semver)](https://github.com/knative-sandbox/eventing-autoscaler-keda/releases) | ![Releasability](https://github.com/knative-sandbox/eventing-autoscaler-keda/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-eventing-autoscaler-keda-nightly-release) |
 | [knative.dev/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-admin.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-admin/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-admin/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-admin-nightly-release) |
 | [knative.dev/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kafka.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-source-kafka/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-source-kafka/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-source-kafka-nightly-release) |
+| [knative.dev/kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kamelet.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-source-kamelet/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-source-kamelet/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-source-kamelet-nightly-release) |
 
 We have a few repos inside of Knative that are not handled in the standard
 process at the moment. They might have additional dependencies or depend on the
@@ -457,6 +458,7 @@ Currently the following plugins are available with their own formulas:
 
 * [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
 * [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
+* [kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
 
 The artifact checksums can be found on the respective release pages. Once the
 PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
@@ -476,4 +478,3 @@ Include the next release leads in the PR as a reminder.
 
 1. Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
 bump knobots auto release workflow to the next release.
-
