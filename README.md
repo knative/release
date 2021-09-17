@@ -35,7 +35,6 @@ This roster is seeded with all approvers from Eventing workgroups.
 - evankanderson
 - lionelvillard
 - matzew
-- vaikas
 
 ## Client roster
 
@@ -58,7 +57,7 @@ This roster is seeded with approvers from the Client workgroups.
 | v0.24   | 2021-06-29   | dprotaso       | matzew          | 2021-06-22 | 2021-06-30
 | v0.25   | 2021-08-10   | yanweiguo      | lionelvillard   | 2021-08-03 | 2021-08-11
 | v0.26   | 2021-09-21   | ZhiminXiang    | evankanderson   | 2021-09-14 | 2021-09-22
-| v0.27   | 2021-11-02   | julz           | vaikas          | 2021-10-26 | 2021-11-03
+| v0.27   | 2021-11-02   | julz           | bmo             | 2021-10-26 | 2021-11-03
 | v0.28   | 2021-12-14   | nak3           | matzew          | 2021-12-07 | 2021-12-15
 | v0.29   | 2022-01-25   | markusthoemmes |                 | 2022-01-18 | 2022-01-26
 
