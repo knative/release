@@ -36,6 +36,7 @@ This roster is seeded with all approvers from Eventing workgroups, plus addition
 - lionelvillard
 - matzew
 - bmo
+- odacremolbap
 
 ## Client roster
 
