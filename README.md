@@ -281,6 +281,11 @@ used to help manage this release.
 Update the defaults in
 [knative-releasability.yaml](https://github.com/knative-sandbox/.github/blob/1e4e31edfb2181220db744ad0fcb135629e1cb8e/workflow-templates/knative-releasability.yaml#L37-L41)
 to this release [sample PR](https://github.com/knative-sandbox/.github/pull/102).
+
+This needs to be updated in the following repositories: 
+- [https://github.com/knative/.github/](https://github.com/knative/.github/blob/main/workflow-templates/knative-releasability.yaml)
+- [https://github.com/knative-sandbox/.github/](https://github.com/knative-sandbox/.github/blob/main/workflow-templates/knative-releasability.yaml)
+
 These changes will be propagated to the rest of Knative in the next round of
 workflow syncs.
 
