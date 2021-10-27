@@ -143,6 +143,10 @@ For some repositories some extra manual validation and updates need to be perfor
 
 If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
+#### knative-sandbox/kn-plugin-quickstart
+
+* Update the version numbers of Serving / Kourier / Eventing in [pkg/install/install.go](https://github.com/knative-sandbox/kn-plugin-quickstart/blob/main/pkg/install/install.go#L25-L27) so that the plugin will use the just-released versions.
+
 ### Releasability
 
 At this point, you can proceed with the releasability check. A releasability
