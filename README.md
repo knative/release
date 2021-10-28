@@ -143,6 +143,10 @@ For some repositories some extra manual validation and updates need to be perfor
 
 If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
+#### knative-sandbox/kn-plugin-quickstart
+
+* Update the version numbers of Serving / Kourier / Eventing in [pkg/install/install.go](https://github.com/knative-sandbox/kn-plugin-quickstart/blob/main/pkg/install/install.go#L25-L27) so that the plugin will use the just-released versions.
+
 ### Releasability
 
 At this point, you can proceed with the releasability check. A releasability
@@ -420,6 +424,7 @@ Lastly:
 | [knative.dev/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-admin.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-admin/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-admin/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-admin-nightly-release) |
 | [knative.dev/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kafka.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-source-kafka/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-source-kafka/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-source-kafka-nightly-release) |
 | [knative.dev/kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kamelet.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-source-kamelet/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-source-kamelet/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-source-kamelet-nightly-release) |
+| [knative.dev/kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-quickstart.svg?sort=semver)](https://github.com/knative-sandbox/kn-plugin-quickstart/releases) | ![Releasability](https://github.com/knative-sandbox/kn-plugin-quickstart/workflows/Releasability/badge.svg) | ![Nightly](https://prow.knative.dev/badge.svg?jobs=ci-knative-sandbox-kn-plugin-quickstart-nightly-release) |
 
 We have a few repos inside of Knative that are not handled in the standard
 process at the moment. They might have additional dependencies or depend on the
@@ -457,6 +462,7 @@ Currently the following plugins are available with their own formulas:
 * [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
 * [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
 * [kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
+* [kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart/) is managed via `quickstart.rb` formula
 
 The artifact checksums can be found on the respective release pages. Once the
 PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
