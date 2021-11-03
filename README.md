@@ -472,7 +472,7 @@ this, so you're done here.
 
 ### Final checks & transition to the next release leads
 
-1. Add the release to [Knative Release Principles - Version Table](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md)
+1. Add the release to the [release table](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md)
 
 1. Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670)
 to enable dot releases on the new releases and approve it. These are create by the Prow
