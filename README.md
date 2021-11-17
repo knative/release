@@ -23,7 +23,6 @@ This roster is seeded with all approvers from Serving workgroups, plus additiona
 
 - dprotaso
 - julz
-- markusthoemmes
 - nak3
 - psschwei
 - yanweiguo
@@ -61,7 +60,7 @@ This roster is seeded with approvers from the Client workgroups.
 | v0.26   | 2021-09-21   | ZhiminXiang    | evankanderson   | 2021-09-14 | 2021-09-22
 | v1.0    | 2021-11-02   | julz           | bmo             | 2021-10-26 | 2021-11-03
 | v1.1    | 2021-12-14   | nak3           | matzew          | 2021-12-07 | 2021-12-15
-| v1.2    | 2022-01-25   | markusthoemmes | psschwei        | 2022-01-18 | 2022-01-26
+| v1.2    | 2022-01-25   | dprotaso       | psschwei        | 2022-01-18 | 2022-01-26
 
 ---
 
