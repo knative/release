@@ -187,7 +187,7 @@ After the dependencies are aligned and releasability is ready to GO, perform one
 last check manually that every `knative.dev` in the `go.mod` file is properly
 configured:
 
-- For the _support_ repos (`hack`, `test-infra`, `pkg`, etc) you should see the
+- For the _support_ repos (`hack`, `pkg`, etc) you should see the
   dependency version pointing at a revision which should match the `HEAD` of the
   release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf`
   points at the revision `acbf2af596cf`, which is the `HEAD` of the
@@ -319,9 +319,8 @@ skipping the prow job part:
 | Repo                                                            | Releasability                                                                             |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | [knative.dev/pkg](https://github.com/knative/pkg)               | ![Releasability](https://github.com/knative/pkg/workflows/Releasability/badge.svg)        |
-| [knative.dev/test-infra](https://github.com/knative/test-infra) | ![Releasability](https://github.com/knative/test-infra/workflows/Releasability/badge.svg) |
 
-After **pkg** and **test-infra** repos have their release branches cut, follow
+After **pkg** repo has their release branch cut, follow
 the [release a repository](#release-a-repository) guide for the following repos
 skipping the prow job part:
 
