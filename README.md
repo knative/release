@@ -353,7 +353,7 @@ additional caution should be used when merging big changes.
 ### Collect release-notes
 
 Make a new HackMD release notes document.
-[last release notes document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA), empty
+[last release notes document](https://hackmd.io/rq4yUsZDSfG7MZ177roihg), empty
 it out and send it to the WG leads of the respective project (serving or
 eventing) to fill in. Coordinate with both serving and eventing leads.
 
