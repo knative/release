@@ -350,6 +350,11 @@ channel every morning (5am PST, M-F).
 Announce on **#general** that the release will be cut in a week and that
 additional caution should be used when merging big changes.
 
+### Check nightly builds
+
+Check the status of the nightly builds for each repo. If they are failing,
+reach out the respective WG leads to investigate.
+
 ### Collect release-notes
 
 Make a new HackMD release notes document.
@@ -370,6 +375,11 @@ to run.
 
 Confirm with the respective WG leads that the release is imminent and obtain
 green light.
+
+### Check nightly builds
+
+Check the status of the nightly builds for each repo. If they are failing,
+reach out the respective WG leads to investigate.
 
 ## Day of the release
 
