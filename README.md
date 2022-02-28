@@ -273,7 +273,8 @@ https://github.com/knative/community/blob/main/peribolos/knative.yaml and
 https://github.com/knative/community/blob/main/peribolos/knative-sandbox.yaml
 . If not, send a PR like
 [this one](https://github.com/knative/community/pull/209) to grant yourself some
-super power.
+super power. Ensure to run `/hack/update-codegen.sh` to add yourself to the owner
+files as well, as part of the PR.
 
 ### Create a release Slack channel
 
