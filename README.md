@@ -139,7 +139,7 @@ For some repositories some extra manual validation and updates need to be perfor
 
 #### knative/client
 
-* Update the version numbers of Serving and Eventing in [test/presubmit-integration-tests-latest-release.sh](https://github.com/knative/client/blob/main/test/presubmit-integration-tests-latest-release.sh#L20-L21) so that the integration test is already running against the just released serving and eventing versions.
+* Update the version numbers of Serving and Eventing in [test/presubmit-integration-tests-latest-release.sh](https://github.com/knative/client/blob/main/test/presubmit-integration-tests-latest-release.sh#L20-L21) so that the integration test is already running against the just released serving and eventing versions. **This should no longer be needed thanks to https://github.com/knative/client/pull/1625**
 * (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
 
 If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
