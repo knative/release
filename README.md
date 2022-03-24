@@ -47,9 +47,6 @@ This roster is seeded with approvers from the Client workgroups.
 
 | Release | Release Date | Serving        | Eventing            | PKG cut    | Unpin repos
 | ------- | ------------ | -------------- | --------------------| ---------- | -----------
-| v0.17   | 2020-08-18   | yanweiguo      | Harwayne            | 2020-08-11 | 2020-08-19
-| v0.18   | 2020-09-29   | ZhiminXiang    | n3wscott            | 2020-09-22 | 2020-09-30
-| v0.19   | 2020-11-10   | julz           | n3wscott            | 2020-11-03 | 2020-11-11
 | v0.20   | 2021-01-12   | nak3           | slinkydeveloper     | 2021-01-07 | 2021-01-13
 | v0.21   | 2021-02-23   | mattmoor       | lionelvillard       | 2021-02-16 | 2021-02-24
 | v0.22   | 2021-04-06   | markusthoemmes | evankanderson       | 2021-03-30 | 2021-04-07
