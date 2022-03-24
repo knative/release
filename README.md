@@ -62,6 +62,11 @@ This roster is seeded with approvers from the Client workgroups.
 | v1.2    | 2022-01-25   | dprotaso       | psschwei            | 2022-01-18 | 2022-01-26
 | v1.3    | 2022-03-08   | carlisia/kvmware | xtreme-sameer-vohra/kvmware | 2022-03-01 | 2022-03-09
 | v1.4    | 2022-04-19   | nader-ziada    | ikvmw               | 2022-04-12 | 2022-04-20
+| v1.5    | 2022-05-31   | yanweiguo      | lionelvillard       | 2022-05-24 | 2022-06-01
+| v1.6    | 2022-07-12   | ZhiminXiang    | evankanderson       | 2022-07-05 | 2022-07-13
+| v1.7    | 2022-08-23   | dprotaso       | matzew              | 2022-08-16 | 2022-08-24
+| v1.8    | 2022-10-04   | nak3           | lionelvillard       | 2022-09-27 | 2022-10-05
+| v1.9    | 2022-11-15   | psschwei       | evankanderson       | 2022-11-08 | 2022-11-16
 
 ---
 
