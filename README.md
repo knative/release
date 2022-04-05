@@ -181,7 +181,9 @@ if buoy check go.mod --domain knative.dev --release ${RELEASE} --verbose; then
 fi
 ```
 
-If there are changes, then it's NO-GO, otherwise it's GO
+If there are changes, then it's NO-GO, otherwise it's GO.
+
+NOTE: The releasability check will not work on dot releases and there is a potential for false positives.
 
 ### Just one last check before cutting
 
@@ -248,13 +250,11 @@ leads to fix them.
 ### What could go wrong?
 
 In case you cut a branch before it was ready (e.g. some deps misalignment, a
-failing test, etc), you can try to restart this process. But first, clean up the
-repo in this order:
+failing test, etc), then follow the steps below:
 
-1. Remove the Github release (if any)
-1. Remove the git tag (if any) using `git push --delete origin v0.20.0`
-   (assuming `origin` is the `knative.dev` repo)
-1. Remove the git branch (if any) from the Github UI
+1. Mark the broken release as a `pre-release`
+1. Create a dot release
+1. Repeat the steps for a release for the new dot release
 
 
 ---
@@ -293,7 +293,7 @@ to this release [sample PR](https://github.com/knative-sandbox/.github/pull/152)
 Notice that you only need to update the file in the [`knative-sandbox`](https://github.com/knative-sandbox/.github/blob/main/workflow-templates/knative-releasability.yaml) repository as it is treated as the source of truth and the changes are propagated from there. This change must be propagated to all the other repos **before** the following repos are cut.
 
 These changes will be propagated to the rest of Knative in the next round of
-workflow syncs.
+workflow syncs. Check to ensure that it has indeed propagated and if not the sync will have to manually triggered.
 
 ### Announce the imminent `pkg` cut
 
@@ -390,6 +390,10 @@ repo. Wait for [release automation](#the-prow-job) to kick in (runs on a 2 hour
 interval). Once the release automation passed, it will create a release tag in
 the repository. Enhance the respective tags with the collected release-notes
 using the GitHub UI.
+
+**NOTE:** The release day does not mean one has to release everything. The 
+pipeline outlined below will take time to complete and it is ok for the release
+to take days. The day of the release marks the beginning of this process.
 
 In general the release dependency order is something like the following (as of
 v0.20). Note: `buoy check` will fail if the dependencies are not yet ready.
