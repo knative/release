@@ -287,10 +287,8 @@ used to help manage this release.
 ### Update the Knative releasability defaults
 
 Update the defaults in
-[knative-releasability.yaml](https://github.com/knative-sandbox/.github/blob/d2c0b2981fe359ad4b392b1fd955d10dc4894fe4/workflow-templates/knative-releasability.yaml#L39-L44)
-to this release [sample PR](https://github.com/knative-sandbox/.github/pull/152).
-
-Notice that you only need to update the file in the [`knative-sandbox`](https://github.com/knative-sandbox/.github/blob/main/workflow-templates/knative-releasability.yaml) repository as it is treated as the source of truth and the changes are propagated from there. This change must be propagated to all the other repos **before** the following repos are cut.
+[knative-releasability.yaml](https://github.com/knative-sandbox/knobots/blob/main/workflow-templates/knative-releasability.yaml)
+to this release [sample PR](https://github.com/knative-sandbox/knobots/pull/170).
 
 These changes will be propagated to the rest of Knative in the next round of
 workflow syncs. Check to ensure that it has indeed propagated and if not the sync will have to manually triggered.
@@ -497,6 +495,6 @@ https://prow.knative.dev/?job=ci-knative-prow-jobs-syncer
 grant ACLs for the next release leads, and to remove yourself from the rotation.
 Include the next release leads in the PR as a reminder.
 
-1. Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to
+1. Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/152/files) to
 bump knobots auto release workflow to the next release.
 
