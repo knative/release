@@ -46,17 +46,6 @@ This roster is seeded with approvers from the Client workgroups.
 
 | Release | Release Date | Serving        | Eventing            | PKG cut    | Unpin repos
 | ------- | ------------ | -------------- | --------------------| ---------- | -----------
-| v0.20   | 2021-01-12   | nak3           | slinkydeveloper     | 2021-01-07 | 2021-01-13
-| v0.21   | 2021-02-23   | mattmoor       | lionelvillard       | 2021-02-16 | 2021-02-24
-| v0.22   | 2021-04-06   | markusthoemmes | evankanderson       | 2021-03-30 | 2021-04-07
-| v0.23   | 2021-05-18   | tcnghia        | vaikas              | 2021-05-11 | 2021-05-19
-| v0.24   | 2021-06-29   | dprotaso       | matzew              | 2021-06-22 | 2021-06-30
-| v0.25   | 2021-08-10   | yanweiguo      | lionelvillard       | 2021-08-03 | 2021-08-11
-| v0.26   | 2021-09-21   | ZhiminXiang    | evankanderson       | 2021-09-14 | 2021-09-22
-| v1.0    | 2021-11-02   | julz           | bmo                 | 2021-10-26 | 2021-11-03
-| v1.1    | 2021-12-14   | nak3           | matzew              | 2021-12-07 | 2021-12-15
-| v1.2    | 2022-01-25   | dprotaso       | psschwei            | 2022-01-18 | 2022-01-26
-| v1.3    | 2022-03-08   | carlisia/kvmware | xtreme-sameer-vohra/kvmware | 2022-03-01 | 2022-03-09
 | v1.4    | 2022-04-19   | nader-ziada    | ikvmw               | 2022-04-12 | 2022-04-20
 | v1.5    | 2022-05-31   | dprotaso       | lionelvillard       | 2022-05-24 | 2022-06-01
 | v1.6    | 2022-07-12   | ZhiminXiang    | evankanderson       | 2022-07-05 | 2022-07-13
