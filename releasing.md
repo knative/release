@@ -227,6 +227,7 @@ Currently the following plugins are available with their own formulas:
 * [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
 * [kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
 * [kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart/) is managed via `quickstart.rb` formula
+* [kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event) is managed via `event.rb` formula
 
 The artifact checksums can be found on the respective release pages. Once the
 PR is merged, [cut a new branch](#cut-the-branch). There is no automation after
