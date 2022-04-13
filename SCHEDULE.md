@@ -1,4 +1,4 @@
-# Knative Release
+# Knative Release Roster
 
 This document includes the roster to perform a Knative release.
 

@@ -1,5 +1,4 @@
-
-# Release Process
+# Knative Release
 
 Below you'll find the instructions to release a `knative.dev` repository.
 
