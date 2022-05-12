@@ -375,6 +375,5 @@ In case you cut a branch before it was ready (e.g. some deps misalignment, a
 failing test, etc), then follow the steps below:
 
 1. Mark the broken release as a `pre-release`
-1. Create a dot release
+1. Create a dot release by waiting until the job triggers (once a week on Tue) or [on demand](https://github.com/knative/test-infra/blob/main/guides/manual_release.md#creating-a-dot-release-on-demand).
 1. Repeat the steps for a release for the new dot release
-
