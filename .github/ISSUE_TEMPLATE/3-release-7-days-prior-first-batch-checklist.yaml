@@ -1,0 +1,36 @@
+name: 7 days prior - first batch of repos checklist
+description: This release checklist tracks the release of the supporting repos.
+title: "[Release vx.xx]: 7 days prior - first batch of repos checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-3
+  type: checkboxes
+  attributes:
+    label: Please only mark each repo as done after it has been verified as released and published.
+    description: |
+      - Please change the title to include the current release.
+      - See the full [release instructions](https://github.com/knative/release/blob/main/INSTRUCTIONS.md) for details.
+      - Please ensure that there are no outstanding PRs for each repo before [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#cut-the-branch) cutting its release branch.
+      - For each repo listed, (all except **knative.dev/hack**):
+        - follow the specific instructions to [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#release-a-repository).
+        - note: these supporting repos do not get a release tag.
+        - [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#aligning-the-dependencies).
+    options:
+      - label: All items on the "14 days prior to release checklistt" have been checked off
+        required: true
+      - label: step 1 - knative.dev/hack release branch has been cut (hack does not have dependencies)
+      - label: step 2 - knative.dev/pkg release branch has been cut
+      - label: step 3 - dependencies for the knative.dev/pkg release are up-to-date
+      - label: step 4 - knative.dev/networking release branch has been cut
+      - label: step 5 - no dependency needed to be updated for the knative.dev/networking release
+      - label: step 6 - knative.dev/caching release branch has been cut
+      - label: step 7 - no dependency needed to be updated for the knative.dev/caching release
+      - label: step 8 - knative.dev/reconciler-test release branch has been cut
+      - label: step 9 - no dependency needed to be updated for the knative.dev/reconciler-test release
+      - label: step 10 - knative.dev/control-protocol release branch has been cut
+      - label: step 11 - no dependency needed to be updated for the knative.dev/control-protocol release
+      - label: Announcement of the imminent `pkg` cut has been made in the **#general** Slack channel
+      - label: Nightly builds have been checked for each repo
+      - label: Release notes have been collected for each repo (that has them)
+      - label: A new GitHub issue for the "1 day prior to release checklist" has been created

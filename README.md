@@ -12,9 +12,11 @@ How to release a `knative.dev` repository.
 | v1.8    | 2022-10-04   | nak3           | lionelvillard       | 2022-09-27 | 2022-10-05
 | v1.9    | 2022-11-15   | psschwei       | evankanderson       | 2022-11-08 | 2022-11-16
 
-[Roster](./ROSTER.md) has the roster for each Knative release.
+## Release Leads
 
-[Instructions](./INSTRUCTIONS.md) has the instructions for cutting a release.
+Release lead volunteers will need to follow the [release instructions](./INSTRUCTIONS.md) for cutting a Knative release.
+
+Current Knative volunteers are listed in the [release roster](./ROSTER.md). If you would like to be a release lead, please open a PR to add your name to the list!
 
 ## Repo Releasability
 

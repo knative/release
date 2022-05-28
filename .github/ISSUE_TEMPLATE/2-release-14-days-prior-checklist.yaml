@@ -1,0 +1,19 @@
+name: 14 days prior to release checklist
+description: This release checklist tracks that the releasability defaults have been done and propagated.
+title: "[Release vx.xx]: 14 days prior to release checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-2
+  type: checkboxes
+  attributes:
+    label: Please mark each task as they get done.
+    description: |
+      - Please change the title to include the current release.
+      - See the full [release instructions](https://github.com/knative/release/blob/main/INSTRUCTIONS.md) for details.
+    options:
+      - label: All items on the "First week of release rotation checklist" have been checked off
+        required: true
+      - label: The Knative releasability defaults have been updated
+      - label: The releasability defaults update has been propagated
+      - label: A new GitHub issue for the "7 days Prior to Release Checklist" has been created

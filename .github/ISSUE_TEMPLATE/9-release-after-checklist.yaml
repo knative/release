@@ -1,0 +1,11 @@
+# Pin issue: https://docs.github.com/en/issues/tracking-your-work-with-issues/pinning-an-issue-to-your-repository
+
+
+# - [ ] All items on the "Day of Release Checklist" have been checked off
+# - [ ] homebrew-client updated
+# - [ ] homebrew-kn-plugins updated
+# - [ ] Add the release to the [release table](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md)
+# - [ ] Watch for the PR like [this one](https://github.com/knative/test-infra/pull/2670) to enable dot releases on the new releases and approve it. These are create by the Prow https://prow.knative.dev/?job=ci-knative-prow-jobs-syncer
+# - [ ] Send a PR like [this one](https://github.com/knative-sandbox/knobots/pull/87) to bump knobots auto release workflow to the next release.
+
+

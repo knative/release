@@ -1,0 +1,26 @@
+name: Release - third batch of repos checklist
+description: This release checklist requires that the eventing repo has been released and published.
+title: "[Release vx.xx]: third batch of repos checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-4
+  type: checkboxes
+  attributes:
+    label: Please only mark each repo as done after it has been verified as released and published.
+    description: |
+      - Please change the title to include the current release.
+      - See the full [release instructions](https://github.com/knative/release/blob/main/INSTRUCTIONS.md) for details.
+      - Please ensure that there are no outstanding PRs for each repo before cutting its release branch.
+      - Note that it is not required that all repos be released on the same day the release is scheduled to start.
+      - Before cutting a release branch for any of the repos on this list, the `eventing` repo must have been [released and published](https://github.com/knative/eventing/releases).
+      - Follow the specific instructions to [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#release-a-repository) for each repo listed.
+    options:
+      - label: All items on the "Release - second batch of repos checklist" have been checked off
+        required: true
+      - label: knative.dev/eventing-ceph
+      - label: knative.dev/eventing-kogito
+      - label: knative.dev/eventing-nats
+      - label: knative.dev/eventing-rabbitmq
+      - label: knative.dev/sample-source
+      - label: A new GitHub issue for the "Release - fourth batch of repos checklist" has been created
