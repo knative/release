@@ -151,6 +151,7 @@ Use the generated notes to:
 1. add them to the [HackMD document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA)
 2. ask the relevant WG leads if they have any add or edit for the updated repo notes in the [HackMD document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA)
 3. use the GitHub UI to update the repo release tag with the final notes
+
 ## Homebrew updates
 ### homebrew-client
 After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
