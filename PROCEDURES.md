@@ -1,37 +1,4 @@
 # Procedures
-
-- [Procedures](#procedures)
-  - [Releasing a repository](#releasing-a-repository)
-  - [Open PR check](#open-pr-check)
-  - [Build health check](#build-health-check)
-  - [Dependency check](#dependency-check)
-    - [Exceptions](#exceptions)
-    - [Aligning dependencies](#aligning-dependencies)
-  - [Releasability check](#releasability-check)
-    - [Exceptions](#exceptions-1)
-    - [Updating the releasability defaults](#updating-the-releasability-defaults)
-    - [Verifying releasability](#verifying-releasability)
-  - [Cut a branch](#cut-a-branch)
-    - [Exceptions](#exceptions-2)
-    - [Cutting a branch](#cutting-a-branch)
-    - [What could go wrong?](#what-could-go-wrong)
-  - [Release automation check](#release-automation-check)
-    - [Exceptions](#exceptions-3)
-    - [Nightly job](#nightly-job)
-    - [Release job](#release-job)
-    - [Manually triggering a release](#manually-triggering-a-release)
-  - [Release notes](#release-notes)
-    - [Exceptions](#exceptions-4)
-    - [New release notes document](#new-release-notes-document)
-    - [Release notes update](#release-notes-update)
-  - [Homebrew updates](#homebrew-updates)
-    - [homebrew-client](#homebrew-client)
-    - [homebrew-kn-plugins](#homebrew-kn-plugins)
-  - [Administrative work](#administrative-work)
-    - [Permissions for release leads](#permissions-for-release-leads)
-    - [Creating a release Slack channel](#creating-a-release-slack-channel)
-    - [Updating the release schedule](#updating-the-release-schedule)
-
 ## Releasing a repository
 To release a `knative.dev` repository, these are the steps needed, in order:
 
