@@ -1,0 +1,20 @@
+name: T-minus 14 days checklist
+description: This release checklist tracks that the releasability defaults have been updated and propagated.
+title: "[Release vx.xx]: T-minus 14 days checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-2
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This release checklist tracks that the releasability defaults have been updated and propagated.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-14-days).
+    options:
+      - label: All items on the "T-minus 30 days checklist" have been checked off
+        required: true
+      - label: The releasability defaults have been updated
+      - label: The releasability defaults update has been propagated thru all `knative.dev` repos
+      - label: An announcement has been made in the `#general` Slack channel that the `pkg` will be cut in a week
+      - label: A new GitHub issue for the "T-minus 7 days checklist" has been created

@@ -1,3 +1,21 @@
+name: Post release checklist
+description: This release checklist tracks the work to be done post release.
+title: "[Release vx.xx]: Post release checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-4
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This release checklist tracks the work to be done post release.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#post-release).
+    options:
+      - label: All items on the "T-minus zero first last batch checklist" have been checked off
+        required: true
+
+
 # Pin issue: https://docs.github.com/en/issues/tracking-your-work-with-issues/pinning-an-issue-to-your-repository
 
 

@@ -1,0 +1,23 @@
+name: T-minus zero second batch checklist
+description: This release checklist tracks the second batch of core repos to be released.
+title: "[Release vx.xx]: T-minus zero second batch checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-4
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This release checklist tracks the second batch of core repos to be released.
+      - Please only mark a repo as done after it has been verified as released and published.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-zero-second-batch).
+    options:
+      - label: All items on the "T-minus zero first batch checklist" have been checked off
+        required: true
+      - label: knative.dev/eventing-ceph
+      - label: knative.dev/eventing-kogito
+      - label: knative.dev/eventing-nats
+      - label: knative.dev/eventing-rabbitmq
+      - label: knative.dev/sample-source
+      - label: A new GitHub issue for the "T-minus zero third batch checklist" has been created

@@ -1,0 +1,25 @@
+name: T-minus zero last batch checklist
+description: xxx
+title: "[Release vx.xx]: T-minus zero last batch checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-4
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This release checklist tracks the last batch of core repos to be released.
+      - Please only mark a repo as done after it has been verified as released and published.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-zero-last-batch).
+    options:
+      - label: All items on the "T-minus zero third batch checklist" have been checked off
+        required: true
+      - label: knative.dev/eventing-kafka-broker
+      - label: knative.dev/eventing-autoscaler-keda
+      - label: knative.dev/kn-plugin-admin
+      - label: knative.dev/kn-plugin-event
+      - label: knative.dev/kn-plugin-source-kafka
+      - label: knative.dev/kn-plugin-source-kamelet
+      - label: knative.dev/kn-plugin-quickstart
+      - label: A new GitHub issue for the "Post release checklist" has been created

@@ -1,0 +1,23 @@
+name: T-minus zero third batch checklist
+description: xxx.
+title: "[Release vx.xx]: T-minus zero third batch checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-4
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This release checklist tracks the third batch of core repos to be released.
+      - Please only mark a repo as done after it has been verified as released and published.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-zero-third-batch).
+    options:
+      - label: All items on the "T-minus zero second batch checklistt" have been checked off
+        required: true
+      - label: knative.dev/client
+      - label: knative.dev/eventing-kafka
+      - label: knative.dev/eventing-redis
+      - label: knative.dev/eventing-github
+      - label: knative.dev/eventing-gitlab
+      - label: A new GitHub issue for the "T-minus zero last batch checklist" has been created

@@ -1,23 +1,19 @@
-name: 7 days prior - first batch of repos checklist
-description: This release checklist tracks the release of the supporting repos.
-title: "[Release vx.xx]: 7 days prior - first batch of repos checklist"
+name: T-minus 7 days checklist
+description: This release checklist tracks the release of the supporting repos and other timely actions.
+title: "[Release vx.xx]: T-minus 7 days checklist"
 assignees:
   - knative-release-leads
 body:
 - id: release-3
   type: checkboxes
   attributes:
-    label: Please only mark each repo as done after it has been verified as released and published.
+    label: Please change the title to include the current release.
     description: |
-      - Please change the title to include the current release.
-      - See the full [release instructions](https://github.com/knative/release/blob/main/INSTRUCTIONS.md) for details.
-      - Please ensure that there are no outstanding PRs for each repo before [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#cut-the-branch) cutting its release branch.
-      - For each repo listed, (all except **knative.dev/hack**):
-        - follow the specific instructions to [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#release-a-repository).
-        - note: these supporting repos do not get a release tag.
-        - [release a repository](https://github.com/knative/release/blob/main/INSTRUCTIONS.md#aligning-the-dependencies).
+      - This release checklist tracks the release of the supporting repos and other timely actions.
+      - Please only mark a repo as done after it has been verified as released and published.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-7-days).
     options:
-      - label: All items on the "14 days prior to release checklistt" have been checked off
+      - label: All items on the "T-minus 14 days checklist" have been checked off
         required: true
       - label: step 1 - knative.dev/hack release branch has been cut (hack does not have dependencies)
       - label: step 2 - knative.dev/pkg release branch has been cut
@@ -33,4 +29,4 @@ body:
       - label: Announcement of the imminent `pkg` cut has been made in the **#general** Slack channel
       - label: Nightly builds have been checked for each repo
       - label: Release notes have been collected for each repo (that has them)
-      - label: A new GitHub issue for the "1 day prior to release checklist" has been created
+      - label: A new GitHub issue for the "T-minus 1 day checklist" has been created
