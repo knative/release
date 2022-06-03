@@ -10,23 +10,18 @@ body:
     label: Please change the title to include the current release.
     description: |
       - This release checklist tracks the release of the supporting repos and other timely actions.
-      - Please only mark a repo as done after it has been verified as released and published.
+      - Please only mark a repo as done after it has had its release branch cut.
       - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-7-days).
     options:
       - label: All items on the "T-minus 14 days checklist" have been checked off
         required: true
-      - label: step 1 - knative.dev/hack release branch has been cut (hack does not have dependencies)
-      - label: step 2 - knative.dev/pkg release branch has been cut
-      - label: step 3 - dependencies for the knative.dev/pkg release are up-to-date
-      - label: step 4 - knative.dev/networking release branch has been cut
-      - label: step 5 - no dependency needed to be updated for the knative.dev/networking release
-      - label: step 6 - knative.dev/caching release branch has been cut
-      - label: step 7 - no dependency needed to be updated for the knative.dev/caching release
-      - label: step 8 - knative.dev/reconciler-test release branch has been cut
-      - label: step 9 - no dependency needed to be updated for the knative.dev/reconciler-test release
-      - label: step 10 - knative.dev/control-protocol release branch has been cut
-      - label: step 11 - no dependency needed to be updated for the knative.dev/control-protocol release
-      - label: Announcement of the imminent `pkg` cut has been made in the **#general** Slack channel
-      - label: Nightly builds have been checked for each repo
-      - label: Release notes have been collected for each repo (that has them)
+      - label: A fresh HackMD release notes document has been pinned to the **#*release-xdotx** Slack channel
+      - label: An announcement has been made in the **#general** Slack channel that the cut of `pkg` is immminent
+      - label: The nightly release build status has been verified for each of the core knative.dev repos
+      - label: knative.dev/hack
+      - label: knative.dev/pkg
+      - label: knative.dev/networking
+      - label: knative.dev/caching
+      - label: knative.dev/reconciler-test
+      - label: knative.dev/control-protocol
       - label: A new GitHub issue for the "T-minus 1 day checklist" has been created

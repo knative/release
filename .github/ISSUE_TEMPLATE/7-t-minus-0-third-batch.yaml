@@ -10,7 +10,7 @@ body:
     label: Please change the title to include the current release.
     description: |
       - This release checklist tracks the third batch of core repos to be released.
-      - Please only mark a repo as done after it has been verified as released and published.
+      - Please only mark a repo as done after it has been verified the release has been published. Release notes can be done later.
       - View [documentation](https://github.com/knative/release/blob/main/PHASES.md#t-minus-zero-third-batch).
     options:
       - label: All items on the "T-minus zero second batch checklistt" have been checked off

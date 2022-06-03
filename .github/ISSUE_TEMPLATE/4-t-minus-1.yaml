@@ -15,5 +15,5 @@ body:
       - label: All items on the "T-minus 7 days checklist" have been checked off
         required: true
       - label: Obtained ACK from each WG leads that the release is imminent and is green-lighted
-      - label: Nighly builds are passing for each repo on the [list of nightly builds](https://github.com/knative/release/blob/main/README.md#repo-releasability)
+      - label: A re-check of the nightly release build status has been done for each of the core knative.dev repos
       - label: A new GitHub issue for the "T-minus zero first batch checklist" has been created
