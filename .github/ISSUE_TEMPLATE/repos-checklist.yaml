@@ -1,0 +1,48 @@
+name: Knative repository release checklist
+description: This checklist tracks the `knative.dev` repos to be released.
+title: "[Release vx.xx]: T-minus zero first batch checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-repos
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This checklist tracks the `knative.dev` repos to be released.
+      - Please only mark a repo as done:
+        - for supporting repos, after a release branch has been cut
+        - for core repos, after it has been verified the release has been published (release notes can be done later)
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md).
+    options:
+      - label: knative.dev/hack
+      - label: knative.dev/pkg
+      - label: knative.dev/networking
+      - label: knative.dev/caching
+      - label: knative.dev/reconciler-test
+      - label: knative.dev/control-protocol
+      - label: knative.dev/serving
+      - label: knative.dev/net-certmanager
+      - label: knative.dev/net-contour
+      - label: knative.dev/net-http01
+      - label: knative.dev/net-istio
+      - label: knative.dev/net-kourier
+      - label: knative.dev/net-gateway-api
+      - label: knative.dev/eventing
+      - label: knative.dev/sample-controller
+      - label: knative.dev/eventing-ceph
+      - label: knative.dev/eventing-kogito
+      - label: knative.dev/eventing-rabbitmq
+      - label: knative.dev/sample-source
+      - label: knative.dev/client
+      - label: knative.dev/eventing-kafka
+      - label: knative.dev/eventing-redis
+      - label: knative.dev/eventing-github
+      - label: knative.dev/eventing-gitlab
+      - label: knative.dev/eventing-kafka-broker
+      - label: knative.dev/eventing-autoscaler-keda
+      - label: knative.dev/kn-plugin-admin
+      - label: knative.dev/kn-plugin-event
+      - label: knative.dev/kn-plugin-source-kafka
+      - label: knative.dev/kn-plugin-source-kamelet
+      - label: knative.dev/kn-plugin-quickstart

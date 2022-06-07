@@ -1,0 +1,28 @@
+name: Knative release tasks checklist
+description: This checklist tracks the tasks to be done for a new Knative release.
+title: "[Release vx.xx]: T-minus 30 days checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: release-tasks
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release.
+    description: |
+      - This checklist tracks the tasks to be done for a new Knative release.
+      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md).
+    options:
+      - label: Prior release leads have been removed from rotation
+      - label: New release leads have been added for the new rotation
+      - label: A new Slack channel for the release has been created
+      - label: The releasability defaults have been updated
+      - label: The releasability defaults update has been propagated thru all applicable `knative.dev` repos
+      - label: An announcement has been made in the **#general** Slack channel that `pkg` will be released in a week
+      - label: An announcement has been made in the **#general** Slack channel that the cut of `pkg` is immminent
+      - label: The nightly release build status has been verified for each of the core knative.dev repos
+      - label: Obtained ACK from each WG leads that the release is imminent and is green-lighted
+      - label: A re-check of the nightly release build status has been done for each of the core knative.dev repos
+      - label: Post release - Homebrew tap has been updated
+      - label: Post release - The client plugin's Homebrew repo has been updated
+      - label: Post release - Release schedule has been updated
+      - label: Post release - An announcement was made in the **#general** and **#operation** Slack channels that the new Knative release is out
