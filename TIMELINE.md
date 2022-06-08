@@ -32,7 +32,6 @@ Cut the release branch of all the [supporting repos](#supporting-repos). These a
 - 📄 Open a new [release notes document](PROCEDURES.md#new-release-notes-document) for the release.
 - 📣 Announce on the **#general** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
 - 👀 Verify that the [nightly release automation](PROCEDURES.md#nightly-job) is passing for each of the core `knative.dev` repos. If any is failing, reach out to the corresponding WG leads and ask them to investigate. Repeat throughout the week.
-- 📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
 
 🚨 **NOTES:**
 
@@ -43,6 +42,8 @@ Cut the release branch of all the [supporting repos](#supporting-repos). These a
 - Automation will trigger all the downstream repos to update their dependencies to these new versions in the next few cycles. The goal is to have the first wave of repo releases (**serving**, **eventing**, etc) become "releasable" by the scheduled [day of release](#t-minus-zero---day-of-release). This is signaled via the reporting of the [releasability](PROCEDURES.md#releasability-check) status posted to the **release-`xdotx`** Slack channel every morning (5am PST, M-F).
 
 ### Supporting repos
+📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
+
 | Repo   | Releasability   |
 | ---------------------- | ---------------------- |
 | [knative.dev/hack](https://github.com/knative/hack) | N/A |

@@ -13,6 +13,7 @@ body:
       - Please only mark a repo as done:
         - for supporting repos, after a release branch has been cut
         - for core repos, after it has been verified the release has been published (release notes can be done later)
+      - Please see the [TIMELINE](https://github.com/knative/release/blob/main/TIMELINE.md) document for more specific guidance.
     options:
       - label: T-minus 30 days - Prior release leads have been removed from rotation
       - label: T-minus 30 days - New release leads have been added for the new rotation
