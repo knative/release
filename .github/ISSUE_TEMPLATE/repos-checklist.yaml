@@ -1,6 +1,6 @@
 name: Knative repository release checklist
 description: This checklist tracks the `knative.dev` repos to be released.
-title: "[Release vx.xx]: T-minus zero first batch checklist"
+title: "[Release vx.xx]: Release repos checklist"
 assignees:
   - knative-release-leads
 body:
@@ -13,36 +13,35 @@ body:
       - Please only mark a repo as done:
         - for supporting repos, after a release branch has been cut
         - for core repos, after it has been verified the release has been published (release notes can be done later)
-      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md).
     options:
-      - label: "T-minus 7 days: knative.dev/hack"
-      - label: "T-minus 7 days: knative.dev/pkg (dependency: knative.dev/hack)"
-      - label: "T-minus 7 days: knative.dev/networking (dependency: knative/pkg)"
-      - label: "T-minus 7 days: knative.dev/caching (dependency: knative/pkg)"
-      - label: "T-minus 7 days: knative.dev/reconciler-test (dependency: knative/pkg)"
-      - label: "T-minus 7 days: knative.dev/control-protocol (dependency: knative/reconciler-test)"
-      - label: "T-minus 0 day: knative.dev/serving (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-certmanager (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-contour (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-http01 (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-istio (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-kourier (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/net-gateway-api (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/eventing (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/sample-controller (dependency: knative/control-protocol)"
-      - label: "T-minus 0 day: knative.dev/eventing-ceph (dependency: knative/eventing)"
-      - label: "T-minus 0 day: knative.dev/eventing-kogito (dependency: knative/eventing)"
-      - label: "T-minus 0 day: knative.dev/eventing-rabbitmq (dependency: knative/eventing)"
-      - label: "T-minus 0 day: knative.dev/sample-source (dependency: knative/eventing)"
-      - label: "T-minus 0 day: knative.dev/client (dependencies: knative/eventing, knative/serving)"
-      - label: "T-minus 0 day: knative.dev/eventing-kafka (dependencies: knative/eventing, knative/serving)"
-      - label: "T-minus 0 day: knative.dev/eventing-redis (dependencies: knative/eventing, knative/serving)"
-      - label: "T-minus 0 day: knative.dev/eventing-github (dependencies: knative/eventing, knative/serving)"
-      - label: "T-minus 0 day: knative.dev/eventing-gitlab (dependencies: knative/eventing, knative/serving)"
-      - label: "T-minus 0 day: knative.dev/eventing-kafka-broker (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/eventing-autoscaler-keda (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/kn-plugin-admin (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/kn-plugin-event (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/kn-plugin-source-kafka (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/kn-plugin-source-kamelet (dependencies: all of the above repos)"
-      - label: "T-minus 0 day: knative.dev/kn-plugin-quickstart (dependencies: all of the above repos)"
+      - label: knative.dev/hack
+      - label: knative.dev/pkg
+      - label: knative.dev/networking
+      - label: knative.dev/caching
+      - label: knative.dev/reconciler-test
+      - label: knative.dev/control-protocol
+      - label: knative.dev/serving
+      - label: knative.dev/net-certmanager
+      - label: knative.dev/net-contour
+      - label: knative.dev/net-http01
+      - label: knative.dev/net-istio
+      - label: knative.dev/net-kourier
+      - label: knative.dev/net-gateway-api
+      - label: knative.dev/eventing
+      - label: knative.dev/sample-controller
+      - label: knative.dev/eventing-ceph
+      - label: knative.dev/eventing-kogito
+      - label: knative.dev/eventing-rabbitmq
+      - label: knative.dev/sample-source
+      - label: knative.dev/client
+      - label: knative.dev/eventing-kafka
+      - label: knative.dev/eventing-redis
+      - label: knative.dev/eventing-github
+      - label: knative.dev/eventing-gitlab
+      - label: knative.dev/eventing-kafka-broker
+      - label: knative.dev/eventing-autoscaler-keda
+      - label: knative.dev/kn-plugin-admin
+      - label: knative.dev/kn-plugin-event
+      - label: knative.dev/kn-plugin-source-kafka
+      - label: knative.dev/kn-plugin-source-kamelet
+      - label: knative.dev/kn-plugin-quickstart

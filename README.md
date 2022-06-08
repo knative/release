@@ -12,9 +12,4 @@ This project is for Knative release leads who need to track and perform a series
 | v1.9    | 2022-11-15   | psschwei       | evankanderson       | 2022-11-08 | 2022-11-16
 
 ## Release leads
-
-Current Knative volunteers are listed in the [release roster](./ROSTER.md). If you would like to be a Knative release lead, please open a PR to add your name to the list!
-
-## Release cycles
-
-[Each phase of a Knative release cycle](PHASES.md) requires its set of actions to be fully completed before moving on to the next phase of the cycle. Most of the phases involve performing various [procedures](PROCEDURES.md) on the [repos to be released](PHASES.md#repos-to-be-released) during that phase.
+The current pool of Knative release lead volunteers are listed in the [release roster](./ROSTER.md). If you would like to be a Knative release lead, please open a PR to add your name to the list! Please note: Before volunteering to lead a specific release, please look over the [release timeline](TIMELINE.md) to ensure your availability during the various checkpoints for that release is going to be a match.

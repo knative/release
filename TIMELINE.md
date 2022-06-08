@@ -1,72 +1,49 @@
 
-# Phases of a Knative release cycle
+# Timeline of a Knative release cycle
 
-We release each repository of `knative.dev` every 6 weeks. Please check the [release schedule](README.md#release-schedule) to calculate when to start work on each phase of a release cycle.
+We release each repository of `knative.dev` every 6 weeks. Please check the [release schedule](README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
 
 ## Repos to be released
-- All repos to be released are listed in this document, broken down by phases
+- All repos to be released are listed in this document
 - Each repo indicates its releasability and other statuses, when applicable
-- Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** cutting a release branch
+- Each repo needs to be successfully updated to use the latest version of all dependencies **before** cutting its release branch
 
-## Checklists
-- The cheklist in each phase helps to ensure that all work needed for a release is completed, and done in the proper order
-- Many checklist items require performing various checks and other documented [procedures](PROCEDURES.md)
-- For each phase, open its corresponding GitHub checklist issue at the start of the work
-- Please do not open a new checklist before being done with the one that comes before
-
-## Phases
+## Timeline
    - [T-minus 30 days](#t-minus-30-days)
    - [T-minus 14 days](#t-minus-14-days)
    - [T-minus 7 days](#t-minus-7-days)
    - [T-minus 1 day](#t-minus-1-day)
    - [T-minus zero - day of the release](#t-minus-zero---day-of-release)
-    - [T-minus zero first batch](#t-minus-zero-first-batch)
-    - [T-minus zero second batch](#t-minus-zero-second-batch)
-    - [T-minus zero third batch](#t-minus-zero-third-batch)
-    - [T-minus zero last batch](#t-minus-zero-last-batch)
    - [Post-release](#post-release)
 
 ## T-minus 30 days
-This phase tracks the initial setup of a new Knative release.
-
-✅ Open a [tasks checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=tasks-checklist.yaml) issue.
-
-📝 See these instructions for further guidance:
-
-- [Permissions for release leads](PROCEDURES.md#permissions-for-release-leads).
-- [Creating a release Slack channel](PROCEDURES.md#creating-a-release-slack-channel).
+- ✅ Open a [tasks checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=tasks-checklist.yaml) issue.
+- 📝 See these instructions for further guidance:
+  - [Permissions for release leads](PROCEDURES.md#permissions-for-release-leads).
+  - [Creating a release Slack channel](PROCEDURES.md#creating-a-release-slack-channel).
 
 ## T-minus 14 days
-This phase tracks that the releasability defaults have been updated and propagated.
+- Ensure that the releasability defaults have been updated and propagated.
+- 📝 See instructions for guidance on [updating the releasability defaults](PROCEDURES.md#updating-the-releasability-defaults).
 
-📝 See instructions for guidance on [updating the releasability defaults](PROCEDURES.md#updating-the-releasability-defaults).
+## T-minus 7 days - releasing supporting repos
+Cut the release branch of all the [supporting repos](#supporting-repos). These are the base repos where we have common code and common scripts.
 
-## T-minus 7 days
-This phase tracks the release of the [supporting repos](#supporting-repos) and other timely actions.
+- ✅ Open a [repos checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=repos-checklist.yaml) issue.
+- 📄 Open a new [release notes document](PROCEDURES.md#new-release-notes-document) for the release.
+- 📣 Announce on the **#general** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
+- 👀 Verify that the [nightly release automation](PROCEDURES.md#nightly-job) is passing for each of the core `knative.dev` repos. If any is failing, reach out to the corresponding WG leads and ask them to investigate. Repeat throughout the week.
+- 📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
 
-✅ Open a [repos checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=repos-checklist.yaml) issue.
-
-📄 Open a new [release notes document](PROCEDURES.md#new-release-notes-document) for the release.
-
-### Timely actions
-Now is a good time to take the actions below:
-
-- Announce on the **#general** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
-- Verify that the [nightly release automation](PROCEDURES.md#nightly-job) is passing for each of the core `knative.dev` repos (those to be release in the subsequent phases). If any is failing, reach out to the corresponding WG leads and ask them to investigate. Repeat throughout the week.
-
-### Releasing supporting repos
 🚨 **NOTES:**
 
 - The release branch for each supporting repos must be done **only after** the branch for their dependencies is cut.
+
 - After each repo's release branch is cut, a dependency update might be required for the next repo in the sequence. It is doubly important to have a successful [dependency check](PROCEDURES.md#dependency-check) and subsequently [verify its releasability](PROCEDURES.md#verifying-releasability) before proceeding to cut the branch.
 
-📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
-
-Automation will trigger all the downstream repos to update their dependencies to these new versions in the next few cycles. The goal is to have the first wave of repo releases (**serving**, **eventing**, etc) become "releasable" by the scheduled [day of release](#t-minus-zero---day-of-release). This is signaled via the reporting of the [releasability](PROCEDURES.md#releasability-check) status posted to the **release-`xdotx`** Slack channel every morning (5am PST, M-F).
+- Automation will trigger all the downstream repos to update their dependencies to these new versions in the next few cycles. The goal is to have the first wave of repo releases (**serving**, **eventing**, etc) become "releasable" by the scheduled [day of release](#t-minus-zero---day-of-release). This is signaled via the reporting of the [releasability](PROCEDURES.md#releasability-check) status posted to the **release-`xdotx`** Slack channel every morning (5am PST, M-F).
 
 ### Supporting repos
-These are the base repos where we have common code and common scripts.
-
 | Repo   | Releasability   | Depends on |
 | ---------------------- | ---------------------- |
 | [knative.dev/hack](https://github.com/knative/hack) | N/A | None |
@@ -83,7 +60,13 @@ These are the base repos where we have common code and common scripts.
 ## T-minus zero - day of release
 The release of the core repos starts on the first day of the release schedule.
 
-🚨 **NOTE:** It is not required that all repos in the included sub-sections be released on the same day the release is scheduled to start. The pipeline outlined below will take time to complete and it is ok for the release process to progress over days.
+🚨 **NOTES:**
+
+- It is not required that all repos in the included sub-sections be released on the same day the release is scheduled to start. The pipeline outlined below will take time to complete and it is ok for the release process to progress over days.
+
+- An extra reminder to wait for the `knative.dev/eventing` and `knative.dev/serving` releases to be **published** before running a [dependency check](PROCEDURES.md#dependency-check) and subsequently [verifying releasability](PROCEDURES.md#verifying-releasability) on the repos that depend on these two packages. This will result in their `go.mod` correctly looking like, for example, `knative.dev/eventing v0.31.0`, instead of `knative.dev/eventing v0.30.1-0.20220419135228-39eef14419d8`.
+
+- The release notes of a dependency are not a blocker for proceeding to cut a release for a repo.
 
 ### Exceptions
 We have a few repos inside of Knative that are not handled in the standard release process at the moment. They might have additional dependencies or depend on the releases existing. **Skip these:**
@@ -93,12 +76,10 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | [knative.dev/operator](https://github.com/knative/operator) | [![Releases](https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver)](https://github.com/knative/operator/releases) | [![Releasability](https://github.com/knative/operator/workflows/Releasability/badge.svg)](https://github.com/knative/operator/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_operator_main_periodic)](https://prow.knative.dev?job=nightly_operator_main_periodic) |
 | [knative.dev/docs](https://github.com/knative/docs)       | N/A      | N/A    | N/A                                                                                   |
 
-## T-minus zero - core repos
-This phase tracks the first batch of core repos to be released.
-
-🚨 **Note:** An extra reminder to wait for the `knative.dev/eventing` and `knative.dev/serving` releases from this phase to be **published** before running a [dependency check](PROCEDURES.md#dependency-check) and subsequently [verifying releasability](PROCEDURES.md#verifying-releasability) on the repos in the subsequent phases. The release of these repos will result in the `go.mod` in the repos that depend on them correctly looking like `knative.dev/eventing v0.31.0`, instead of `knative.dev/eventing v0.30.1-0.20220419135228-39eef14419d8`.
-
+## T-minus zero - releasing core repos
 📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
+
+### This group can be started after all the supporting repos have been successfully released.
 
 | Repo   | Release   | Releasability   | Nightly   |  Depends on   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
@@ -113,10 +94,7 @@ This phase tracks the first batch of core repos to be released.
 | [knative.dev/sample-controller](https://github.com/knative-sandbox/sample-controller) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/sample-controller.svg?sort=semver)](https://github.com/knative-sandbox/sample-controller/releases)  | [![Releasability](https://github.com/knative-sandbox/sample-controller/workflows/Releasability/badge.svg)](https://github.com/knative-sandbox/sample-controller/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_sample-controller_main_periodic)](https://prow.knative.dev?job=nightly_sample-controller_main_periodic)  | `hack` `pkg`   |
 
 
-### T-minus zero second batch
-This phase tracks the second batch of core repos to be released.
-
-📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
+### This group can be started after `knative.dev/eventing` has been successfully published.
 
 | Repo   | Release   | Releasability   | Nightly   |   Depends on   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
@@ -125,10 +103,7 @@ This phase tracks the second batch of core repos to be released.
 | [knative.dev/eventing-rabbitmq](https://github.com/knative-sandbox/eventing-rabbitmq)   | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-rabbitmq.svg?sort=semver)](https://github.com/knative-sandbox/eventing-rabbitmq/releases)   | [![Releasability](https://github.com/knative-sandbox/eventing-rabbitmq/workflows/Releasability/badge.svg)](https://github.com/knative-sandbox/eventing-rabbitmq/actions/workflows/knative-releasability.yaml)   | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_eventing-rabbitmq_main_periodic)](https://prow.knative.dev?job=nightly_eventing-rabbitmq_main_periodic) | `eventing` `hack` `pkg` `reconciler-test` |
 | [knative.dev/sample-source](https://github.com/knative-sandbox/sample-source)  | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/sample-source.svg?sort=semver)](https://github.com/knative-sandbox/sample-source/releases)  | [![Releasability](https://github.com/knative-sandbox/sample-source/workflows/Releasability/badge.svg)](https://github.com/knative-sandbox/sample-source/actions/workflows/knative-releasability.yaml)  | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_sample-source_main_periodic)](https://prow.knative.dev?job=nightly_sample-source_main_periodic) | `eventing` `hack` `pkg`  |
 
-### T-minus zero third batch
-This phase tracks the third batch of core repos to be released.
-
-📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
+### This group can be started after both `knative.dev/eventing` and `knative.dev/serving` have been successfully published.
 
 | Repo   | Release   | Releasability   | Nightly   |   Depends on   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
@@ -138,10 +113,7 @@ This phase tracks the third batch of core repos to be released.
 | [knative.dev/eventing-github](https://github.com/knative-sandbox/eventing-github) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-github.svg?sort=semver)](https://github.com/knative-sandbox/eventing-github/releases) | [![Releasability](https://github.com/knative-sandbox/eventing-github/workflows/Releasability/badge.svg)](https://github.com/knative-sandbox/eventing-github/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_eventing-github_main_periodic)](https://prow.knative.dev?job=nightly_eventing-github_main_periodic) | `eventing` `hack` `pkg` `serving`
 | [knative.dev/eventing-gitlab](https://github.com/knative-sandbox/eventing-gitlab) | [![Releases](https://img.shields.io/github/release-pre/knative-sandbox/eventing-gitlab.svg?sort=semver)](https://github.com/knative-sandbox/eventing-gitlab/releases) | [![Releasability](https://github.com/knative-sandbox/eventing-gitlab/workflows/Releasability/badge.svg)](https://github.com/knative-sandbox/eventing-gitlab/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_eventing-gitlab_main_periodic)](https://prow.knative.dev?job=nightly_eventing-gitlab_main_periodic) | `eventing` `hack` `pkg` `serving`
 
-### T-minus zero last batch
-This phase tracks the last batch of core repos to be released.
-
-📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
+### This group can be started after all the previous repos have been successfully published.
 
 | Repo   | Release   | Releasability   | Nightly   |   Depends on   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
@@ -155,8 +127,6 @@ This phase tracks the last batch of core repos to be released.
 
 
 ## Post-release
-This phase tracks the work to be done post release.
-
 📝 See these instructions for further guidance:
 
 - [Homebrew updates](PROCEDURES.md#homebrew-updates).

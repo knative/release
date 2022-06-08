@@ -39,7 +39,7 @@ In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` auto
 
 - If there is no "Upgrade to latest dependencies" PR open, manually trigger the generation of these PRs starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. nUse this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
 - Check the `go.mod` to ensure hashes point to commit hash at the head of the release branch of the dependency repo
-  - For the **[supporting repos](PHASES.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
+  - For the **[supporting repos](TIMELINE.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
   - For the **core release** repos, you should see the dependency version pointing at the version tag. E.g. `knative.dev/eventing v0.20.0` points at the tag `v0.20.0` in the `eventing` repo.
 
 ## Releasability check
@@ -106,7 +106,7 @@ tl;dr: check that the release job succeeded.
 The automation used to cut the actual releases is the very same as the automation used to cut nightly releases. The only difference is that the nightly job runs on `main`, and the release job runs against the release branch.
 
 ### Exceptions
-Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release automation check and this step can be skipped for those. All of the [supporting repos](PHASES.md#supporting-repos) fit these criteria.
+Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release automation check and this step can be skipped for those. All of the [supporting repos](TIMELINE.md#supporting-repos) fit these criteria.
 
 ### Nightly job
 tl;dr: verify the nightly release automation is passing.
@@ -138,7 +138,7 @@ You can manually trigger a release for a repository by re-running its release jo
 
 ## Release notes
 ### Exceptions
-Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release note and this step can be skipped for those. All of the [supporting repos](PHASES.md#supporting-repos) fit these criteria.
+Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release note and this step can be skipped for those. All of the [supporting repos](TIMELINE.md#supporting-repos) fit these criteria.
 
 ### New release notes document
 For a new Knative release version, start a fresh HackMD release notes document by emptying out the [last release notes document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA). Post and pin it to the **release-`xdotx`** Slack channel.

@@ -1,6 +1,6 @@
 name: Knative release tasks checklist
 description: This checklist tracks the tasks to be done for a new Knative release.
-title: "[Release vx.xx]: T-minus 30 days checklist"
+title: "[Release vx.xx]: Release tasks checklist"
 assignees:
   - knative-release-leads
 body:
@@ -10,13 +10,12 @@ body:
     label: Please change the title to include the current release.
     description: |
       - This checklist tracks the tasks to be done for a new Knative release.
-      - View [documentation](https://github.com/knative/release/blob/main/PHASES.md).
     options:
       - label: T-minus 30 days - Prior release leads have been removed from rotation
       - label: T-minus 30 days - New release leads have been added for the new rotation
       - label: T-minus 30 days - A new Slack channel for the release has been created
       - label: T-minus 14 days - The releasability defaults have been updated
-      - label: T-minus 14 days - The releasability defaults update has been propagated thru all applicable `knative.dev` repos
+      - label: T-minus 14 days - The releasability defaults update have been propagated thru all applicable `knative.dev` repos
       - label: T-minus 14 days - An announcement has been made in the **#general** Slack channel that `pkg` will be released in a week
       - label: T-minus 7 days - A fresh HackMD release notes document has been pinned to the **#*release-xdotx** Slack channel
       - label: T-minus 7 days - A draft for the announcement blog post has been started
