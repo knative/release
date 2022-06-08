@@ -1,5 +1,5 @@
 
-# Timeline of a Knative release cycle
+# Timeline of a Knative release
 
 We release each repository of `knative.dev` every 6 weeks. Please check the [release schedule](README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
 
@@ -17,7 +17,7 @@ We release each repository of `knative.dev` every 6 weeks. Please check the [rel
    - [Post-release](#post-release)
 
 ## T-minus 30 days
-- ✅ Open a [tasks checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=tasks-checklist.yaml) issue.
+- ✅ Open a [release checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=release-checklist.yaml) issue.
 - 📝 See these instructions for further guidance:
   - [Permissions for release leads](PROCEDURES.md#permissions-for-release-leads).
   - [Creating a release Slack channel](PROCEDURES.md#creating-a-release-slack-channel).
@@ -29,7 +29,6 @@ We release each repository of `knative.dev` every 6 weeks. Please check the [rel
 ## T-minus 7 days - releasing supporting repos
 Cut the release branch of all the [supporting repos](#supporting-repos). These are the base repos where we have common code and common scripts.
 
-- ✅ Open a [repos checklist](https://github.com/knative/release/issues/new?assignees=knative/knative-release-leads&template=repos-checklist.yaml) issue.
 - 📄 Open a new [release notes document](PROCEDURES.md#new-release-notes-document) for the release.
 - 📣 Announce on the **#general** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
 - 👀 Verify that the [nightly release automation](PROCEDURES.md#nightly-job) is passing for each of the core `knative.dev` repos. If any is failing, reach out to the corresponding WG leads and ask them to investigate. Repeat throughout the week.

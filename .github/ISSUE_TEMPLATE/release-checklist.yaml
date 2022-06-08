@@ -1,0 +1,64 @@
+name: Knative release checklist
+description: This checklist tracks tasks and repo releases for a Knative release.
+title: "[Release vx.xx]: checklist"
+assignees:
+  - knative-release-leads
+body:
+- id: knative-release
+  type: checkboxes
+  attributes:
+    label: Please change the title to include the current release version.
+    description: |
+      - This checklist tracks tasks and repo releases for a Knative release.
+      - Please only mark a repo as done:
+        - for supporting repos, after a release branch has been cut
+        - for core repos, after it has been verified the release has been published (release notes can be done later)
+    options:
+      - label: T-minus 30 days - Prior release leads have been removed from rotation
+      - label: T-minus 30 days - New release leads have been added for the new rotation
+      - label: T-minus 30 days - A new Slack channel for the release has been created
+      - label: T-minus 14 days - The releasability defaults have been updated
+      - label: T-minus 14 days - The releasability defaults update have been propagated thru all applicable `knative.dev` repos
+      - label: T-minus 14 days - An announcement has been made in the **#general** Slack channel that `pkg` will be released in a week
+      - label: T-minus 7 days - A fresh HackMD release notes document has been pinned to the **#*release-xdotx** Slack channel
+      - label: T-minus 7 days - A draft for the announcement blog post has been started
+      - label: T-minus 7 days - An announcement has been made in the **#general** Slack channel that the cut of `pkg` is immminent
+      - label: T-minus 7 days - The nightly release build status has been verified for each of the core knative.dev repos
+      - label: knative.dev/hack
+      - label: knative.dev/pkg
+      - label: knative.dev/networking
+      - label: knative.dev/caching
+      - label: knative.dev/reconciler-test
+      - label: knative.dev/control-protocol
+      - label: T-minus 1 day - Obtained ACK from each WG leads that the release is imminent and is green-lighted
+      - label: T-minus 1 day - A re-check of the nightly release build status has been done for each of the core knative.dev repos
+      - label: knative.dev/serving
+      - label: knative.dev/net-certmanager
+      - label: knative.dev/net-contour
+      - label: knative.dev/net-http01
+      - label: knative.dev/net-istio
+      - label: knative.dev/net-kourier
+      - label: knative.dev/net-gateway-api
+      - label: knative.dev/eventing
+      - label: knative.dev/sample-controller
+      - label: knative.dev/eventing-ceph
+      - label: knative.dev/eventing-kogito
+      - label: knative.dev/eventing-rabbitmq
+      - label: knative.dev/sample-source
+      - label: knative.dev/client
+      - label: knative.dev/eventing-kafka
+      - label: knative.dev/eventing-redis
+      - label: knative.dev/eventing-github
+      - label: knative.dev/eventing-gitlab
+      - label: knative.dev/eventing-kafka-broker
+      - label: knative.dev/eventing-autoscaler-keda
+      - label: knative.dev/kn-plugin-admin
+      - label: knative.dev/kn-plugin-event
+      - label: knative.dev/kn-plugin-source-kafka
+      - label: knative.dev/kn-plugin-source-kamelet
+      - label: knative.dev/kn-plugin-quickstart
+      - label: Post release - Homebrew tap has been updated
+      - label: Post release - The client plugin's Homebrew repo has been updated
+      - label: Post release - Release schedule has been updated
+      - label: Post release - An announcement was made in the **#general** and **#operation** Slack channels that the new Knative release is out
+      - label: Post release - A blog post announcing the release has been published
