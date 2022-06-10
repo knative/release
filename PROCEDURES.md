@@ -12,7 +12,7 @@ To release a `knative.dev` repository, these are the steps needed, in order:
 - ✅ [post release](#post-release)
 
 Most of the above steps are automated. In some noted exceptions, it might be
-necessary to perform some of them manually.cl
+necessary to perform some of them manually.
 
 For some repos, there might also be additional validations, or steps that need to be skipped. These exceptions are documented where they apply.
 
@@ -24,7 +24,7 @@ tl;dr: check that all builds on `main` are passing.
 
 Check if the repository is in a good shape and the builds pass consistently. **This is required** because the [Prow job](#release-job) that builds the release artifacts will execute all the various tests (build, unit, e2e) and, if something goes wrong, the release process will probably need to restart from the beginning.
 
-For any problems in a specific repo, get in touch with the relevant WG leads to fix them.
+For any problems in a specific repo, get in touch with the [relevant WG leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md#working-groups) leads to fix them.
 
 ## Dependency check
 tl;dr: check that all the dependencies for the repo are up-to-date and aligned with the relase version.
@@ -35,15 +35,16 @@ Repos that don't have dependencies naturally don't need a dependency check and t
 ### Aligning dependencies
 Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** its release branch is cut.
 
-In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` automation will run PRs like this [Upgrade to latest dependencies PR](https://github.com/knative/eventing/pull/4713) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
+In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
 
-- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. nUse this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
+- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
 - Check the `go.mod` to ensure hashes point to commit hash at the head of the release branch of the dependency repo
   - For the **[supporting repos](TIMELINE.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
   - For the **core release** repos, you should see the dependency version pointing at the version tag. E.g. `knative.dev/eventing v0.20.0` points at the tag `v0.20.0` in the `eventing` repo.
 
 ## Releasability check
 tl;dr: check that the releasability test is passing.
+
 ### Exceptions
 Repos that don't have dependencies naturally don't need a releasability check and this step can be skipped for those. Currently, `knative.dev/hack` is the only `knative.dev` repo that does not have any dependencies.
 
@@ -66,6 +67,7 @@ If the releasability test reports a NO-GO on a repo where it was previously pass
 
 ## Cut a branch
 tl;dr: cut a release branch from `main`.
+
 ### Exceptions
 For some repositories some extra manual validation and updates need to be performed before the release branch is cut:
 
@@ -74,7 +76,7 @@ For some repositories some extra manual validation and updates need to be perfor
   - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
 - `knative-sandbox/kn-plugin-quickstart`
-  - Update the version numbers of Serving / Kourier / Eventing in [pkg/install/install.go](https://github.com/knative-sandbox/kn-plugin-quickstart/blob/main/pkg/install/install.go#L25-L27) so that the plugin will use the just-released versions.
+  - Update the version numbers of Serving / Kourier / Eventing in [pkg/install/install.go](https://github.com/knative-sandbox/kn-plugin-quickstart/blob/4e57ed10eaac8882b0a81b2861ddaee37bfcd6f9/pkg/install/install.go#L25-L27) so that the plugin will use the just-released versions.
 
 ### Cutting a branch
 Cutting a `release-x.y` branch can be done by using the GitHub UI:
@@ -83,7 +85,7 @@ Cutting a `release-x.y` branch can be done by using the GitHub UI:
 
   ![Click the branch selection box](images/github-branch.png)
 
-2. Search for the correct `release-x.y` branch name for the release.
+1. Search for the correct `release-x.y` branch name for the release.
 
   ![Search for the expected release branch name](images/github-branch-search.png)
 
@@ -167,6 +169,8 @@ After the client release, the [Homebrew tap](https://github.com/knative/homebrew
 ### homebrew-kn-plugins
 Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
 for the the plugins supported after their repos have successfully created a release.
+
+Please follow the instructions on how [to update the plugin versions running a script](https://github.com/knative-sandbox/homebrew-kn-plugins#updating-plugin-versions).
 
 Currently the following plugins are available with their own formulas:
 
