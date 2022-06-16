@@ -7,9 +7,10 @@ To release a `knative.dev` repository, these are the steps needed, in order:
 - ✅ [dependency check](#dependency-check)
 - ✅ [releasability check](#releasability-check)
 - ✅ [cut a branch](#cut-a-branch)
-- ✅ [automation check](#automation-check)
+- ✅ [automation check](#release-automation-check)
 - ✅ [release notes update](#release-notes-update)
-- ✅ [post release](#post-release)
+- ✅ [homebrew updates](#homebrew-updates)
+- ✅ [administrative work](#administrative-work)
 
 Most of the above steps are automated. In some noted exceptions, it might be
 necessary to perform some of them manually.
