@@ -74,7 +74,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | Repo   | Release   | Releasability   | Nightly   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/operator](https://github.com/knative/operator) | [![Releases](https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver)](https://github.com/knative/operator/releases) | [![Releasability](https://github.com/knative/operator/workflows/Releasability/badge.svg)](https://github.com/knative/operator/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_operator_main_periodic)](https://prow.knative.dev?job=nightly_operator_main_periodic) |
-| [knative.dev/docs](https://github.com/knative/docs)       | N/A      | N/A    | N/A                                                                                   |
 
 ## T-minus zero - releasing core repos
 📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
@@ -129,5 +128,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 ## Post-release
 📝 See these instructions for further guidance:
 
+- [Releasing a new version of the Knative documentation](PROCEDURES.md#releasing-a-new-version-of-the-knative-documentation).
 - [Homebrew updates](PROCEDURES.md#homebrew-updates).
 - [Updating the release schedule](PROCEDURES.md#updating-the-release-schedule).
