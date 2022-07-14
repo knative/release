@@ -58,6 +58,7 @@ body:
       - label: knative.dev/kn-plugin-source-kafka
       - label: knative.dev/kn-plugin-source-kamelet
       - label: knative.dev/kn-plugin-quickstart
+      - label: knative.dev/docs
       - label: Post release - Homebrew tap has been updated
       - label: Post release - The client plugin's Homebrew repo has been updated
       - label: Post release - Release schedule has been updated
