@@ -18,6 +18,7 @@ body:
       - label: T-minus 30 days - Prior release leads have been removed from rotation
       - label: T-minus 30 days - New release leads have been added for the new rotation
       - label: T-minus 30 days - A new Slack channel for the release has been created
+      - label: T-minus 30 days - Knobots update-deps job has been bumped to new release version
       - label: T-minus 14 days - The releasability defaults have been updated
       - label: T-minus 14 days - The releasability defaults update have been propagated thru all applicable `knative.dev` repos
       - label: T-minus 14 days - An announcement has been made in the **#general** Slack channel that `pkg` will be released in a week
