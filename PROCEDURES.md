@@ -251,6 +251,10 @@ If not, open a PR in the `knative/community` repo to grant/remove permissions. H
 
 It is ok to add/remove leads in two separate PRs.
 
+### Bump dependencies in auto update job
+
+In the first week of the rotation, open a PR in the [knobots repo](https://github.com/knative-sandbox/knobots) to bump the [update-deps job](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-sandbox/knobots/pull/216) for an example.
+
 ### Creating a release Slack channel
 Ask someone from the TOC to create a **release-`xdotx`** (Ex: `release-1dot5`) Slack channel that will be used to help manage a new release.
 
