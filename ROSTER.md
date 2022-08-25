@@ -27,6 +27,7 @@ This roster is seeded with all approvers from Eventing workgroups, plus addition
 - lionelvillard
 - matzew
 - houshengbo
+- gab-satchi
 
 ## Client
 
