@@ -76,9 +76,6 @@ For some repositories some extra manual validation and updates need to be perfor
   - (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
   - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
 
-- `knative-sandbox/kn-plugin-quickstart`
-  - Update the version numbers of Serving / Kourier / Eventing in [pkg/install/install.go](https://github.com/knative-sandbox/kn-plugin-quickstart/blob/4e57ed10eaac8882b0a81b2861ddaee37bfcd6f9/pkg/install/install.go#L25-L27) so that the plugin will use the just-released versions.
-
 ### Cutting a branch
 Cutting a `release-x.y` branch can be done by using the GitHub UI:
 
