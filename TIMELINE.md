@@ -21,7 +21,6 @@ We release each repository of `knative.dev` every 6 weeks. Please check the [rel
 - 📝 See these instructions for further guidance:
   - [Permissions for release leads](PROCEDURES.md#permissions-for-release-leads).
   - [Creating a release Slack channel](PROCEDURES.md#creating-a-release-slack-channel).
-  - [Bump dependencies in auto-update job](PROCEDURES.md#bump-dependencies-in-auto-update-job).
 
 ## T-minus 14 days
 - Ensure that the releasability defaults have been updated and propagated.
@@ -132,3 +131,4 @@ We have a few repos inside of Knative that are not handled in the standard relea
 - [Releasing a new version of the Knative documentation](PROCEDURES.md#releasing-a-new-version-of-the-knative-documentation).
 - [Homebrew updates](PROCEDURES.md#homebrew-updates).
 - [Updating the release schedule](PROCEDURES.md#updating-the-release-schedule).
+- [Bump dependencies in auto-update job](PROCEDURES.md#bump-dependencies-in-auto-update-job).
