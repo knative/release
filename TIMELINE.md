@@ -1,7 +1,7 @@
 
 # Timeline of a Knative release
 
-We release each repository of `knative.dev` every 6 weeks. Please check the [release schedule](README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
+We release each repository of `knative.dev` roughly every 3 months. Please check the [release schedule](README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
 
 ## Repos to be released
 - All repos to be released are listed in this document
