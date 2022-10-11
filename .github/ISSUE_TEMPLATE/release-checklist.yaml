@@ -22,9 +22,9 @@ body:
       - label: T-minus 14 days - The releasability defaults have been updated
       - label: T-minus 14 days - The releasability defaults update have been propagated thru all applicable `knative.dev` repos
       - label: T-minus 14 days - An announcement has been made in the **#general** Slack channel that `pkg` will be released in a week
-      - label: T-minus 7 days - A fresh HackMD release notes document has been pinned to the **#*release-xdotx** Slack channel
+      - label: T-minus 7 days - A fresh HackMD release notes document has been pinned to the **#release** Slack channel
       - label: T-minus 7 days - A draft for the announcement blog post has been started
-      - label: T-minus 7 days - An announcement has been made in the **#general** Slack channel that the cut of `pkg` is immminent
+      - label: T-minus 7 days - An announcement has been made in the **#general** Slack channel that the cut of `pkg` is imminent
       - label: T-minus 7 days - The nightly release build status has been verified for each of the core knative.dev repos
       - label: knative.dev/hack
       - label: knative.dev/pkg
