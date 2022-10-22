@@ -13,12 +13,6 @@ The Knative project releases quarterly, on Tuesday of the 4th week of January, A
 
 **NOTE**: *Minor deviances from above schedule are possible, but they must be accepted by the [TOC committee](https://github.com/knative/community/blob/main/TECH-OVERSIGHT-COMMITTEE.md). Exact dates will always be updated in table(s) below.*
 
-### Release schedule for 2022
-
-| Release | Release Date | Serving        | Eventing            | PKG cut    | Unpin repos
-| ------- | ------------ | -------------- | --------------------| ---------- | -----------
-| v1.8    | 2022-10-18   | nak3           | lionelvillard       | 2022-10-11 | 2022-10-19
-
 ### Release schedule for 2023
 
 | Release | Release Date | Serving        | Eventing            | PKG cut    | Unpin repos
