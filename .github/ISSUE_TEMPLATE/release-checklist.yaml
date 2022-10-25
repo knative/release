@@ -64,7 +64,7 @@ body:
       - label: knative.dev/docs
       - label: Post release - Homebrew tap has been updated
       - label: Post release - The client plugin's Homebrew repo has been updated
-      - label: Post release - Release schedule has been updated
+      - label: Post release - Release schedule has been updated in [RELEASE-SCHEDULE.md](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md) and [README.md](https://github.com/knative/release/blob/main/README.md)
       - label: Post release - An announcement was made in the **#general** and **#operation** Slack channels that the new Knative release is out
       - label: Post release - A blog post announcing the release has been published
       - label: Post release - Knobots update-deps job has been bumped to the next release version
