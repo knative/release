@@ -104,6 +104,8 @@ We have a few repos inside of Knative that are not handled in the standard relea
 
 ### This group can be started after both `knative.dev/eventing` and `knative.dev/serving` have been successfully published.
 
+Note that `client-pkg` is a supporting library and thus does **NOT** have a release job on Prow.
+
 | Repo   | Release   | Releasability   | Nightly   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/client-pkg](https://github.com/knative/client-pkg) | n/a | [![Releasability](https://github.com/knative/client/workflows/Releasability/badge.svg)](https://github.com/knative/client-pkg/actions/workflows/knative-releasability.yaml) | n/a |
