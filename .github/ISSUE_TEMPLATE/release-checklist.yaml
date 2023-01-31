@@ -46,6 +46,7 @@ body:
       - label: knative.dev/eventing-kogito
       - label: knative.dev/eventing-rabbitmq
       - label: knative.dev/sample-source
+      - label: knative.dev/client-pkg
       - label: knative.dev/client
          - (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
          - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
