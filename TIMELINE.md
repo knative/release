@@ -104,6 +104,14 @@ We have a few repos inside of Knative that are not handled in the standard relea
 
 ### This group can be started after both `knative.dev/eventing` and `knative.dev/serving` have been successfully published.
 
+Note that `client-pkg` is a supporting library and thus does **NOT** have a release job on Prow.
+
+| Repo   | Release   | Releasability   | Nightly   |
+| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| [knative.dev/client-pkg](https://github.com/knative/client-pkg) | n/a | [![Releasability](https://github.com/knative/client/workflows/Releasability/badge.svg)](https://github.com/knative/client-pkg/actions/workflows/knative-releasability.yaml) | n/a |
+
+### This group can be started after `knative.dev/client-pkg` has been successfully cut.
+
 | Repo   | Release   | Releasability   | Nightly   |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/client](https://github.com/knative/client)   | [![Releases](https://img.shields.io/github/release-pre/knative/client.svg?sort=semver)](https://github.com/knative/client/releases)  | [![Releasability](https://github.com/knative/client/workflows/Releasability/badge.svg)](https://github.com/knative/client/actions/workflows/knative-releasability.yaml) | [![Nightly](https://prow.knative.dev/badge.svg?jobs=nightly_client_main_periodic)](https://prow.knative.dev?job=nightly_client_main_periodic) |
