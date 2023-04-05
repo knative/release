@@ -1,0 +1,143 @@
+# Copyright 2023 The Knative Authors.
+# SPDX-License-Identifier: Apache-2.0
+
+name: 'releasability'
+
+on:
+  workflow_call:
+    inputs:
+      repo:
+        type: string
+        required: true
+      release:
+        type: string
+        required: false
+    secrets:
+      SLACK_WEBHOOK:
+        required: false
+
+env:
+  DEFAULT_RELEASE: "1.10" # make sure this is quoted
+  CHECK_MESSAGE: ""
+  VERIFY_MESSAGE: ""
+
+jobs:
+  check:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Defaults
+        run: |
+          export RELEASE="${{ inputs.release }}"
+
+          if [[ -z "${RELEASE}" ]]; then
+            export RELEASE="${DEFAULT_RELEASE}"
+          fi
+          echo "RELEASE=${RELEASE}" >> "$GITHUB_ENV"
+
+          tokens=(${RELEASE//\./ })
+          release_minor="${tokens[1]}"
+          echo "MODULE_RELEASE=0.$(( release_minor + 27 ))" >> $GITHUB_ENV
+
+          if [[ "${{ secrets.SLACK_WEBHOOK }}" != "" ]]; then
+            echo "SLACK_WEBHOOK=exists" >> "$GITHUB_ENV"
+          fi
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.20.x
+
+      - name: Install Dependencies
+        run: go install knative.dev/toolbox/buoy@main
+
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ inputs.repo }}
+          fetch-depth: 0
+
+      - name: Release branch exists
+        run: |
+            git checkout release-${RELEASE} || git checkout main
+
+      - name: Dependencies are cut
+        run: |
+          # The following pushes the stdout of buoy into $CHECK_MESSAGE
+          CHECK=0
+          echo 'CHECK_MESSAGE<<EOF' >> "$GITHUB_ENV"
+          buoy check go.mod \
+            --release "${RELEASE}" \
+            --module-release "${MODULE_RELEASE}" \
+            --domain knative.dev \
+            --verbose 2>> "$GITHUB_ENV"|| CHECK="$?"
+          echo 'EOF' >> "$GITHUB_ENV"
+
+          # We just captured the return code of the buoy call, test it to see
+          # if we should continue validating. The next steps short circuit if
+          # we already know we are not ready for a release.
+          if [[ "$CHECK" -eq "0"  ]]; then
+            echo 'current=true' >> "$GITHUB_ENV"
+          else
+            echo 'current=false' >> "$GITHUB_ENV"
+          fi
+
+      - name: Verify it is up to date
+        if: env.current == 'true'
+        run: |
+          # if update deps returns un-successful, then mark current to false.
+          if ! ./hack/update-deps.sh --release "${RELEASE}" --module-release "${MODULE_RELEASE}" --upgrade; then
+            echo "VERIFY_MESSAGE=Unable to update deps for ${{ inputs.repo }}." >> "$GITHUB_ENV"
+            echo 'current=false' >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          # If we don't run `git status` before the "git diff-index" it seems
+          # to list every file that's been touched by codegen.
+          git status
+
+          CHANGED="$(git diff-index --name-only HEAD --)"
+
+          # If we see no changes after the upgrade, then we are up to date.
+          if [[ "$CHANGED" == "" ]]; then
+              echo "VERIFY_MESSAGE=${{ inputs.repo }} up to date." >> "$GITHUB_ENV"
+          else
+              echo "VERIFY_MESSAGE=${{ inputs.repo }} is out of date." >> "$GITHUB_ENV"
+              echo "The following files are changed: $CHANGED"
+              echo 'current=false' >> "$GITHUB_ENV"
+          fi
+
+      - name: Status GO
+        if: env.current == 'true'
+        run: |
+          echo 'SLACK_COLOR=#098e00' >> "$GITHUB_ENV"
+          echo 'SLACK_TITLE=:green_heart: Releasability for ${{ inputs.repo }} @ ${{ env.RELEASE }} is GO!' >> "$GITHUB_ENV"
+
+      - name: Status NO-GO
+        if: env.current == 'false'
+        run: |
+          echo 'SLACK_COLOR=#8E1600' >> "$GITHUB_ENV"
+          echo 'SLACK_TITLE=:broken_heart: Releasability for ${{ inputs.repo }} @ ${{ env.RELEASE }} is NO-GO!' >> "$GITHUB_ENV"
+
+      - name: Post status to Slack
+        # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
+        if: env.SLACK_WEBHOOK != ''
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_CHANNEL: knative-release
+          SLACK_USERNAME: knative/release
+          SLACK_ICON: http://github.com/knative.png?size=48
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          MSG_MINIMAL: 'true'
+          SLACK_FOOTER: View GitHub Run - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          SLACK_MESSAGE: |
+            ${{ env.CHECK_MESSAGE }}
+            ${{ env.VERIFY_MESSAGE }}
+
+      - name: Fail if NO-GO
+        if: env.current == 'false'
+        run: |
+          # When we have figured out that things are NO-GO, we intentionally fail the job
+          # so that the status badge shows up red and we can use the badges to create a
+          # releasability dashboard for all of the repos.
+          exit 1
