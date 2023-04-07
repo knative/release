@@ -52,17 +52,12 @@ Repos that don't have dependencies naturally don't need a releasability check an
 The releasability check will not work on dot releases and there is a potential for false positives in those cases.
 
 ### Updating the releasability defaults
-Open a PR in the `knative-sandbox/knobots` repo to update the releasability defaults for a release and bump the version info in the source workflow [knative-releasability.yaml](https://github.com/knative-sandbox/knobots/blob/main/workflow-templates/knative-releasability.yaml) file.  Here is an example:
-
-- [Update releasability defaults for 1.5 by gab-satchi · Pull Request #202 · knative-sandbox/knobots](https://github.com/knative-sandbox/knobots/pull/202?w=1)
-
-The changes in the source workflow will be automatically propagated to the rest of Knative repos in the next round of
-workflow syncs, and it can also be triggered manually when necessary.
+Open a PR in the `knative/release` repo to update the releasability defaults for a release. This can be found in the [releasability worfklow](https://github.com/knative/release/blob/main/.github/workflows/releasability.yaml#L20)
 
 ### Verifying releasability
-An automatic repo releasability test is executed periodically and the results are posted on the corresponding Slack release channel. If the dependencies are properly aligned, the releasability test will pass.
+An automatic releasability workflow is executed periodically and the results are posted on the corresponding Slack release channel. If the dependencies are properly aligned, the releasability test will pass.
 
-A test can be re-run by manually running the [Releasability workflow](https://github.com/knative/serving/actions?query=workflow%3AReleasability).
+A test can be re-run by manually running the [Releasability workflow](https://github.com/knative/release/actions).
 
 If the releasability test reports a NO-GO on a repo where it was previously passing, probably a new PR merge introduced a dependency misalignment. Whatever the reason, if the releasability test is failing, it is necessary to start with the first step in the [Releasing a repository](#releasing-a-repository) process to get this test to a passing state.
 
@@ -251,9 +246,6 @@ It is ok to add/remove leads in two separate PRs.
 ### Bump dependencies in auto update job
 
 After a release open a PR in the [knobots repo](https://github.com/knative-sandbox/knobots) to bump the [update-deps job](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-sandbox/knobots/pull/216) for an example.
-
-### Creating a release Slack channel
-Ask someone from the TOC to create a **release-`xdotx`** (Ex: `release-1dot5`) Slack channel that will be used to help manage a new release.
 
 ### Updating the release schedule
 We maintain a list of current (and future) releases in the [Community repo](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md). When a new release goes out, an older one will almost always fall out of support. We should update the release schedule accordingly by opening a PR against the community repo. See [here](https://github.com/knative/community/pull/991/files) for an example.
