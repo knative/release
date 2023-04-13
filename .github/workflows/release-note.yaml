@@ -110,6 +110,12 @@ jobs:
         echo "${{ inputs.repo }}@${{ env.BRANCH }}" >> $GITHUB_STEP_SUMMARY
         cat release-notes.md >> $GITHUB_STEP_SUMMARY
 
+    - name: Archive Release Notes
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ env.ORG }}-${{ env.REPO }}-${{ env.BRANCH }}.md
+        path: release-notes.md
+
     - name: Status GO
       run: |
         echo 'SLACK_COLOR=#098e00' >> "$GITHUB_ENV"
