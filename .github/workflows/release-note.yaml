@@ -106,13 +106,8 @@ jobs:
 
     - name: Display Notes
       run: |
-        cat release-notes.md
-
-    - name: Archive Release Notes
-      uses: actions/upload-artifact@v3
-      with:
-        name: ${{ env.ORG }}-${{ env.REPO }}-release-notes.md
-        path: release-notes.md
+        echo "${{ inputs.repo }}@${{ env.BRANCH }}" >> $GITHUB_STEP_SUMMARY
+        cat release-notes.md >> $GITHUB_STEP_SUMMARY
 
     - name: Status GO
       run: |
