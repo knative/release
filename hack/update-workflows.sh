@@ -3,7 +3,7 @@
 
 for repo in $(yq '.[] | .name' repos.yaml); do
   cat <<EOF >".github/workflows/${repo/\//-}.yaml"
-# Copyright 2022 The Knative Authors.
+# Copyright 2023 The Knative Authors.
 # SPDX-License-Identifier: Apache-2.0
 
 # This file is automagically generation from ./hack/update-workflows.sh
@@ -12,7 +12,7 @@ name: '$repo'
 
 on:
   schedule:
-    - cron: '0 1 * * 1-5' # 6am Pacific, weekdays.
+    - cron: '0 13 * * 1-5' # 6am Pacific, weekdays.
 
   workflow_dispatch:
     inputs:
