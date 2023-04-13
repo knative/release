@@ -27,6 +27,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SLACK_WEBHOOK: ${{ secrets.SONAR_TOKEN != '' }}
 
     steps:
     - name: Set up Go
@@ -59,12 +60,13 @@ jobs:
         export ORG=$(echo '${{ inputs.repo }}' | awk -F '/' '{print $1}')
         export REPO=$(echo '${{ inputs.repo }}' | awk -F '/' '{print $2}')
 
-        echo "ORG=$ORG" >> $GITHUB_ENV
-        echo "REPO=$REPO" >> $GITHUB_ENV
-
         if [[ -z "$BRANCH" ]]; then
             BRANCH="$(head -n1 "$BRANCHES")" # Default to last release branch
         fi
+
+        echo "ORG=$ORG" >> $GITHUB_ENV
+        echo "REPO=$REPO" >> $GITHUB_ENV
+        echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
         # If start rev isn't set find the merge base of
         # the target branch and the previous branch
@@ -100,3 +102,29 @@ jobs:
       with:
         name: ${{ env.ORG }}-${{ env.REPO }}-release-notes.md
         path: release-notes.md
+
+    - name: Status GO
+      run: |
+        echo 'SLACK_COLOR=#098e00' >> "$GITHUB_ENV"
+        echo 'SLACK_TITLE=Generated release note' >> "$GITHUB_ENV"
+
+    - name: Status NO-GO
+      if: failure()
+      run: |
+        echo 'SLACK_COLOR=#8E1600' >> "$GITHUB_ENV"
+        echo 'SLACK_TITLE=Generating release note failed' >> "$GITHUB_ENV"
+
+    - name: Post status to Slack
+      # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
+      if: ${{ always() && env.SLACK_WEBHOOK != '' }}
+      uses: rtCamp/action-slack-notify@v2.2.0
+      env:
+        SLACK_CHANNEL: knative-release
+        SLACK_USERNAME: knative/release
+        SLACK_ICON: http://github.com/knative.png?size=48
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        MSG_MINIMAL: 'true'
+        SLACK_FOOTER: View GitHub Run - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        SLACK_MESSAGE: |
+          Releate note: [${{ inputs.repo }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
