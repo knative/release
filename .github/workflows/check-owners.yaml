@@ -16,7 +16,7 @@ jobs:
     - id: set-matrix
       run: |
         set -x
-        echo "repos=$(yq -o=json -I=0 repos.yaml)" >> $GITHUB_OUTPUT
+        echo "repos=$(yq -o=json -I=0 '[ .[] | .name ]' repos.yaml)" >> $GITHUB_OUTPUT
 
   check:
     runs-on: ubuntu-latest
