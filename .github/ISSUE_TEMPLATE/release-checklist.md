@@ -9,7 +9,7 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 ### T-minus 30 days
 
 - [ ] Release leads have been updated for the upcoming release (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#permissions-for-release-leads))
-  - See workflow to check rollout: ![Owner Workflow](https://github.com/knative/release/actions/workflows/check-owners.yaml/badge.svg)
+  - See workflow to check rollout: [![Owner Workflow](https://github.com/knative/release/actions/workflows/check-owners.yaml/badge.svg)](https://github.com/knative/release/actions/workflows/check-owners.yaml)
 
 ### T-minus 14 days
 - [ ] Update release version in the following workflows
