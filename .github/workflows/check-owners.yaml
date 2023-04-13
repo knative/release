@@ -4,6 +4,8 @@
 name: 'Check OWNER files'
 
 on:
+  schedule:
+    - cron: '0 1,13 * * 1-5' # 6am/pm Pacific, weekdays.
   workflow_dispatch: {}
 
 jobs:
