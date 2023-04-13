@@ -32,6 +32,8 @@ jobs:
      - name: OWNER_ALIASES up to date
        if: always()
        run: |
-         curl -L https://raw.githubusercontent.com/${{ matrix.repo }}/main/OWNER_ALIASES >repo-owners
-         curl -L https://raw.githubusercontent.com/knative/community/main/OWNER_ALIASES >community-owners
+         ORG="$(echo '${{ matrix.repo }}' | awk -F '/' '{print $1}')"
+
+         curl --fail -L https://raw.githubusercontent.com/${{ matrix.repo }}/main/OWNERS_ALIASES >repo-owners
+         curl --fail -L https://raw.githubusercontent.com/knative/community/main/peribolos/$ORG-OWNERS_ALIASES >community-owners
          diff repo-owners community-owners
