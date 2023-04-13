@@ -106,13 +106,13 @@ jobs:
     - name: Status GO
       run: |
         echo 'SLACK_COLOR=#098e00' >> "$GITHUB_ENV"
-        echo 'SLACK_TITLE=Generated release note' >> "$GITHUB_ENV"
+        echo 'SLACK_TITLE=Release note - ${{ inputs.repo }}@${{ env.BRANCH }}' >> "$GITHUB_ENV"
 
     - name: Status NO-GO
       if: failure()
       run: |
         echo 'SLACK_COLOR=#8E1600' >> "$GITHUB_ENV"
-        echo 'SLACK_TITLE=Generating release note failed' >> "$GITHUB_ENV"
+        echo 'SLACK_TITLE=Release note failed - ${{ inputs.repo }}@${{ env.BRANCH }}' >> "$GITHUB_ENV"
 
     - name: Post status to Slack
       # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
@@ -124,7 +124,6 @@ jobs:
         SLACK_ICON: http://github.com/knative.png?size=48
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         MSG_MINIMAL: 'true'
-        SLACK_FOOTER: View GitHub Run - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        SLACK_MESSAGE: |
-          Releate note: [${{ inputs.repo }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+        SLACK_MESSAGE: View - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        SLACK_FOOTER: ""
 
