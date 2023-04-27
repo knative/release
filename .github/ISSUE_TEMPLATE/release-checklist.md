@@ -26,21 +26,21 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 
 #### Cut Supporting Repositories
 
-- [knative.dev/hack](https://github.com/knative/hack)
+- [knative/hack](https://github.com/knative/hack)
   - [ ] Branch Cut
-- [knative.dev/pkg](https://github.com/knative/pkg)
+- [knative/pkg](https://github.com/knative/pkg)
   - [ ] Dependencies up to date - [![releasabilty][pkg-release-badge]][pkg-release-workflow]
   - [ ] Branch Cut
-- [knative.dev/networking](https://github.com/knative/networking)
+- [knative/networking](https://github.com/knative/networking)
   - [ ] Dependencies up to date - [![releasabilty][networking-release-badge]][networking-release-workflow]
   - [ ] Branch Cut
-- [knative.dev/caching](https://github.com/knative/caching)
+- [knative/caching](https://github.com/knative/caching)
   - [ ] Dependencies up to date - [![releasabilty][caching-release-badge]][caching-release-workflow]
   - [ ] Branch Cut
-- [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test)
+- [knative-sandbox/reconciler-test](https://github.com/knative-sandbox/reconciler-test)
   - [ ] Dependencies up to date - [![releasabilty][reconciler-test-release-badge]][reconciler-test-release-workflow]
   - [ ] Branch Cut
-- [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol)
+- [knative-sandbox/control-protocol](https://github.com/knative-sandbox/control-protocol)
   - [ ] Dependencies up to date - [![releasabilty][control-protocol-release-badge]][control-protocol-release-workflow]
   - [ ] Branch Cut
 
@@ -50,65 +50,65 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
  - [ ] A re-check of the nightly releases status and notify [working group leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) of failures
 
 ### Release Day(s)
-
-#### Phase 1 - Core Repositories
-- [knative.dev/serving](https://github.com/knative/serving)
+- Review the [PROCEDURE](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-repository) on how to release a repo.
+#### Phase 1 - Core Repositories _(Can be started after all the supporting repos have been successfully released)_
+- [knative/serving](https://github.com/knative/serving)
   - [ ] Dependencies up to date - [![releasabilty][serving-release-badge]][serving-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][serving-prow-badge]][serving-prow-job]
     - Latest Version [![Releases][serving-version-badge]][serving-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing](https://github.com/knative/eventing)
+- [knative/eventing](https://github.com/knative/eventing)
   - [ ] Dependencies up to date - [![releasabilty][eventing-release-badge]][eventing-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
       - Prow Release Job [![Prow][eventing-prow-badge]][eventing-prow-job]
 	  - Latest Version [![Releases][eventing-version-badge]][eventing-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-certmanager](https://github.com/knative-sandbox/net-certmanager)
+- [knative-sandbox/net-certmanager](https://github.com/knative-sandbox/net-certmanager)
   - [ ] Dependencies up to date - [![releasabilty][net-certmanager-release-badge]][net-certmanager-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
       - Prow Release [![Prow][net-certmanager-prow-badge]][net-certmanager-prow-job]
 	  - Latest Version [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-contour](https://github.com/knative-sandbox/net-contour)
+- [knative-sandbox/net-contour](https://github.com/knative-sandbox/net-contour)
   - [ ] Dependencies up to date - [![releasabilty][net-contour-release-badge]][net-contour-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
      - Prow Release [![Releases][net-contour-prow-badge]][net-contour-prow-job]
 	 - Latest Version [![Releases][net-contour-version-badge]][net-contour-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-gateway-api](https://github.com/knative-sandbox/net-gateway-api)
+- [knative-sandbox/net-gateway-api](https://github.com/knative-sandbox/net-gateway-api)
   - [ ] Dependencies up to date - [![releasabilty][net-gateway-api-release-badge]][net-gateway-api-release-workflow]
   - [ ] Branch Cut
   - [ ] Release https://app.slack.com/client/T08PSQ7BQ/C050X5BGNNS
     - Prow Release [![Releases][net-gateway-api-prow-badge]][net-gateway-api-prow-job]
 	 - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-http01](https://github.com/knative-sandbox/net-http01)
+- [knative-sandbox/net-http01](https://github.com/knative-sandbox/net-http01)
   - [ ] Dependencies up to date - [![releasabilty][net-http01-release-badge]][net-http01-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-http01-prow-badge]][net-http01-prow-job]
 	 - Latest Version [![Releases][net-http01-version-badge]][net-http01-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-istio](https://github.com/knative-sandbox/net-istio)
+- [knative-sandbox/net-istio](https://github.com/knative-sandbox/net-istio)
   - [ ] Dependencies up to date - [![releasabilty][net-istio-release-badge]][net-istio-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-istio-prow-badge]][net-istio-prow-job]
 	- Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/net-kourier](https://github.com/knative-sandbox/net-kourier)
+- [knative-sandbox/net-kourier](https://github.com/knative-sandbox/net-kourier)
   - [ ] Dependencies up to date - [![releasabilty][net-kourier-release-badge]][net-kourier-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-kourier-prow-badge]][net-kourier-prow-job]
     - Latest Version [![Releases][net-kourier-version-badge]][net-kourier-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/sample-controller](https://github.com/knative-sandbox/sample-controller)
+- [knative-sandbox/sample-controller](https://github.com/knative-sandbox/sample-controller)
   - [ ] Dependencies up to date - [![releasabilty][sample-controller-release-badge]][sample-controller-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
@@ -116,44 +116,30 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
     - Latest Version [![Releases][sample-controller-version-badge]][sample-controller-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 2 - Start after `knative.dev/eventing` is cut
+#### Phase 2 - Eventing Dependant Repositories _(Can be started after `knative/eventing` has been successfully released)_
 
-- [knative.dev/eventing-ceph](https://github.com/knative-sandbox/eventing-ceph)
+- [knative-sandbox/eventing-ceph](https://github.com/knative-sandbox/eventing-ceph)
   - [ ] Dependencies up to date - [![releasabilty][eventing-ceph-release-badge]][eventing-ceph-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][eventing-ceph-prow-badge]][eventing-ceph-prow-job]
     - Latest Version [![Releases][eventing-ceph-version-badge]][eventing-ceph-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-kogito](https://github.com/knative-sandbox/eventing-kogito)
+- [knative-sandbox/eventing-kogito](https://github.com/knative-sandbox/eventing-kogito)
   - [ ] Dependencies up to date - [![releasabilty][eventing-kogito-release-badge]][eventing-kogito-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][eventing-kogito-prow-badge]][eventing-kogito-prow-job]
     - Latest Version [![Releases][eventing-kogito-version-badge]][eventing-kogito-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-rabbitmq](https://github.com/knative-sandbox/eventing-rabbitmq)
+- [knative-sandbox/eventing-rabbitmq](https://github.com/knative-sandbox/eventing-rabbitmq)
   - [ ] Dependencies up to date - [![releasabilty][eventing-rabbitmq-release-badge]][eventing-rabbitmq-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]
     - Latest Version [![Releases][eventing-rabbitmq-version-badge]][eventing-rabbitmq-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-kafka](https://github.com/knative-sandbox/eventing-kafka)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-release-badge]][eventing-kafka-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
-    - Latest Version [![Releases][eventing-kafka-version-badge]][eventing-kafka-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-kafka-broker](https://github.com/knative-sandbox/eventing-kafka-broker)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
-    - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/sample-source](https://github.com/knative-sandbox/sample-source)
+- [knative-sandbox/sample-source](https://github.com/knative-sandbox/sample-source)
   - [ ] Dependencies up to date - [![releasabilty][sample-source-release-badge]][sample-source-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
@@ -161,46 +147,14 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
     - Latest Version [![Releases][sample-source-version-badge]][sample-source-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 3 - Start after  `knative.dev/eventing`  & `knative.dev/serving` is cut
+#### Phase 3 - Sub-Supporting Repositories  _(Can be started after `knative/eventing`  & `knative/serving` have been successfully released)_
 
-- [knative.dev/client-pkg](https://github.com/knative/client-pkg)
+- [knative/client-pkg](https://github.com/knative/client-pkg)
   - [ ] Dependencies up to date - [![releasabilty][client-pkg-release-badge]][client-pkg-release-workflow]
   - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][client-pkg-prow-badge]][client-pkg-prow-job]
-    - Latest Version [![Releases][client-pkg-version-badge]][client-pkg-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-redis](https://github.com/knative-sandbox/eventing-redis)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-redis-release-badge]][eventing-redis-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-redis-prow-badge]][eventing-redis-prow-job]
-    - Latest Version [![Releases][eventing-redis-version-badge]][eventing-redis-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-github](https://github.com/knative-sandbox/eventing-github)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-github-release-badge]][eventing-github-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-github-prow-badge]][eventing-github-prow-job]
-    - Latest Version [![Releases][eventing-github-version-badge]][eventing-github-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/eventing-gitlab](https://github.com/knative-sandbox/eventing-gitlab)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-gitlab-release-badge]][eventing-gitlab-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-gitlab-prow-badge]][eventing-gitlab-prow-job]
-    - Latest Version [![Releases][eventing-gitlab-version-badge]][eventing-gitlab-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 4
-- [knative.dev/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda)
-  - [ ] Dependencies up to date - [![releasabilty][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job  [![Prow][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job]
-    - Latest Version [![Releases][eventing-autoscaler-keda-version-badge]][eventing-autoscaler-keda-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/client](https://github.com/knative/client)
+#### Phase 4 - Client-pkg Dependant Repositories  _(Can be started after `knative/client-pkg` has been successfully released)_
+- [knative/client](https://github.com/knative/client)
   - [ ] _(optional)_ Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
      - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
   - [ ] Dependencies up to date - [![releasabilty][client-release-badge]][client-release-workflow]
@@ -209,45 +163,86 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
     - Prow Release Job  [![Prow][client-prow-badge]][client-prow-job]
     - Latest Version [![Releases][client-version-badge]][client-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-kafka](https://github.com/knative-sandbox/eventing-kafka)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-release-badge]][eventing-kafka-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
+    - Latest Version [![Releases][eventing-kafka-version-badge]][eventing-kafka-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-redis](https://github.com/knative-sandbox/eventing-redis)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-redis-release-badge]][eventing-redis-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-redis-prow-badge]][eventing-redis-prow-job]
+    - Latest Version [![Releases][eventing-redis-version-badge]][eventing-redis-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-github](https://github.com/knative-sandbox/eventing-github)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-github-release-badge]][eventing-github-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-github-prow-badge]][eventing-github-prow-job]
+    - Latest Version [![Releases][eventing-github-version-badge]][eventing-github-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-gitlab](https://github.com/knative-sandbox/eventing-gitlab)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-gitlab-release-badge]][eventing-gitlab-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-gitlab-prow-badge]][eventing-gitlab-prow-job]
+    - Latest Version [![Releases][eventing-gitlab-version-badge]][eventing-gitlab-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 
-
-#### Phase 5
-- [knative.dev/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin)
+#### Phase 5 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
+- [knative-sandbox/eventing-kafka-broker](https://github.com/knative-sandbox/eventing-kafka-broker)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
+    - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda)
+  - [ ] Dependencies up to date - [![releasabilty][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job  [![Prow][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job]
+    - Latest Version [![Releases][eventing-autoscaler-keda-version-badge]][eventing-autoscaler-keda-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-admin-release-badge]][kn-plugin-admin-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][kn-plugin-admin-prow-badge]][kn-plugin-admin-prow-job]
     - Latest Version [![Releases][kn-plugin-admin-version-badge]][kn-plugin-admin-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event)
+- [knative-sandbox/kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-event-release-badge]][kn-plugin-event-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][kn-plugin-event-prow-badge]][kn-plugin-event-prow-job]
     - Latest Version [![Releases][kn-plugin-event-version-badge]][kn-plugin-event-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka)
+- [knative-sandbox/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-source-kafka-release-badge]][kn-plugin-source-kafka-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][kn-plugin-source-kafka-prow-badge]][kn-plugin-source-kafka-prow-job]
     - Latest Version [![Releases][kn-plugin-source-kafka-version-badge]][kn-plugin-source-kafka-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet)
+- [knative-sandbox/kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-source-kamelet-release-badge]][kn-plugin-source-kamelet-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][kn-plugin-source-kamelet-prow-badge]][kn-plugin-source-kamelet-prow-job]
     - Latest Version [![Releases][kn-plugin-source-kamelet-version-badge]][kn-plugin-source-kamelet-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart)
+- [knative-sandbox/kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-quickstart-release-badge]][kn-plugin-quickstart-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release Job  [![Prow][kn-plugin-quickstart-prow-badge]][kn-plugin-quickstart-prow-job]
     - Latest Version [![Releases][kn-plugin-quickstart-version-badge]][kn-plugin-quickstart-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative.dev/func](https://github.com/knative/func)
+- [knative/func](https://github.com/knative/func)
   - [ ] Dependencies up to date - [![releasabilty][func-release-badge]][func-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
@@ -255,7 +250,7 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
     - Latest Version [![Releases][func-version-badge]][func-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 5
+#### Final Phase
 - [ ] Talk to Vincent (Operator WG Lead) and have him cut (or help you cut) the [knative/operator](https://github.com/knative/operator)
 - [ ] Knative Client Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-client))
 - [ ] Knative Client Plugins Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-kn-plugins))
