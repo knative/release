@@ -155,8 +155,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 
 #### Phase 4 - Client-pkg Dependant Repositories  _(Can be started after `knative/client-pkg` has been successfully released)_
 - [knative/client](https://github.com/knative/client)
-  - [ ] _(optional)_ Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
-     - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
   - [ ] Dependencies up to date - [![releasabilty][client-release-badge]][client-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
