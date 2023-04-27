@@ -101,7 +101,7 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
     - Prow Release [![Releases][net-istio-prow-badge]][net-istio-prow-job]
 	- Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative/net-kourier](https://github.com/knative-sandbox/net-kourier)
+- [knative-sandbox/net-kourier](https://github.com/knative-sandbox/net-kourier)
   - [ ] Dependencies up to date - [![releasabilty][net-kourier-release-badge]][net-kourier-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
