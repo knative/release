@@ -19,7 +19,7 @@ The Knative project releases quarterly, on Tuesday of the 4th week of January, A
 | ------- | ------------ | -------------- | --------------------| ---------- | -----------
 | v1.9    | 2023-01-24   | psschwei       | evankanderson       | 2023-01-17 | 2023-01-25
 | v1.10   | 2023-04-25   | pradnyavmw, kvmware | dsimansk, pierDipi | 2023-04-18 | 2023-04-26
-| v1.11   | 2023-07-25   | TBD            | TBD                 | 2023-07-18 | 2023-07-26
+| v1.11   | 2023-07-25   | skonto         | TBD                 | 2023-07-18 | 2023-07-26
 | v1.12   | 2023-10-24   | TBD            | TBD                 | 2023-10-17 | 2023-10-25
 
 ## Release leads
