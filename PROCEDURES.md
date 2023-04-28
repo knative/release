@@ -64,13 +64,6 @@ If the releasability test reports a NO-GO on a repo where it was previously pass
 ## Cut a branch
 tl;dr: cut a release branch from `main`.
 
-### Exceptions
-For some repositories some extra manual validation and updates need to be performed before the release branch is cut:
-
-- `knative/client`
-  - (optional) Check that [CHANGELOG.adoc](https://github.com/knative/client/blob/main/CHANGELOG.adoc) contains a section about the release, i.e. the top-level "(Unreleased)" section should be changed to point to the upcoming release version and number. It's not critical if the changelog is aligned after the release in retrospective.
-  - If the validation fails, the fix should be trivial and could be either performed by the release leads or the client team.
-
 ### Cutting a branch
 Cutting a `release-x.y` branch can be done by using the GitHub UI:
 
