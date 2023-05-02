@@ -27,6 +27,7 @@ jobs:
     with:
       repo: ${repo}
       release: \${{ inputs.release }}
+      post-to-slack: \${{ github.event_name != 'schedule' }}
     secrets: inherit
 EOF
 done
