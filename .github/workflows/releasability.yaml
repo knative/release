@@ -12,6 +12,10 @@ on:
       release:
         type: string
         required: false
+      post-to-slack:
+        type: boolean
+        default: false
+        required: false
     secrets:
       SLACK_WEBHOOK:
         required: false
@@ -120,7 +124,7 @@ jobs:
 
       - name: Post status to Slack
         # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
-        if: env.SLACK_WEBHOOK != ''
+        if: env.SLACK_WEBHOOK != '' && inputs.post-to-slack
         uses: rtCamp/action-slack-notify@v2.2.0
         env:
           SLACK_CHANNEL: knative-release
