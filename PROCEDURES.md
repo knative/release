@@ -36,9 +36,9 @@ Repos that don't have dependencies naturally don't need a dependency check and t
 ### Aligning dependencies
 Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** its release branch is cut.
 
-In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713)) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
+In order to align the `knative.dev` dependencies, `knative-extension/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713)) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
 
-- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
+- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-extension/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
 - Check the `go.mod` to ensure hashes point to commit hash at the head of the release branch of the dependency repo
   - For the **[supporting repos](TIMELINE.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
   - For the **core release** repos, you should see the dependency version pointing at the version tag. E.g. `knative.dev/eventing v0.20.0` points at the tag `v0.20.0` in the `eventing` repo.
@@ -207,18 +207,18 @@ After the client release, the [Homebrew tap](https://github.com/knative/homebrew
 ✅ Open a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
 
 ### homebrew-kn-plugins
-Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
+Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-extension/homebrew-kn-plugins) needs to be updated
 for the the plugins supported after their repos have successfully created a release.
 
-Please follow the instructions on how [to update the plugin versions running a script](https://github.com/knative-sandbox/homebrew-kn-plugins#updating-plugin-versions).
+Please follow the instructions on how [to update the plugin versions running a script](https://github.com/knative-extension/homebrew-kn-plugins#updating-plugin-versions).
 
 Currently the following plugins are available with their own formulas:
 
-* [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
-* [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
-* [kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
-* [kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart/) is managed via `quickstart.rb` formula
-* [kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event) is managed via `event.rb` formula
+* [kn-plugin-admin](https://github.com/knative-extension/kn-plugin-admin) is managed via the `admin.rb` formula
+* [kn-plugin-source-kafka](https://github.com/knative-extension/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
+* [kn-plugin-source-kamelet](https://github.com/knative-extension/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
+* [kn-plugin-quickstart](https://github.com/knative-extension/kn-plugin-quickstart/) is managed via `quickstart.rb` formula
+* [kn-plugin-event](https://github.com/knative-extension/kn-plugin-event) is managed via `event.rb` formula
 
 ## Administrative work
 ### Permissions for release leads
@@ -227,7 +227,7 @@ During a release, the release leads for that cycle need to be given all the perm
 Check if the new leads are included in/removed from these two files in the `Knative Release Leads` section:
 
 - [knative/community/main/peribolos/knative.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative.yaml#L878)
-- [knative/community/main/peribolos/knative-sandbox.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative-sandbox.yaml#L739)
+- [knative/community/main/peribolos/knative-extension.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative-extension.yaml#L739)
 
 If not, open a PR in the `knative/community` repo to grant/remove permissions. Here's an example:
 
@@ -238,7 +238,7 @@ It is ok to add/remove leads in two separate PRs.
 
 ### Bump dependencies in auto update job
 
-After a release open a PR in the [knobots repo](https://github.com/knative-sandbox/knobots) to bump the [update-deps job](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-sandbox/knobots/pull/216) for an example.
+After a release open a PR in the [knobots repo](https://github.com/knative-extension/knobots) to bump the [update-deps job](https://github.com/knative-extension/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-extension/knobots/pull/216) for an example.
 
 ### Updating the release schedule
 We maintain a list of current (and future) releases in the [Community repo](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md). When a new release goes out, an older one will almost always fall out of support. We should update the release schedule accordingly by opening a PR against the community repo. See [here](https://github.com/knative/community/pull/991/files) for an example.

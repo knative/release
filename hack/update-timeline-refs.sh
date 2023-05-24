@@ -10,7 +10,7 @@ echo "${start_marker}" >> TIMELINE.md
 for repo in $(yq '.[] | .name' repos.yaml); do
 
 repo_no_prefix=${repo/knative\/}
-repo_no_prefix=${repo_no_prefix/knative-sandbox\/}
+repo_no_prefix=${repo_no_prefix/knative-extension\/}
 
   cat <<EOF >> TIMELINE.md
 [${repo_no_prefix}-version-badge]: https://img.shields.io/github/release-pre/${repo}.svg?sort=semver
