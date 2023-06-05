@@ -1,5 +1,18 @@
 # Procedures
+
+## Supporting Repos
+
+| Repo                                                                                |
+| ----------------------------------------------------------------------------------- |
+| [knative.dev/hack](https://github.com/knative/hack)                                 |
+| [knative.dev/pkg](https://github.com/knative/pkg)                                   |
+| [knative.dev/networking](https://github.com/knative/networking)                     |
+| [knative.dev/caching](https://github.com/knative/caching)                           |
+| [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test)   |
+| [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol) |
+
 ## Releasing a repository
+
 To release a `knative.dev` repository, these are the steps needed, in order:
 
 - ✅ [open PR check](#open-pr-check)
@@ -18,9 +31,11 @@ necessary to perform some of them manually.
 For some repos, there might also be additional validations, or steps that need to be skipped. These exceptions are documented where they apply.
 
 ## Open PR check
+
 Please ensure that there are no outstanding PRs for each repo before proceeding with each of the steps. For additional PRs merged into a repo during the release process, new checks need to be done in that repo and in the repos that depend on it.
 
 ## Build health check
+
 tl;dr: check that all builds on `main` are passing.
 
 Check if the repository is in a good shape and the builds pass consistently. **This is required** because the [Prow job](#release-job) that builds the release artifacts will execute all the various tests (build, unit, e2e) and, if something goes wrong, the release process will probably need to restart from the beginning.
@@ -28,33 +43,40 @@ Check if the repository is in a good shape and the builds pass consistently. **T
 For any problems in a specific repo, get in touch with the [relevant WG leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md#working-groups) leads to fix them.
 
 ## Dependency check
+
 tl;dr: check that all the dependencies for the repo are up-to-date and aligned with the relase version.
 
 ### Exceptions
+
 Repos that don't have dependencies naturally don't need a dependency check and this step can be skipped for those. Currently, `knative.dev/hack` is the only `knative.dev` repo that does not have any dependencies.
 
 ### Aligning dependencies
-Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** its release branch is cut.
+
+Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** its release branch is cut.Refer **[Supporting Repo Dependencies](PROCEDURES.md/#supporting-repo-dependencies)** and **[Core Repo Dependencies](PROCEDURES.md/#Core-repo-dependencies)**.
 
 In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713)) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
 
 - If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
 - Check the `go.mod` to ensure hashes point to commit hash at the head of the release branch of the dependency repo
-  - For the **[supporting repos](TIMELINE.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
+  - For the **[supporting repos](PROCEDURES.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
   - For the **core release** repos, you should see the dependency version pointing at the version tag. E.g. `knative.dev/eventing v0.20.0` points at the tag `v0.20.0` in the `eventing` repo.
 
 ## Releasability check
-tl;dr: check that the releasability test is passing.
+
+tl;dr: check that the releasability test is passing. If there is any failure, check if the correct SHA is updated in the required repo.
 
 ### Exceptions
+
 Repos that don't have dependencies naturally don't need a releasability check and this step can be skipped for those. Currently, `knative.dev/hack` is the only `knative.dev` repo that does not have any dependencies.
 
 The releasability check will not work on dot releases and there is a potential for false positives in those cases.
 
 ### Updating the releasability defaults
-Open a PR in the `knative/release` repo to update the releasability defaults for a release. This can be found in the [releasability worfklow](https://github.com/knative/release/blob/main/.github/workflows/releasability.yaml#L20)
+
+Open a PR in the `knative/release` repo to update the releasability defaults for a release. This can be found in the [releasability worfklow](https://github.com/knative/release/blob/main/.github/workflows/releasability.yaml#L24)
 
 ### Verifying releasability
+
 An automatic releasability workflow is executed periodically and the results are posted on the corresponding Slack release channel. If the dependencies are properly aligned, the releasability test will pass.
 
 A test can be re-run by manually running the [Releasability workflow](https://github.com/knative/release/actions).
@@ -62,26 +84,29 @@ A test can be re-run by manually running the [Releasability workflow](https://gi
 If the releasability test reports a NO-GO on a repo where it was previously passing, probably a new PR merge introduced a dependency misalignment. Whatever the reason, if the releasability test is failing, it is necessary to start with the first step in the [Releasing a repository](#releasing-a-repository) process to get this test to a passing state.
 
 ## Cut a branch
+
 tl;dr: cut a release branch from `main`.
 
 ### Cutting a branch
+
 Cutting a `release-x.y` branch can be done by using the GitHub UI:
 
 1. Click on the branch selection box at the top level page of the repository.
 
-  ![Click the branch selection box](images/github-branch.png)
+   - ![Click the branch selection box](images/github-branch.png)
 
-1. Search for the correct `release-x.y` branch name for the release.
+2. Search for the correct `release-x.y` branch name for the release.
 
-  ![Search for the expected release branch name](images/github-branch-search.png)
+   - ![Search for the expected release branch name](images/github-branch-search.png)
 
-1. Click "Create branch: release-x.y".
+3. Click "Create branch: release-x.y".
 
-  ![Click create branch: release-x.y](images/github-branch-create.png)
+   - ![Click create branch: release-x.y](images/github-branch-create.png)
 
 Otherwise, you can do it by hand on your local machine.
 
 ### What could go wrong?
+
 In case you cut a branch before it was ready (e.g. some deps misalignment, a failing test, etc), then follow the steps below:
 
 1. Mark the broken release as a `pre-release`
@@ -89,19 +114,23 @@ In case you cut a branch before it was ready (e.g. some deps misalignment, a fai
 1. Repeat the steps for a release for the new dot release
 
 ## Release automation check
+
 tl;dr: check that the release job succeeded.
 
 The automation used to cut the actual releases is the very same as the automation used to cut nightly releases. The only difference is that the nightly job runs on `main`, and the release job runs against the release branch.
 
 ### Exceptions
-Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release automation check and this step can be skipped for those. All of the [supporting repos](TIMELINE.md#supporting-repos) fit these criteria.
+
+Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release automation check and this step can be skipped for those. All of the [supporting repos](PROCEDURES.md#supporting-repos) fit these criteria.
 
 ### Nightly job
+
 tl;dr: verify the nightly release automation is passing.
 
-Verify via [testgrid](http://testgrid.knative.dev/knative) that all relevant nightly releases are passing ([example](http://testgrid.knative.dev/serving#nightly)). If they are not, coordinate with the relevant WG leads to fix them.
+Verify via [testgrid](http://testgrid.knative.dev) that all relevant nightly releases are passing ([example](http://testgrid.knative.dev/serving#nightly)). If they are not, coordinate with the relevant WG leads to fix them.
 
 ### Release job
+
 tl;dr: verify the release automation succeeded.
 
 After a `release-x.y` branch comes into existence, a Prow job builds the code
@@ -110,6 +139,7 @@ from that branch, creates a release tag in the repo, publishes the images, publi
 Verify the release automation succeeded for all relevant repos via the Prow dashboard: [Prow Status for the release automation - all repos](https://prow.knative.dev/?job=release*).
 
 ### Manually triggering a release
+
 You can manually trigger a release for a repository by re-running its release job.
 
 1. Navigate to https://prow.knative.dev/
@@ -125,20 +155,12 @@ You can manually trigger a release for a repository by re-running its release jo
    ![Rerun Prow Release](images/prow-rerun.png)
 
 ## Release notes
+
 ### Exceptions
-Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release note and this step can be skipped for those. All of the [supporting repos](TIMELINE.md#supporting-repos) fit these criteria.
 
-### New release notes document
-For a new Knative release version, start a fresh HackMD release notes document by emptying out the [last release notes document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA). Post and pin it to the **release-`xdotx`** Slack channel.
+Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release note and this step can be skipped for those. All of the [supporting repos](PROCEDURES.md#supporting-repos) fit these criteria.
 
-### Release notes update
-After a repo release [has been published](#release-job), generate the repo's notes by using the `Release Notes` GitHub Action workflow. See an example in [Eventing](https://github.com/knative/eventing/actions?query=workflow%3A%22Release+Notes%22). The default starting and ending SHAs will work if running out of the `main` branch, or you can determine the correct starting and ending SHAs for the script to run.
-
-Use the generated notes to:
-
-1. add them to the [HackMD document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA)
-2. ask the relevant WG leads if they have any add or edit for the updated repo notes in the [HackMD document](https://hackmd.io/cJwvzJ4eRVeqqiXzOPtxsA)
-3. use the GitHub UI to update the repo release tag with the final notes
+To create release note for each repo, run the [Release Notes workflow](https://github.com/knative/release/actions/workflows/release-note.yaml). Afterwards the release note markdown will be a downloadable artifact.
 
 ## Releasing a new version of the Knative documentation
 
@@ -156,19 +178,19 @@ This is because the website references these releases in various locations.
 
 Check the following components for the new release:
 
-* [client](https://github.com/knative/client/releases/)
-* [eventing](https://github.com/knative/eventing/releases/)
-* [operator](https://github.com/knative/operator/releases/)
-* [serving](https://github.com/knative/serving/releases/)
+- [client](https://github.com/knative/client/releases/)
+- [eventing](https://github.com/knative/eventing/releases/)
+- [operator](https://github.com/knative/operator/releases/)
+- [serving](https://github.com/knative/serving/releases/)
 
 ### Create a release branch
 
 1. Check on the `#docs` Slack channel to make sure the release is ready.
-_In the future, we should automate this so the check isn't needed._
+   _In the future, we should automate this so the check isn't needed._
 
-1. Using the GitHub UI, create a `release-X.Y` branch based on `main`.
+2. Using the GitHub UI, create a `release-X.Y` branch based on `main`.
 
-  ![branch](https://user-images.githubusercontent.com/35748459/87461583-804c4c80-c5c3-11ea-8105-f9b34988c9af.png)
+   - ![branch](https://user-images.githubusercontent.com/35748459/87461583-804c4c80-c5c3-11ea-8105-f9b34988c9af.png)
 
 ### Generate the new docs version
 
@@ -179,23 +201,25 @@ We keep the last 4 releases available per [our support window](https://github.co
 
 To generate the new docs version:
 
-1. In `hack/build.sh` on the main branch, update `VERSIONS`
-to include the new version, and remove the oldest. Order matters, most recent first.
+1.  In `hack/build.sh` on the main branch, update `VERSIONS`
+    to include the new version, and remove the oldest. Order matters, most recent first.
 
-    For example:
+        For example:
 
-    ```
-    VERSIONS=("1.5" "1.4" "1.3" "1.2")
-    ```
+        ```
+        VERSIONS=("1.10" "1.9" "1.8")
+        ```
 
-1. PR the result to main.
+2.  PR the result to main.
 
 ### How GitHub and Netlify are hooked up
 
 Netlify build is configured via [netlify.toml](https://github.com/knative/docs/blob/main/netlify.toml)
 
 ## Homebrew updates
+
 ### homebrew-client
+
 After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
 
 - Copy `kn.rb` to the `kn@${PREV_RELEASE}.rb` with `$PREV_RELEASE` to be replace with the latest release (e.g. `0.19`).
@@ -206,22 +230,10 @@ After the client release, the [Homebrew tap](https://github.com/knative/homebrew
 
 ✅ Open a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
 
-### homebrew-kn-plugins
-Similar to the client repo, the [client plugin's Homebrew repo](https://github.com/knative-sandbox/homebrew-kn-plugins) needs to be updated
-for the the plugins supported after their repos have successfully created a release.
-
-Please follow the instructions on how [to update the plugin versions running a script](https://github.com/knative-sandbox/homebrew-kn-plugins#updating-plugin-versions).
-
-Currently the following plugins are available with their own formulas:
-
-* [kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin) is managed via the `admin.rb` formula
-* [kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka) is managed via `source-kafka.rb` formula
-* [kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet) is managed via `source-kamelet.rb` formula
-* [kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart/) is managed via `quickstart.rb` formula
-* [kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event) is managed via `event.rb` formula
-
 ## Administrative work
+
 ### Permissions for release leads
+
 During a release, the release leads for that cycle need to be given all the permissions to perform the tasks needed for a release. Likewise, permissions for leads from the previous release cycle need to be revoked.
 
 Check if the new leads are included in/removed from these two files in the `Knative Release Leads` section:
@@ -241,4 +253,146 @@ It is ok to add/remove leads in two separate PRs.
 After a release open a PR in the [knobots repo](https://github.com/knative-sandbox/knobots) to bump the [update-deps job](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-sandbox/knobots/pull/216) for an example.
 
 ### Updating the release schedule
+
 We maintain a list of current (and future) releases in the [Community repo](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md). When a new release goes out, an older one will almost always fall out of support. We should update the release schedule accordingly by opening a PR against the community repo. See [here](https://github.com/knative/community/pull/991/files) for an example.
+
+## Supporting Repo Dependencies
+
+```mermaid
+graph TD
+A(Hack)--> P(Pkg)
+P(Pkg) --> N(Networking)
+A[Hack] --> C(Caching)
+A[Hack] --> N(Networking)
+A[Hack] --> R(Reconciler-test)
+%% A[Hack] --> CP(Control-Protocol)
+P(Pkg) --> C(Caching)
+P(Pkg) --> R(Reconciler-test)
+style P fill:red
+style P color:white
+style A fill:blue
+style A color:white
+style N fill: Orange
+style N color:white
+style R fill: green
+style R color: white
+style C fill: purple
+style C color: white
+linkStyle 0 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 1 stroke-width:1px,fill:none,stroke:red;
+linkStyle 2 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 3 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 4 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 5 stroke-width:1px,fill:none,stroke:red;
+linkStyle 6 stroke-width:1px,fill:none,stroke:red;
+```
+
+## Core Repo Dependencies
+
+```mermaid
+graph LR
+A[Hack]
+A[Hack] -->  S[Serving]
+A[Hack] --> E[Eventing]
+A[Hack] --> CM(Cert-Manager)
+A[Hack] --> NC(Net-Contour)
+A[Hack] --> NGA(Net-Gateway-API)
+A[Hack] --> NH(Net-Http01)
+A[Hack] --> NS(Net-Istio)
+A[Hack] --> NK(Net-Kourier)
+
+P(Pkg)
+P(Pkg) ---->S[Serving]
+P(Pkg) ---->E[Eventing]
+P(Pkg) ---->CM(Cert-Manager)
+P(Pkg) ---->NC(Net-Contour)
+P(Pkg) ---->NGA(Net-Gateway-API)
+P(Pkg) ---->NH(Net-Http01)
+P(Pkg) ---->NS(Net-Istio)
+P(Pkg) ---->NK(Net-Kourier)
+
+C(Caching)------->S(Serving)
+
+N(Networking)--------->S(Serving)
+N(Networking)--------->CM(Cert-Manager)
+N(Networking)--------->NC(Net-Contour)
+N(Networking)--------->NGA(Net-Gateway-API)
+N(Networking)--------->NH(Net-http01)
+N(Networking)--------->NS(Net-Istio)
+N(Networking)--------->NK(Net-Kourier)
+
+R(Reconciler-test)------>E(Eventing)
+HS(Hack/Schema)---------->E(Eventing)
+HS(Hack/Schema)-------->SC(Sample-Controller)
+
+P(Pkg) ---->SC(Sample-Controller)
+A[Hack]---> SC(Sample-Controller)
+
+style P fill:teal
+style P color:white
+style A fill:blue
+style A color:white
+style N fill: Orange
+style N color:white
+style R fill: saddlebrown
+style R color: white
+style C fill: purple
+style C color: white
+style E fill:salmon
+style E color: white
+style S fill: salmon
+style S color: white
+style CM fill: salmon
+style CM color: white
+style NC fill: salmon
+style NC color: white
+style NGA fill: salmon
+style NGA color: white
+style NH fill: salmon
+style NH color: white
+style NS fill: salmon
+style NS color: white
+style NK fill: salmon
+style NK color: White
+style HS fill: tomato
+style HS color: white
+style SC fill: salmon
+style SC color: white
+
+linkStyle 0 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 1 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 2 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 3 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 4 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 5 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 5 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 6 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 7 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 28 stroke-width:2px,fill:none,stroke:blue
+
+
+linkStyle 8 stroke-width:1px,fill:none,stroke:teal
+linkStyle 9 stroke-width:1px,fill:none,stroke:teal
+linkStyle 10 stroke-width:1px,fill:none,stroke:teal
+linkStyle 11 stroke-width:1px,fill:none,stroke:teal
+linkStyle 12 stroke-width:1px,fill:none,stroke:teal
+linkStyle 13 stroke-width:1px,fill:none,stroke:teal
+linkStyle 14 stroke-width:1px,fill:none,stroke:teal
+linkStyle 15 stroke-width:1px,fill:none,stroke:teal
+
+
+linkStyle 16 stroke-width:px,fill:none,stroke:purple
+
+linkStyle 17 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 18 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 19 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 20 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 21 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 22 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 23 stroke-width:1px,fill:none,stroke:Orange
+linkStyle 24 stroke-width:1px,fill:none,stroke:saddlebrown
+
+linkStyle 25 stroke-width:2px,fill:none,stroke:tomato
+linkStyle 26 stroke-width:2px,fill:none,stroke:tomato
+linkStyle 27 stroke-width:1px,fill:none,stroke:teal;
+```
