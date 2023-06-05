@@ -250,6 +250,7 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 
 #### Final Phase
 - [ ] Talk to Vincent (Operator WG Lead) and have him cut (or help you cut) the [knative/operator](https://github.com/knative/operator)
+   - Latest Version [![Releases][operator-version-badge]][operator-release-page]
 - [ ] Knative Client Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-client))
 - [ ] Knative Client Plugins Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-kn-plugins))
 
@@ -305,6 +306,8 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [func-nightly-page]: https://prow.knative.dev?job=nightly_func_main_periodic
 [func-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_func_main_periodic
 [func-prow-job]: https://prow.knative.dev?job=release_func_main_periodic
+
+[operator-version-badge]: https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver
 
 [networking-version-badge]: https://img.shields.io/github/release-pre/knative/networking.svg?sort=semver
 [networking-release-badge]: https://github.com/knative/release/workflows/knative/networking/badge.svg
