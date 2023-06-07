@@ -40,9 +40,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 - [knative-sandbox/reconciler-test](https://github.com/knative-sandbox/reconciler-test)
   - [ ] Dependencies up to date - [![releasabilty][reconciler-test-release-badge]][reconciler-test-release-workflow]
   - [ ] Branch Cut
-- [knative-sandbox/control-protocol](https://github.com/knative-sandbox/control-protocol)
-  - [ ] Dependencies up to date - [![releasabilty][control-protocol-release-badge]][control-protocol-release-workflow]
-  - [ ] Branch Cut
 
 ### T-minus 1 day
 
@@ -343,15 +340,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [operator-nightly-page]: https://prow.knative.dev?job=nightly_operator_main_periodic
 [operator-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_operator_main_periodic
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
-
-[control-protocol-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/control-protocol.svg?sort=semver
-[control-protocol-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/control-protocol/badge.svg
-[control-protocol-release-page]: https://github.com/knative-sandbox/control-protocol/releases
-[control-protocol-release-workflow]: https://github.com/knative/release/actions/workflows/knative-sandbox-control-protocol.yaml
-[control-protocol-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_control-protocol_main_periodic
-[control-protocol-nightly-page]: https://prow.knative.dev?job=nightly_control-protocol_main_periodic
-[control-protocol-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_control-protocol_main_periodic
-[control-protocol-prow-job]: https://prow.knative.dev?job=release_control-protocol_main_periodic
 
 [eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-autoscaler-keda.svg?sort=semver
 [eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-autoscaler-keda/badge.svg
