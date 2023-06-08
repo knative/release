@@ -50,7 +50,6 @@ Cut the release branch of all the [supporting repos](#supporting-repos). These a
 | [knative.dev/networking](https://github.com/knative/networking) | [![Releasability][networking-release-badge]][networking-release-workflow] |
 | [knative.dev/caching](https://github.com/knative/caching) | [![Releasability][caching-release-badge]][caching-release-workflow] |
 | [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test) | [![Releasability][reconciler-test-release-badge]][reconciler-test-release-workflow] |
-| [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol) | [![Releasability][control-protocol-release-badge]][control-protocol-release-workflow] |
 
 
 ## T-minus 1 day
@@ -231,15 +230,6 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [operator-nightly-page]: https://prow.knative.dev?job=nightly_operator_main_periodic
 [operator-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_operator_main_periodic
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
-
-[control-protocol-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/control-protocol.svg?sort=semver
-[control-protocol-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/control-protocol/badge.svg
-[control-protocol-release-page]: https://github.com/knative-sandbox/control-protocol/releases
-[control-protocol-release-workflow]: https://github.com/knative/release/actions/workflows/knative-sandbox-control-protocol.yaml
-[control-protocol-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_control-protocol_main_periodic
-[control-protocol-nightly-page]: https://prow.knative.dev?job=nightly_control-protocol_main_periodic
-[control-protocol-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_control-protocol_main_periodic
-[control-protocol-prow-job]: https://prow.knative.dev?job=release_control-protocol_main_periodic
 
 [eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-autoscaler-keda.svg?sort=semver
 [eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-autoscaler-keda/badge.svg

@@ -7,7 +7,6 @@
 - name: knative/pkg
 - name: knative/serving
 - name: knative/operator
-- name: knative-sandbox/control-protocol
 - name: knative-sandbox/eventing-autoscaler-keda
 - name: knative-sandbox/eventing-ceph
 - name: knative-sandbox/eventing-github
