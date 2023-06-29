@@ -315,6 +315,7 @@ Notes
 - [ ] Collect release notes into the blog post and publish it (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-release-schedule))
 - [ ] Knobots update-deps job has been bumped to the next release version (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
 - [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channels that the new Knative release is out
+- [ ] Document any change(s) needed to improve the release process
 
 <!-- autogen start -->
 [caching-version-badge]: https://img.shields.io/github/release-pre/knative/caching.svg?sort=semver
