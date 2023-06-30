@@ -53,7 +53,7 @@ For any problems in a specific repo, get in touch with the [relevant WG leads](h
 
 ## Dependency check
 
-tl;dr: check that all the dependencies for the repo are up-to-date and aligned with the relase version.
+tl;dr: check that all the dependencies for the repo are up-to-date and aligned with the release version.
 
 ### Exceptions
 
