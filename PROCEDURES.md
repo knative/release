@@ -34,6 +34,15 @@ For some repos, there might also be additional validations, or steps that need t
 
 Please ensure that there are no outstanding PRs for each repo before proceeding with each of the steps. For additional PRs merged into a repo during the release process, new checks need to be done in that repo and in the repos that depend on it.
 
+Since eventing has a couple of different repositories, you can use the following script to create a Github search query for open PRs in the eventing repos from the `knative-automation` or `knative-prow-robot` users:
+
+```bash
+$ for org in knative knative-sandbox; do for repo in $(curl -s https://api.github.com/orgs/${org}/repos\?per_page\=100 | jq -r '.[] | select(.archived == false) | .full_name' | grep eventing); do echo repo:$repo; done; done | tr '\n' ' '| cat - <(echo "repo:knative-sandbox/reconciler-test is:open is:pr archived:false author:knative-automation author:knative-prow-robot")
+
+repo:knative/eventing repo:knative-sandbox/eventing-kafka repo:knative-sandbox/eventing-rabbitmq repo:knative-sandbox/eventing-kafka-broker repo:knative-sandbox/eventing-autoscaler-keda repo:knative-sandbox/eventing-github repo:knative-sandbox/eventing-prometheus repo:knative-sandbox/eventing-couchdb repo:knative-sandbox/eventing-gitlab repo:knative-sandbox/eventing-natss repo:knative-sandbox/eventing-awssqs repo:knative-sandbox/eventing-ceph repo:knative-sandbox/eventing-redis repo:knative-sandbox/eventing-kogito repo:knative-sandbox/eventing-istio repo:knative-sandbox/reconciler-test is:open is:pr archived:false author:knative-automation author:knative-prow-robot
+```
+The resulting query can then be used on https://github.com/search.
+
 ## Build health check
 
 tl;dr: check that all builds on `main` are passing.
