@@ -1,0 +1,61 @@
+# Copyright 2023 The Knative Authors.
+# SPDX-License-Identifier: Apache-2.0
+
+name: 'knative-unified'
+
+on:
+  schedule:
+    - cron: '0 13 * * 1-5' # 6am Pacific, weekdays.
+
+  workflow_dispatch:
+    inputs:
+      release:
+        type: string
+        required: false
+        description: Release Version
+
+jobs:
+  releasability:
+
+    strategy:
+      matrix:
+        package:
+          - knative/caching
+          - knative/client
+          - knative/client-pkg
+          - knative/eventing
+          - knative/func
+          - knative/networking
+          - knative/pkg
+          - knative/serving
+          - knative-sandbox/control-protocol
+          - knative-sandbox/eventing-autoscaler-keda
+          - knative-sandbox/eventing-ceph
+          - knative-sandbox/eventing-github
+          - knative-sandbox/eventing-gitlab
+          - knative-sandbox/eventing-kafka
+          - knative-sandbox/eventing-kafka-broker
+          - knative-sandbox/eventing-kogito
+          - knative-sandbox/eventing-rabbitmq
+          - knative-sandbox/eventing-redis
+          - knative-sandbox/kn-plugin-admin
+          - knative-sandbox/kn-plugin-event
+          - knative-sandbox/kn-plugin-quickstart
+          - knative-sandbox/kn-plugin-source-kafka
+          - knative-sandbox/kn-plugin-source-kamelet
+          - knative-sandbox/net-certmanager
+          - knative-sandbox/net-contour
+          - knative-sandbox/net-gateway-api
+          - knative-sandbox/net-http01
+          - knative-sandbox/net-istio
+          - knative-sandbox/net-kourier
+          - knative-sandbox/reconciler-test
+          - knative-sandbox/sample-controller
+          - knative-sandbox/sample-source
+
+    uses: ./.github/workflows/releasability.yaml
+    with:
+      repo: ${{ matrix.package }}
+      release: ${{ inputs.release }}
+      post-to-slack: ${{ github.event_name != 'schedule' }}
+    secrets: inherit
