@@ -11,6 +11,7 @@
 - name: knative-sandbox/eventing-ceph
 - name: knative-sandbox/eventing-github
 - name: knative-sandbox/eventing-gitlab
+- name: knative-sandbox/eventing-istio
 - name: knative-sandbox/eventing-kafka
 - name: knative-sandbox/eventing-kafka-broker
 - name: knative-sandbox/eventing-kogito
