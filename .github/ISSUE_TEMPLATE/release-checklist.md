@@ -245,6 +245,14 @@ Notes
     - Prow Release Job [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
     - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-sandbox/eventing-istio](https://github.com/knative-sandbox/eventing-istio)
+  - [ ] Nightly Job [![Nightly][eventing-istio-nightly-badge]][eventing-istio-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][eventing-istio-release-badge]][eventing-istio-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job [![Prow][eventing-istio-prow-badge]][eventing-istio-prow-job]
+    - Latest Version [![Releases][eventing-istio-version-badge]][eventing-istio-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda)
   - [ ] Nightly Job [![Nightly][eventing-autoscaler-keda-nightly-badge]][eventing-autoscaler-keda-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow]
