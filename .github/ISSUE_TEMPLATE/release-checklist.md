@@ -437,6 +437,15 @@ Notes
 [eventing-gitlab-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-gitlab_main_periodic
 [eventing-gitlab-prow-job]: https://prow.knative.dev?job=release_eventing-gitlab_main_periodic
 
+[eventing-istio-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-istio.svg?sort=semver
+[eventing-istio-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-istio/badge.svg
+[eventing-istio-release-page]: https://github.com/knative-sandbox/eventing-istio/releases
+[eventing-istio-release-workflow]: https://github.com/knative/release/actions/workflows/knative-sandbox-eventing-istio.yaml
+[eventing-istio-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-istio_main_periodic
+[eventing-istio-nightly-page]: https://prow.knative.dev?job=nightly_eventing-istio_main_periodic
+[eventing-istio-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-istio_main_periodic
+[eventing-istio-prow-job]: https://prow.knative.dev?job=release_eventing-istio_main_periodic
+
 [eventing-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-kafka.svg?sort=semver
 [eventing-kafka-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-kafka/badge.svg
 [eventing-kafka-release-page]: https://github.com/knative-sandbox/eventing-kafka/releases
