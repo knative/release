@@ -7,7 +7,7 @@ assignees: knative-release-leads
 
 # Timeline of a Knative release
 
-We release each repository of `knative.dev` roughly every 3 months. Please check the [release schedule](../../README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
+We release each repository of `knative.dev` roughly every 3 months. Please check the [release schedule](https://github.com/knative/release/blob/main/README.md#release-schedule) to calculate when to start work on each checkpoint of a release timeline.
 
 ## Repos to be released
 
@@ -31,7 +31,7 @@ We release each repository of `knative.dev` roughly every 3 months. Please check
 
 ### T-minus 7 days - releasing supporting repos
 
-Guidance on [releasing a repository](../../PROCEDURES.md#releasing-a-repository).
+Guidance on [releasing a repository](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-repository).
 
 - [ ] Start a draft for the announcement blog post in the [Knative Team Drive](https://drive.google.com/drive/folders/1IbO2UeEl_HsAX0CDEdbWptMKnMAgCdPt)
 - [ ] An announcement has been made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channel that the cut of [`knative.dev/pkg`](https://github.com/knative/pkg) is imminent
@@ -39,7 +39,7 @@ Guidance on [releasing a repository](../../PROCEDURES.md#releasing-a-repository)
 
 Notes
 
-- Some of the supporting repos can be cut in parallel. Refer [Aligning dependencies](../../PROCEDURES.md/#Aligning-dependencies).
+- Some of the supporting repos can be cut in parallel. Refer [Aligning dependencies](https://github.com/knative/release/blob/main/PROCEDURES.md/#Aligning-dependencies).
 - The release branch for each supporting repos must be done only after the branch for their dependencies is cut.
 
 #### Cut Supporting Repositories
@@ -73,7 +73,7 @@ Notes
 - It is not required that all repos in the included sub-sections be released on the same day the release is scheduled to start.
 - The release notes of a dependency are not a blocker for proceeding to cut a release for a repo.
 - The prow job web page is very slow to respond and you need to click only once to rerun the job.
-- Some repos can be released in parallel.Refer [Aligning dependencies](../../PROCEDURES.md/#Aligning-dependencies).
+- Some repos can be released in parallel.Refer [Aligning dependencies](https://github.com/knative/release/blob/main/PROCEDURES.md#Aligning-dependencies).
 
 #### Phase 1 - Core Repositories _(Can be started after all the supporting repos have been successfully released)_
 
