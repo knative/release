@@ -107,7 +107,7 @@ Notes
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-contour-prow-badge]][net-contour-prow-job]
-  - Latest Version [![Releases][net-contour-version-badge]][net-contour-release-page]
+    - Latest Version [![Releases][net-contour-version-badge]][net-contour-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-gateway-api](https://github.com/knative-sandbox/net-gateway-api)
   - [ ] Nightly Job [![Nightly][net-gateway-api-nightly-badge]][net-gateway-api-nightly-page]
@@ -115,7 +115,7 @@ Notes
   - [ ] Branch Cut
   - [ ] Release https://app.slack.com/client/T08PSQ7BQ/C050X5BGNNS
     - Prow Release [![Releases][net-gateway-api-prow-badge]][net-gateway-api-prow-job]
-  - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
+    - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-http01](https://github.com/knative-sandbox/net-http01)
   - [ ] Nightly Job [![Nightly][net-http01-nightly-badge]][net-http01-nightly-page]
@@ -123,7 +123,7 @@ Notes
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-http01-prow-badge]][net-http01-prow-job]
-  - Latest Version [![Releases][net-http01-version-badge]][net-http01-release-page]
+    - Latest Version [![Releases][net-http01-version-badge]][net-http01-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-istio](https://github.com/knative-sandbox/net-istio)
   - [ ] Nightly Job [![Nightly][net-istio-nightly-badge]][net-istio-nightly-page]
@@ -131,7 +131,7 @@ Notes
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-istio-prow-badge]][net-istio-prow-job]
-  - Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
+    - Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-kourier](https://github.com/knative-sandbox/net-kourier)
   - [ ] Nightly Job [![Nightly][net-kourier-nightly-badge]][net-kourier-nightly-page]
