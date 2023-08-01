@@ -20,6 +20,9 @@ on:
       end-rev:
         description: 'End Tag (defaults to HEAD of the target branch)'
         required: false
+      start-sha:
+        description: 'The commit hash to start processing from (inclusive). To be used with new repos where previous branch is missing.'
+        required: false
 
 jobs:
   release-notes:
@@ -80,6 +83,9 @@ jobs:
         echo "REPO=$REPO" >> $GITHUB_ENV
         echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
+
+        export START_SHA="${{ inputs.start-sha }}"
+
         # If start rev isn't set find the merge base of
         # the target branch and the previous branch
         export START_REV="${{ inputs.start-rev }}"
@@ -139,4 +145,3 @@ jobs:
         MSG_MINIMAL: 'true'
         SLACK_MESSAGE: View - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
         SLACK_FOOTER: ""
-
