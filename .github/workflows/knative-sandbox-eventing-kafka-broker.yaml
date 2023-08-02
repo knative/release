@@ -3,7 +3,7 @@
 
 # This file is automagically generation from ./hack/update-workflows.sh
 
-name: 'knative-sandbox/eventing-kafka-broker'
+name: 'knative-extensions/eventing-kafka-broker'
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
   releasability:
     uses: ./.github/workflows/releasability.yaml
     with:
-      repo: knative-sandbox/eventing-kafka-broker
+      repo: knative-extensions/eventing-kafka-broker
       release: ${{ inputs.release }}
       post-to-slack: ${{ github.event_name != 'schedule' }}
     secrets: inherit

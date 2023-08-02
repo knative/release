@@ -3,7 +3,7 @@
 
 # This file is automagically generation from ./hack/update-workflows.sh
 
-name: 'knative-sandbox/kn-plugin-quickstart'
+name: 'knative-extensions/kn-plugin-quickstart'
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
   releasability:
     uses: ./.github/workflows/releasability.yaml
     with:
-      repo: knative-sandbox/kn-plugin-quickstart
+      repo: knative-extensions/kn-plugin-quickstart
       release: ${{ inputs.release }}
       post-to-slack: ${{ github.event_name != 'schedule' }}
     secrets: inherit

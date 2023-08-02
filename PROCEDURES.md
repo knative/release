@@ -8,8 +8,8 @@
 | [knative.dev/pkg](https://github.com/knative/pkg)                                   |
 | [knative.dev/networking](https://github.com/knative/networking)                     |
 | [knative.dev/caching](https://github.com/knative/caching)                           |
-| [knative.dev/reconciler-test](https://github.com/knative-sandbox/reconciler-test)   |
-| [knative.dev/control-protocol](https://github.com/knative-sandbox/control-protocol) |
+| [knative.dev/reconciler-test](https://github.com/knative-extensions/reconciler-test)   |
+| [knative.dev/control-protocol](https://github.com/knative-extensions/control-protocol) |
 
 ## Releasing a repository
 
@@ -37,9 +37,9 @@ Please ensure that there are no outstanding PRs for each repo before proceeding 
 Since eventing has a couple of different repositories, you can use the following script to create a Github search query for open PRs in the eventing repos from the `knative-automation` or `knative-prow-robot` users:
 
 ```bash
-$ for org in knative knative-sandbox; do for repo in $(curl -s https://api.github.com/orgs/${org}/repos\?per_page\=100 | jq -r '.[] | select(.archived == false) | .full_name' | grep eventing); do echo repo:$repo; done; done | tr '\n' ' '| cat - <(echo "repo:knative-sandbox/reconciler-test repo:knative-sandbox/sample-source repo:knative-sandbox/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot")
+$ for org in knative knative-extensions; do for repo in $(curl -s https://api.github.com/orgs/${org}/repos\?per_page\=100 | jq -r '.[] | select(.archived == false) | .full_name' | grep eventing); do echo repo:$repo; done; done | tr '\n' ' '| cat - <(echo "repo:knative-extensions/reconciler-test repo:knative-extensions/sample-source repo:knative-extensions/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot")
 
-repo:knative/eventing repo:knative-sandbox/eventing-kafka repo:knative-sandbox/eventing-rabbitmq repo:knative-sandbox/eventing-kafka-broker repo:knative-sandbox/eventing-autoscaler-keda repo:knative-sandbox/eventing-github repo:knative-sandbox/eventing-prometheus repo:knative-sandbox/eventing-couchdb repo:knative-sandbox/eventing-gitlab repo:knative-sandbox/eventing-natss repo:knative-sandbox/eventing-awssqs repo:knative-sandbox/eventing-ceph repo:knative-sandbox/eventing-redis repo:knative-sandbox/eventing-kogito repo:knative-sandbox/eventing-istio repo:knative-sandbox/reconciler-test repo:knative-sandbox/sample-source repo:knative-sandbox/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot
+repo:knative/eventing repo:knative-extensions/eventing-kafka repo:knative-extensions/eventing-rabbitmq repo:knative-extensions/eventing-kafka-broker repo:knative-extensions/eventing-autoscaler-keda repo:knative-extensions/eventing-github repo:knative-extensions/eventing-prometheus repo:knative-extensions/eventing-couchdb repo:knative-extensions/eventing-gitlab repo:knative-extensions/eventing-natss repo:knative-extensions/eventing-awssqs repo:knative-extensions/eventing-ceph repo:knative-extensions/eventing-redis repo:knative-extensions/eventing-kogito repo:knative-extensions/eventing-istio repo:knative-extensions/reconciler-test repo:knative-extensions/sample-source repo:knative-extensions/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot
 ```
 The resulting query can then be used on https://github.com/search.
 
@@ -63,9 +63,9 @@ Repos that don't have dependencies naturally don't need a dependency check and t
 
 Each repo needs to be successfully updated to use the latest version of all shared dependencies **before** its release branch is cut.Refer **[Supporting Repo Dependencies](PROCEDURES.md/#supporting-repo-dependencies)** and **[Core Repo Dependencies](PROCEDURES.md/#Core-repo-dependencies)**.
 
-In order to align the `knative.dev` dependencies, `knative-sandbox/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713)) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
+In order to align the `knative.dev` dependencies, `knative-extensions/knobots` automation will run "Upgrade to latest dependencies PRs ([example](https://github.com/knative/eventing/pull/4713)) for each repo, executing the command `./hack/update-deps.sh --upgrade --release 0.20` and committing all the content. Note: `buoy check`, which is invoked in the script, will fail if the dependencies are not yet ready.
 
-- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
+- If there is no "Upgrade to latest dependencies" PR open, the update PR might already have been merged. If this is not the case, manually trigger the generation of this PR starting the [Knobots Auto Update Deps](https://github.com/knative-extensions/knobots/actions/workflows/auto-update-deps.yaml) and wait for the PR to pop in the repo you need. Note that in the automation run you have to change the field `If true, send update PRs even for deps changes that don't change vendor. Use this only for releases.` to **true**, because in some cases there are no code changes in the vendor.
 - Check the `go.mod` to ensure hashes point to commit hash at the head of the release branch of the dependency repo
   - For the **[supporting repos](PROCEDURES.md#supporting-repos)** repos (`hack`, `pkg`, etc) you should see the dependency version pointing at a revision which should match the `HEAD` of the release branch. E.g. `knative.dev/pkg v0.0.0-20210112143930-acbf2af596cf` points at the revision `acbf2af596cf`, which is the `HEAD` of the `release-0.20` branch in `pkg` repo.
   - For the **core release** repos, you should see the dependency version pointing at the version tag. E.g. `knative.dev/eventing v0.20.0` points at the tag `v0.20.0` in the `eventing` repo.
@@ -248,7 +248,7 @@ During a release, the release leads for that cycle need to be given all the perm
 Check if the new leads are included in/removed from these two files in the `Knative Release Leads` section:
 
 - [knative/community/main/peribolos/knative.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative.yaml#L878)
-- [knative/community/main/peribolos/knative-sandbox.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative-sandbox.yaml#L739)
+- [knative/community/main/peribolos/knative-extensions.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative-extensions.yaml#L739)
 
 If not, open a PR in the `knative/community` repo to grant/remove permissions. Here's an example:
 
@@ -259,7 +259,7 @@ It is ok to add/remove leads in two separate PRs.
 
 ### Bump dependencies in auto update job
 
-After a release open a PR in the [knobots repo](https://github.com/knative-sandbox/knobots) to bump the [update-deps job](https://github.com/knative-sandbox/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-sandbox/knobots/pull/216) for an example.
+After a release open a PR in the [knobots repo](https://github.com/knative-extensions/knobots) to bump the [update-deps job](https://github.com/knative-extensions/knobots/actions/workflows/auto-update-deps.yaml) to the next release version. See [here](https://github.com/knative-extensions/knobots/pull/216) for an example.
 
 ### Updating the release schedule
 
