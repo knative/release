@@ -15,6 +15,7 @@ This roster is seeded with all approvers from Serving workgroups, plus additiona
 
 - dprotaso
 - nak3
+- ReToCode
 - skonto
 
 ## Eventing
@@ -25,6 +26,8 @@ This roster is seeded with all approvers from Eventing workgroups, plus addition
 - lionelvillard
 - matzew
 - houshengbo
+- Cali0707
+- creydr
 
 ## Client
 
