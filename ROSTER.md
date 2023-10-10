@@ -25,7 +25,7 @@ This roster is seeded with all approvers from Eventing workgroups, plus addition
 - lionelvillard
 - matzew
 - houshengbo
-- Calum Murray
+- Cali0707
 - creydr
 
 ## Client
