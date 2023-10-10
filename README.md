@@ -18,7 +18,7 @@ The Knative project releases quarterly, on Tuesday of the 4th week of January, A
 | Release | Release Date | Serving             | Eventing                        | PKG cut    | Unpin repos
 | ------- | ------------ | ------------------- | --------------------------------| ---------- | -----------
 | v1.11   | 2023-07-25   | skonto, dsimansk    | creydr, pierDipi, Vishal-Chdhry | 2023-07-18 | 2023-07-26
-| v1.12   | 2023-10-24   | skonto, ReToCode    | TBD                             | 2023-10-17 | 2023-10-25
+| v1.12   | 2023-10-24   | skonto, ReToCode    | Calum Murray, creydr            | 2023-10-17 | 2023-10-25
 | v1.13   | 2024-01-23   | TBD                 | TBD                             | 2024-01-16 | 2024-01-24
 | v1.14   | 2024-04-25   | TBD                 | TBD                             | 2024-04-18 | 2024-04-26
 
