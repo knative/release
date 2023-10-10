@@ -15,6 +15,7 @@ This roster is seeded with all approvers from Serving workgroups, plus additiona
 
 - dprotaso
 - nak3
+- ReToCode
 - skonto
 
 ## Eventing
