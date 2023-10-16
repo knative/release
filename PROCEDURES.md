@@ -194,7 +194,7 @@ Check the following components for the new release:
 
 ### Create a release branch
 
-1. Check on the `#docs` Slack channel to make sure the release is ready.
+1. Check on the `#knative-documentation` Slack channel to make sure the release is ready.
    _In the future, we should automate this so the check isn't needed._
 
 2. Using the GitHub UI, create a `release-X.Y` branch based on `main`.
