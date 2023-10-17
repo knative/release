@@ -9,7 +9,6 @@
 | [knative.dev/networking](https://github.com/knative/networking)                     |
 | [knative.dev/caching](https://github.com/knative/caching)                           |
 | [knative.dev/reconciler-test](https://github.com/knative-extensions/reconciler-test)   |
-| [knative.dev/control-protocol](https://github.com/knative-extensions/control-protocol) |
 
 ## Releasing a repository
 
@@ -274,7 +273,6 @@ P(Pkg) --> N(Networking)
 A[Hack] --> C(Caching)
 A[Hack] --> N(Networking)
 A[Hack] --> R(Reconciler-test)
-%% A[Hack] --> CP(Control-Protocol)
 P(Pkg) --> C(Caching)
 P(Pkg) --> R(Reconciler-test)
 style P fill:red
