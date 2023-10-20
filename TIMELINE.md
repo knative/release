@@ -29,7 +29,7 @@ We release each repository of `knative.dev` roughly every 3 months. Please check
 Cut the release branch of all the [supporting repos](#supporting-repos). These are the base repos where we have common code and common scripts.
 
 - 📄 Open a new [release notes document](PROCEDURES.md#new-release-notes-document) for the release.
-- 📣 Announce on the **#general** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
+- 📣 Announce on the **#knative** Slack channel that the release will be cut in a week and that additional caution should be used when merging big changes.
 - 👀 Verify that the [nightly release automation](PROCEDURES.md#nightly-job) is passing for each of the core `knative.dev` repos. If any is failing, reach out to the corresponding WG leads and ask them to investigate. Repeat throughout the week.
 
 🚨 **NOTES:**
@@ -38,7 +38,7 @@ Cut the release branch of all the [supporting repos](#supporting-repos). These a
 
 - After each repo's release branch is cut, a dependency update might be required for the next repo in the sequence. It is doubly important to have a successful [dependency check](PROCEDURES.md#dependency-check) and subsequently [verify its releasability](PROCEDURES.md#verifying-releasability) before proceeding to cut the branch.
 
-- Automation will trigger all the downstream repos to update their dependencies to these new versions in the next few cycles. The goal is to have the first wave of repo releases (**serving**, **eventing**, etc) become "releasable" by the scheduled [day of release](#t-minus-zero---day-of-release). This is signaled via the reporting of the [releasability](PROCEDURES.md#releasability-check) status posted to the **release-`xdotx`** Slack channel every morning (5am PST, M-F).
+- Automation will trigger all the downstream repos to update their dependencies to these new versions in the next few cycles. The goal is to have the first wave of repo releases (**serving**, **eventing**, etc) become "releasable" by the scheduled [day of release](#t-minus-zero---day-of-release). This is signaled via the reporting of the [releasability](PROCEDURES.md#releasability-check) status posted to the **#knative-release** Slack channel every morning (5am PST, M-F).
 
 ### Supporting repos
 📝 See instructions for guidance on [Releasing a repository](PROCEDURES.md#releasing-a-repository) and follow all the steps.
