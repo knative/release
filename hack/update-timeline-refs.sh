@@ -15,7 +15,7 @@ repo_no_prefix=${repo_no_prefix/knative-extensions\/}
 
   cat <<EOF >> $filename
 [${repo_no_prefix}-version-badge]: https://img.shields.io/github/release-pre/${repo}.svg?sort=semver
-[${repo_no_prefix}-release-badge]: https://github.com/knative/release/workflows/${repo}/badge.svg
+[${repo_no_prefix}-release-badge]: https://github.com/knative/release/actions/workflows/${repo/\//-}.yaml/badge.svg
 [${repo_no_prefix}-release-page]: https://github.com/${repo}/releases
 [${repo_no_prefix}-release-workflow]: https://github.com/knative/release/actions/workflows/${repo/\//-}.yaml
 [${repo_no_prefix}-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_${repo_no_prefix}_main_periodic
