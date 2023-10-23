@@ -327,7 +327,7 @@ Notes
 
 <!-- autogen start -->
 [caching-version-badge]: https://img.shields.io/github/release-pre/knative/caching.svg?sort=semver
-[caching-release-badge]: https://github.com/knative/release/workflows/knative/caching/badge.svg
+[caching-release-badge]: https://github.com/knative/release/actions/workflows/knative-caching.yaml/badge.svg
 [caching-release-page]: https://github.com/knative/caching/releases
 [caching-release-workflow]: https://github.com/knative/release/actions/workflows/knative-caching.yaml
 [caching-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_caching_main_periodic
@@ -336,7 +336,7 @@ Notes
 [caching-prow-job]: https://prow.knative.dev?job=release_caching_main_periodic
 
 [client-version-badge]: https://img.shields.io/github/release-pre/knative/client.svg?sort=semver
-[client-release-badge]: https://github.com/knative/release/workflows/knative/client/badge.svg
+[client-release-badge]: https://github.com/knative/release/actions/workflows/knative-client.yaml/badge.svg
 [client-release-page]: https://github.com/knative/client/releases
 [client-release-workflow]: https://github.com/knative/release/actions/workflows/knative-client.yaml
 [client-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_client_main_periodic
@@ -345,7 +345,7 @@ Notes
 [client-prow-job]: https://prow.knative.dev?job=release_client_main_periodic
 
 [client-pkg-version-badge]: https://img.shields.io/github/release-pre/knative/client-pkg.svg?sort=semver
-[client-pkg-release-badge]: https://github.com/knative/release/workflows/knative/client-pkg/badge.svg
+[client-pkg-release-badge]: https://github.com/knative/release/actions/workflows/knative-client-pkg.yaml/badge.svg
 [client-pkg-release-page]: https://github.com/knative/client-pkg/releases
 [client-pkg-release-workflow]: https://github.com/knative/release/actions/workflows/knative-client-pkg.yaml
 [client-pkg-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_client-pkg_main_periodic
@@ -354,7 +354,7 @@ Notes
 [client-pkg-prow-job]: https://prow.knative.dev?job=release_client-pkg_main_periodic
 
 [eventing-version-badge]: https://img.shields.io/github/release-pre/knative/eventing.svg?sort=semver
-[eventing-release-badge]: https://github.com/knative/release/workflows/knative/eventing/badge.svg
+[eventing-release-badge]: https://github.com/knative/release/actions/workflows/knative-eventing.yaml/badge.svg
 [eventing-release-page]: https://github.com/knative/eventing/releases
 [eventing-release-workflow]: https://github.com/knative/release/actions/workflows/knative-eventing.yaml
 [eventing-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing_main_periodic
@@ -363,7 +363,7 @@ Notes
 [eventing-prow-job]: https://prow.knative.dev?job=release_eventing_main_periodic
 
 [func-version-badge]: https://img.shields.io/github/release-pre/knative/func.svg?sort=semver
-[func-release-badge]: https://github.com/knative/release/workflows/knative/func/badge.svg
+[func-release-badge]: https://github.com/knative/release/actions/workflows/knative-func.yaml/badge.svg
 [func-release-page]: https://github.com/knative/func/releases
 [func-release-workflow]: https://github.com/knative/release/actions/workflows/knative-func.yaml
 [func-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_func_main_periodic
@@ -374,7 +374,7 @@ Notes
 [operator-version-badge]: https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver
 
 [networking-version-badge]: https://img.shields.io/github/release-pre/knative/networking.svg?sort=semver
-[networking-release-badge]: https://github.com/knative/release/workflows/knative/networking/badge.svg
+[networking-release-badge]: https://github.com/knative/release/actions/workflows/knative-networking.yaml/badge.svg
 [networking-release-page]: https://github.com/knative/networking/releases
 [networking-release-workflow]: https://github.com/knative/release/actions/workflows/knative-networking.yaml
 [networking-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_networking_main_periodic
@@ -383,7 +383,7 @@ Notes
 [networking-prow-job]: https://prow.knative.dev?job=release_networking_main_periodic
 
 [pkg-version-badge]: https://img.shields.io/github/release-pre/knative/pkg.svg?sort=semver
-[pkg-release-badge]: https://github.com/knative/release/workflows/knative/pkg/badge.svg
+[pkg-release-badge]: https://github.com/knative/release/actions/workflows/knative-pkg.yaml/badge.svg
 [pkg-release-page]: https://github.com/knative/pkg/releases
 [pkg-release-workflow]: https://github.com/knative/release/actions/workflows/knative-pkg.yaml
 [pkg-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_pkg_main_periodic
@@ -392,7 +392,7 @@ Notes
 [pkg-prow-job]: https://prow.knative.dev?job=release_pkg_main_periodic
 
 [serving-version-badge]: https://img.shields.io/github/release-pre/knative/serving.svg?sort=semver
-[serving-release-badge]: https://github.com/knative/release/workflows/knative/serving/badge.svg
+[serving-release-badge]: https://github.com/knative/release/actions/workflows/knative-serving.yaml/badge.svg
 [serving-release-page]: https://github.com/knative/serving/releases
 [serving-release-workflow]: https://github.com/knative/release/actions/workflows/knative-serving.yaml
 [serving-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_serving_main_periodic
@@ -401,7 +401,7 @@ Notes
 [serving-prow-job]: https://prow.knative.dev?job=release_serving_main_periodic
 
 [operator-version-badge]: https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver
-[operator-release-badge]: https://github.com/knative/release/workflows/knative/operator/badge.svg
+[operator-release-badge]: https://github.com/knative/release/actions/workflows/knative-operator.yaml/badge.svg
 [operator-release-page]: https://github.com/knative/operator/releases
 [operator-release-workflow]: https://github.com/knative/release/actions/workflows/knative-operator.yaml
 [operator-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_operator_main_periodic
@@ -410,7 +410,7 @@ Notes
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
 
 [eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-autoscaler-keda.svg?sort=semver
-[eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-autoscaler-keda/badge.svg
+[eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-autoscaler-keda.yaml/badge.svg
 [eventing-autoscaler-keda-release-page]: https://github.com/knative-extensions/eventing-autoscaler-keda/releases
 [eventing-autoscaler-keda-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-autoscaler-keda.yaml
 [eventing-autoscaler-keda-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-autoscaler-keda_main_periodic
@@ -419,7 +419,7 @@ Notes
 [eventing-autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_eventing-autoscaler-keda_main_periodic
 
 [eventing-ceph-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-ceph.svg?sort=semver
-[eventing-ceph-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-ceph/badge.svg
+[eventing-ceph-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-ceph.yaml/badge.svg
 [eventing-ceph-release-page]: https://github.com/knative-extensions/eventing-ceph/releases
 [eventing-ceph-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-ceph.yaml
 [eventing-ceph-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-ceph_main_periodic
@@ -428,7 +428,7 @@ Notes
 [eventing-ceph-prow-job]: https://prow.knative.dev?job=release_eventing-ceph_main_periodic
 
 [eventing-github-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-github.svg?sort=semver
-[eventing-github-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-github/badge.svg
+[eventing-github-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-github.yaml/badge.svg
 [eventing-github-release-page]: https://github.com/knative-extensions/eventing-github/releases
 [eventing-github-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-github.yaml
 [eventing-github-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-github_main_periodic
@@ -437,7 +437,7 @@ Notes
 [eventing-github-prow-job]: https://prow.knative.dev?job=release_eventing-github_main_periodic
 
 [eventing-gitlab-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-gitlab.svg?sort=semver
-[eventing-gitlab-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-gitlab/badge.svg
+[eventing-gitlab-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-gitlab.yaml/badge.svg
 [eventing-gitlab-release-page]: https://github.com/knative-extensions/eventing-gitlab/releases
 [eventing-gitlab-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-gitlab.yaml
 [eventing-gitlab-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-gitlab_main_periodic
@@ -446,7 +446,7 @@ Notes
 [eventing-gitlab-prow-job]: https://prow.knative.dev?job=release_eventing-gitlab_main_periodic
 
 [eventing-istio-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-istio.svg?sort=semver
-[eventing-istio-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-istio/badge.svg
+[eventing-istio-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-istio.yaml/badge.svg
 [eventing-istio-release-page]: https://github.com/knative-extensions/eventing-istio/releases
 [eventing-istio-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-istio.yaml
 [eventing-istio-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-istio_main_periodic
@@ -455,7 +455,7 @@ Notes
 [eventing-istio-prow-job]: https://prow.knative.dev?job=release_eventing-istio_main_periodic
 
 [eventing-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kafka.svg?sort=semver
-[eventing-kafka-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-kafka/badge.svg
+[eventing-kafka-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka.yaml/badge.svg
 [eventing-kafka-release-page]: https://github.com/knative-extensions/eventing-kafka/releases
 [eventing-kafka-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka.yaml
 [eventing-kafka-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-kafka_main_periodic
@@ -464,7 +464,7 @@ Notes
 [eventing-kafka-prow-job]: https://prow.knative.dev?job=release_eventing-kafka_main_periodic
 
 [eventing-kafka-broker-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kafka-broker.svg?sort=semver
-[eventing-kafka-broker-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-kafka-broker/badge.svg
+[eventing-kafka-broker-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka-broker.yaml/badge.svg
 [eventing-kafka-broker-release-page]: https://github.com/knative-extensions/eventing-kafka-broker/releases
 [eventing-kafka-broker-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka-broker.yaml
 [eventing-kafka-broker-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-kafka-broker_main_periodic
@@ -473,7 +473,7 @@ Notes
 [eventing-kafka-broker-prow-job]: https://prow.knative.dev?job=release_eventing-kafka-broker_main_periodic
 
 [eventing-kogito-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kogito.svg?sort=semver
-[eventing-kogito-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-kogito/badge.svg
+[eventing-kogito-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kogito.yaml/badge.svg
 [eventing-kogito-release-page]: https://github.com/knative-extensions/eventing-kogito/releases
 [eventing-kogito-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kogito.yaml
 [eventing-kogito-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-kogito_main_periodic
@@ -482,7 +482,7 @@ Notes
 [eventing-kogito-prow-job]: https://prow.knative.dev?job=release_eventing-kogito_main_periodic
 
 [eventing-rabbitmq-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-rabbitmq.svg?sort=semver
-[eventing-rabbitmq-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-rabbitmq/badge.svg
+[eventing-rabbitmq-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-rabbitmq.yaml/badge.svg
 [eventing-rabbitmq-release-page]: https://github.com/knative-extensions/eventing-rabbitmq/releases
 [eventing-rabbitmq-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-rabbitmq.yaml
 [eventing-rabbitmq-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-rabbitmq_main_periodic
@@ -491,7 +491,7 @@ Notes
 [eventing-rabbitmq-prow-job]: https://prow.knative.dev?job=release_eventing-rabbitmq_main_periodic
 
 [eventing-redis-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-redis.svg?sort=semver
-[eventing-redis-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-redis/badge.svg
+[eventing-redis-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-redis.yaml/badge.svg
 [eventing-redis-release-page]: https://github.com/knative-extensions/eventing-redis/releases
 [eventing-redis-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-redis.yaml
 [eventing-redis-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-redis_main_periodic
@@ -500,7 +500,7 @@ Notes
 [eventing-redis-prow-job]: https://prow.knative.dev?job=release_eventing-redis_main_periodic
 
 [kn-plugin-admin-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-admin.svg?sort=semver
-[kn-plugin-admin-release-badge]: https://github.com/knative/release/workflows/knative-extensions/kn-plugin-admin/badge.svg
+[kn-plugin-admin-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-admin.yaml/badge.svg
 [kn-plugin-admin-release-page]: https://github.com/knative-extensions/kn-plugin-admin/releases
 [kn-plugin-admin-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-admin.yaml
 [kn-plugin-admin-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-admin_main_periodic
@@ -509,7 +509,7 @@ Notes
 [kn-plugin-admin-prow-job]: https://prow.knative.dev?job=release_kn-plugin-admin_main_periodic
 
 [kn-plugin-event-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-event.svg?sort=semver
-[kn-plugin-event-release-badge]: https://github.com/knative/release/workflows/knative-extensions/kn-plugin-event/badge.svg
+[kn-plugin-event-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-event.yaml/badge.svg
 [kn-plugin-event-release-page]: https://github.com/knative-extensions/kn-plugin-event/releases
 [kn-plugin-event-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-event.yaml
 [kn-plugin-event-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-event_main_periodic
@@ -518,7 +518,7 @@ Notes
 [kn-plugin-event-prow-job]: https://prow.knative.dev?job=release_kn-plugin-event_main_periodic
 
 [kn-plugin-quickstart-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-quickstart.svg?sort=semver
-[kn-plugin-quickstart-release-badge]: https://github.com/knative/release/workflows/knative-extensions/kn-plugin-quickstart/badge.svg
+[kn-plugin-quickstart-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-quickstart.yaml/badge.svg
 [kn-plugin-quickstart-release-page]: https://github.com/knative-extensions/kn-plugin-quickstart/releases
 [kn-plugin-quickstart-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-quickstart.yaml
 [kn-plugin-quickstart-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-quickstart_main_periodic
@@ -527,7 +527,7 @@ Notes
 [kn-plugin-quickstart-prow-job]: https://prow.knative.dev?job=release_kn-plugin-quickstart_main_periodic
 
 [kn-plugin-source-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-source-kafka.svg?sort=semver
-[kn-plugin-source-kafka-release-badge]: https://github.com/knative/release/workflows/knative-extensions/kn-plugin-source-kafka/badge.svg
+[kn-plugin-source-kafka-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kafka.yaml/badge.svg
 [kn-plugin-source-kafka-release-page]: https://github.com/knative-extensions/kn-plugin-source-kafka/releases
 [kn-plugin-source-kafka-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kafka.yaml
 [kn-plugin-source-kafka-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-source-kafka_main_periodic
@@ -536,7 +536,7 @@ Notes
 [kn-plugin-source-kafka-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kafka_main_periodic
 
 [kn-plugin-source-kamelet-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-source-kamelet.svg?sort=semver
-[kn-plugin-source-kamelet-release-badge]: https://github.com/knative/release/workflows/knative-extensions/kn-plugin-source-kamelet/badge.svg
+[kn-plugin-source-kamelet-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kamelet.yaml/badge.svg
 [kn-plugin-source-kamelet-release-page]: https://github.com/knative-extensions/kn-plugin-source-kamelet/releases
 [kn-plugin-source-kamelet-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kamelet.yaml
 [kn-plugin-source-kamelet-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-source-kamelet_main_periodic
@@ -545,7 +545,7 @@ Notes
 [kn-plugin-source-kamelet-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kamelet_main_periodic
 
 [net-certmanager-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-certmanager.svg?sort=semver
-[net-certmanager-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-certmanager/badge.svg
+[net-certmanager-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-certmanager.yaml/badge.svg
 [net-certmanager-release-page]: https://github.com/knative-extensions/net-certmanager/releases
 [net-certmanager-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-certmanager.yaml
 [net-certmanager-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-certmanager_main_periodic
@@ -554,7 +554,7 @@ Notes
 [net-certmanager-prow-job]: https://prow.knative.dev?job=release_net-certmanager_main_periodic
 
 [net-contour-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-contour.svg?sort=semver
-[net-contour-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-contour/badge.svg
+[net-contour-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-contour.yaml/badge.svg
 [net-contour-release-page]: https://github.com/knative-extensions/net-contour/releases
 [net-contour-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-contour.yaml
 [net-contour-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-contour_main_periodic
@@ -563,7 +563,7 @@ Notes
 [net-contour-prow-job]: https://prow.knative.dev?job=release_net-contour_main_periodic
 
 [net-gateway-api-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-gateway-api.svg?sort=semver
-[net-gateway-api-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-gateway-api/badge.svg
+[net-gateway-api-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-gateway-api.yaml/badge.svg
 [net-gateway-api-release-page]: https://github.com/knative-extensions/net-gateway-api/releases
 [net-gateway-api-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-gateway-api.yaml
 [net-gateway-api-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-gateway-api_main_periodic
@@ -572,7 +572,7 @@ Notes
 [net-gateway-api-prow-job]: https://prow.knative.dev?job=release_net-gateway-api_main_periodic
 
 [net-http01-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-http01.svg?sort=semver
-[net-http01-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-http01/badge.svg
+[net-http01-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-http01.yaml/badge.svg
 [net-http01-release-page]: https://github.com/knative-extensions/net-http01/releases
 [net-http01-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-http01.yaml
 [net-http01-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-http01_main_periodic
@@ -581,7 +581,7 @@ Notes
 [net-http01-prow-job]: https://prow.knative.dev?job=release_net-http01_main_periodic
 
 [net-istio-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-istio.svg?sort=semver
-[net-istio-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-istio/badge.svg
+[net-istio-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-istio.yaml/badge.svg
 [net-istio-release-page]: https://github.com/knative-extensions/net-istio/releases
 [net-istio-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-istio.yaml
 [net-istio-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-istio_main_periodic
@@ -590,7 +590,7 @@ Notes
 [net-istio-prow-job]: https://prow.knative.dev?job=release_net-istio_main_periodic
 
 [net-kourier-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-kourier.svg?sort=semver
-[net-kourier-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-kourier/badge.svg
+[net-kourier-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-kourier.yaml/badge.svg
 [net-kourier-release-page]: https://github.com/knative-extensions/net-kourier/releases
 [net-kourier-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-kourier.yaml
 [net-kourier-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-kourier_main_periodic
@@ -599,7 +599,7 @@ Notes
 [net-kourier-prow-job]: https://prow.knative.dev?job=release_net-kourier_main_periodic
 
 [reconciler-test-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/reconciler-test.svg?sort=semver
-[reconciler-test-release-badge]: https://github.com/knative/release/workflows/knative-extensions/reconciler-test/badge.svg
+[reconciler-test-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-reconciler-test.yaml/badge.svg
 [reconciler-test-release-page]: https://github.com/knative-extensions/reconciler-test/releases
 [reconciler-test-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-reconciler-test.yaml
 [reconciler-test-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_reconciler-test_main_periodic
@@ -608,7 +608,7 @@ Notes
 [reconciler-test-prow-job]: https://prow.knative.dev?job=release_reconciler-test_main_periodic
 
 [sample-controller-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-controller.svg?sort=semver
-[sample-controller-release-badge]: https://github.com/knative/release/workflows/knative-extensions/sample-controller/badge.svg
+[sample-controller-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-controller.yaml/badge.svg
 [sample-controller-release-page]: https://github.com/knative-extensions/sample-controller/releases
 [sample-controller-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-controller.yaml
 [sample-controller-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-controller_main_periodic
@@ -617,7 +617,7 @@ Notes
 [sample-controller-prow-job]: https://prow.knative.dev?job=release_sample-controller_main_periodic
 
 [sample-source-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-source.svg?sort=semver
-[sample-source-release-badge]: https://github.com/knative/release/workflows/knative-extensions/sample-source/badge.svg
+[sample-source-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-source.yaml/badge.svg
 [sample-source-release-page]: https://github.com/knative-extensions/sample-source/releases
 [sample-source-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-source.yaml
 [sample-source-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-source_main_periodic
@@ -626,3 +626,5 @@ Notes
 [sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
 
 [release-note-workflow]: https://github.com/knative/release/actions/workflows/release-note.yaml
+
+<!-- autogen end -->
