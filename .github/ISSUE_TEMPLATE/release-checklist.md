@@ -210,6 +210,14 @@ Notes
     - Prow Release Job [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
     - Latest Version [![Releases][eventing-kafka-version-badge]][eventing-kafka-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-extensions/eventing-kafka-broker](https://github.com/knative-extensions/eventing-kafka-broker)
+  - [ ] Nightly Job [![Nightly][eventing-kafka-broker-nightly-badge]][eventing-kafka-broker-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
+    - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/eventing-redis](https://github.com/knative-extensions/eventing-redis)
   - [ ] Nightly Job [![Nightly][eventing-redis-nightly-badge]][eventing-redis-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][eventing-redis-release-badge]][eventing-redis-release-workflow]
@@ -237,14 +245,6 @@ Notes
 
 #### Phase 5 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
 
-- [knative-extensions/eventing-kafka-broker](https://github.com/knative-extensions/eventing-kafka-broker)
-  - [ ] Nightly Job [![Nightly][eventing-kafka-broker-nightly-badge]][eventing-kafka-broker-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
-    - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/eventing-istio](https://github.com/knative-extensions/eventing-istio)
   - [ ] Nightly Job [![Nightly][eventing-istio-nightly-badge]][eventing-istio-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][eventing-istio-release-badge]][eventing-istio-release-workflow]
