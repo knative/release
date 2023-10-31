@@ -29,9 +29,9 @@ This roster is seeded with all approvers from Eventing workgroups, plus addition
 - Cali0707
 - creydr
 
-## Client
+## Client & Functions
 
-This roster is seeded with approvers from the Client workgroups.
+This roster is seeded with approvers from the Client and Functions workgroups.
 
 - dsimansk
 - rhuss
