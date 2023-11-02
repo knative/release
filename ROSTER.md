@@ -22,6 +22,7 @@ This roster is seeded with all approvers from Serving workgroups, plus additiona
 
 This roster is seeded with all approvers from Eventing workgroups, plus additional volunteers.
 
+- evankanderson
 - matzew
 - houshengbo
 - Cali0707
