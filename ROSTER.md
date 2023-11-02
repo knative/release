@@ -2,7 +2,7 @@
 
 For each release cycle, we dedicate a team of two individuals, one from Eventing
 and one from Serving, to shepherd the release process. Participation is
-voluntary and based on good faith. Participation is expected to to take place only during local work hours.
+voluntary and based on good faith. Participation is expected to take place only during local work hours.
 
 We seed this rotation with all approvers from all the Serving and Eventing
 workgroups, excluding productivity. If you are no longer active in Knative, or
@@ -23,16 +23,13 @@ This roster is seeded with all approvers from Serving workgroups, plus additiona
 This roster is seeded with all approvers from Eventing workgroups, plus additional volunteers.
 
 - evankanderson
-- lionelvillard
 - matzew
 - houshengbo
 - Cali0707
 - creydr
 
-## Client
+## Client & Functions
 
-This roster is seeded with approvers from the Client workgroups.
+This roster is seeded with approvers from the Client and Functions workgroups.
 
 - dsimansk
-- rhuss
-
