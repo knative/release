@@ -325,6 +325,8 @@ Notes
 - [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channels that the new Knative release is out
 - [ ] Document any change(s) needed to improve the release process
 
+[release-note-workflow]: https://github.com/knative/release/actions/workflows/release-note.yaml
+
 <!-- autogen start -->
 [caching-version-badge]: https://img.shields.io/github/release-pre/knative/caching.svg?sort=semver
 [caching-release-badge]: https://github.com/knative/release/actions/workflows/knative-caching.yaml/badge.svg
@@ -370,8 +372,6 @@ Notes
 [func-nightly-page]: https://prow.knative.dev?job=nightly_func_main_periodic
 [func-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_func_main_periodic
 [func-prow-job]: https://prow.knative.dev?job=release_func_main_periodic
-
-[operator-version-badge]: https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver
 
 [networking-version-badge]: https://img.shields.io/github/release-pre/knative/networking.svg?sort=semver
 [networking-release-badge]: https://github.com/knative/release/actions/workflows/knative-networking.yaml/badge.svg
@@ -571,15 +571,6 @@ Notes
 [net-gateway-api-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-gateway-api_main_periodic
 [net-gateway-api-prow-job]: https://prow.knative.dev?job=release_net-gateway-api_main_periodic
 
-[net-http01-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-http01.svg?sort=semver
-[net-http01-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-http01.yaml/badge.svg
-[net-http01-release-page]: https://github.com/knative-extensions/net-http01/releases
-[net-http01-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-http01.yaml
-[net-http01-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-http01_main_periodic
-[net-http01-nightly-page]: https://prow.knative.dev?job=nightly_net-http01_main_periodic
-[net-http01-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-http01_main_periodic
-[net-http01-prow-job]: https://prow.knative.dev?job=release_net-http01_main_periodic
-
 [net-istio-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-istio.svg?sort=semver
 [net-istio-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-istio.yaml/badge.svg
 [net-istio-release-page]: https://github.com/knative-extensions/net-istio/releases
@@ -624,7 +615,5 @@ Notes
 [sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
 [sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
 [sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
-
-[release-note-workflow]: https://github.com/knative/release/actions/workflows/release-note.yaml
 
 <!-- autogen end -->

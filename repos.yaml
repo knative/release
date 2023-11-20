@@ -25,7 +25,6 @@
 - name: knative-extensions/net-certmanager
 - name: knative-extensions/net-contour
 - name: knative-extensions/net-gateway-api
-- name: knative-extensions/net-http01
 - name: knative-extensions/net-istio
 - name: knative-extensions/net-kourier
 - name: knative-extensions/reconciler-test
