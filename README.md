@@ -19,7 +19,7 @@ The Knative project releases quarterly, on Tuesday of the 4th week of January, A
 |---------|--------------|---------------------------------------------------|------------|-------------|
 | v1.11   | 2023-07-25   | skonto, dsimansk, creydr, pierDipi, Vishal-Chdhry | 2023-07-18 | 2023-07-26  |
 | v1.12   | 2023-10-24   | skonto, ReToCode, Cali0707, creydr, dsimansk      | 2023-10-17 | 2023-10-25  |
-| v1.13   | 2024-01-23   | TBD                                               | 2024-01-16 | 2024-01-24  |
+| v1.13   | 2024-01-23   | skonto, ReToCode                                  | 2024-01-16 | 2024-01-24  |
 | v1.14   | 2024-04-25   | TBD                                               | 2024-04-18 | 2024-04-26  |
 
 ## Release leads
