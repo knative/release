@@ -247,7 +247,7 @@ During a release, the release leads for that cycle need to be given all the perm
 Check if the new leads are included in/removed from these two files in the `Knative Release Leads` section:
 
 - [knative/community/main/peribolos/knative.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative.yaml#L878)
-- [knative/community/main/peribolos/knative-extensions.yaml#Knative Release Leads](https://github.com/knative/community/blob/e635686d46366906af861c409978c2c55990a10e/peribolos/knative-extensions.yaml#L739)
+- [knative/community/main/peribolos/knative-extensions.yaml#Knative Release Leads](https://github.com/knative/community/blob/d9633c5bc6b2557e359f5402f998d20e3a51502a/peribolos/knative-extensions.yaml#L747)
 
 If not, open a PR in the `knative/community` repo to grant/remove permissions. Here's an example:
 
