@@ -84,7 +84,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | [knative.dev/net-certmanager](https://github.com/knative-extensions/net-certmanager) | [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]  | [![Releasability][net-certmanager-release-badge]][net-certmanager-release-workflow]  | [![Nightly][net-certmanager-nightly-badge]][net-certmanager-nightly-page]  | [![Release][net-certmanager-prow-badge]][net-certmanager-prow-job]  |
 | [knative.dev/net-contour](https://github.com/knative-extensions/net-contour) | [![Releases][net-contour-version-badge]][net-contour-release-page]  | [![Releasability][net-contour-release-badge]][net-contour-release-workflow]  | [![Nightly][net-contour-nightly-badge]][net-contour-nightly-page]  | [![Release][net-contour-prow-badge]][net-contour-prow-job]  |
 | [knative.dev/net-gateway-api](https://github.com/knative-extensions/net-gateway-api) | [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]  | [![Releasability][net-gateway-api-release-badge]][net-gateway-api-release-workflow]  | [![Nightly][net-gateway-api-nightly-badge]][net-gateway-api-nightly-page]  | [![Release][net-gateway-api-prow-badge]][net-gateway-api-prow-job]  |
-| [knative.dev/net-http01](https://github.com/knative-extensions/net-http01) | [![Releases][net-http01-version-badge]][net-http01-release-page]  | [![Releasability][net-http01-release-badge]][net-http01-release-workflow]  | [![Nightly][net-http01-nightly-badge]][net-http01-nightly-page]  | [![Release][net-http01-prow-badge]][net-http01-prow-job]  |
 | [knative.dev/net-istio](https://github.com/knative-extensions/net-istio) | [![Releases][net-istio-version-badge]][net-istio-release-page]  | [![Releasability][net-istio-release-badge]][net-istio-release-workflow]  | [![Nightly][net-istio-nightly-badge]][net-istio-nightly-page]  | [![Release][net-istio-prow-badge]][net-istio-prow-job]  |
 | [knative.dev/net-kourier](https://github.com/knative-extensions/net-kourier) | [![Releases][net-kourier-version-badge]][net-kourier-release-page]  | [![Releasability][net-kourier-release-badge]][net-kourier-release-workflow]  | [![Nightly][net-kourier-nightly-badge]][net-kourier-nightly-page]  | [![Release][net-kourier-prow-badge]][net-kourier-prow-job]  |
 | [knative.dev/eventing](https://github.com/knative/eventing) | [![Releases][eventing-version-badge]][eventing-release-page]  | [![Releasability][eventing-release-badge]][eventing-release-workflow]  | [![Nightly][eventing-nightly-badge]][eventing-nightly-page]  | [![Release][eventing-prow-badge]][eventing-prow-job]  |
@@ -393,15 +392,6 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [net-gateway-api-nightly-page]: https://prow.knative.dev?job=nightly_net-gateway-api_main_periodic
 [net-gateway-api-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-gateway-api_main_periodic
 [net-gateway-api-prow-job]: https://prow.knative.dev?job=release_net-gateway-api_main_periodic
-
-[net-http01-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-http01.svg?sort=semver
-[net-http01-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-http01/badge.svg
-[net-http01-release-page]: https://github.com/knative-extensions/net-http01/releases
-[net-http01-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-http01.yaml
-[net-http01-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-http01_main_periodic
-[net-http01-nightly-page]: https://prow.knative.dev?job=nightly_net-http01_main_periodic
-[net-http01-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-http01_main_periodic
-[net-http01-prow-job]: https://prow.knative.dev?job=release_net-http01_main_periodic
 
 [net-istio-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-istio.svg?sort=semver
 [net-istio-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-istio/badge.svg
