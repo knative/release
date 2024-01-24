@@ -14,7 +14,6 @@ in the rotation, feel free to send a PR to remove yourself.
 This roster is seeded with all approvers from Serving workgroups, plus additional volunteers.
 
 - dprotaso
-- nak3
 - ReToCode
 - skonto
 
