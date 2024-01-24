@@ -304,7 +304,6 @@ A[Hack] --> E[Eventing]
 A[Hack] --> CM(Cert-Manager)
 A[Hack] --> NC(Net-Contour)
 A[Hack] --> NGA(Net-Gateway-API)
-A[Hack] --> NH(Net-Http01)
 A[Hack] --> NS(Net-Istio)
 A[Hack] --> NK(Net-Kourier)
 
@@ -314,7 +313,6 @@ P(Pkg) ---->E[Eventing]
 P(Pkg) ---->CM(Cert-Manager)
 P(Pkg) ---->NC(Net-Contour)
 P(Pkg) ---->NGA(Net-Gateway-API)
-P(Pkg) ---->NH(Net-Http01)
 P(Pkg) ---->NS(Net-Istio)
 P(Pkg) ---->NK(Net-Kourier)
 
@@ -324,7 +322,6 @@ N(Networking)--------->S(Serving)
 N(Networking)--------->CM(Cert-Manager)
 N(Networking)--------->NC(Net-Contour)
 N(Networking)--------->NGA(Net-Gateway-API)
-N(Networking)--------->NH(Net-http01)
 N(Networking)--------->NS(Net-Istio)
 N(Networking)--------->NK(Net-Kourier)
 
