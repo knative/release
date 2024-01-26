@@ -33,7 +33,6 @@ We release each repository of `knative.dev` roughly every 3 months. Please check
 
 Guidance on [releasing a repository](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-repository).
 
-- [ ] Start a draft for the announcement blog post in the [Knative Team Drive](https://drive.google.com/drive/folders/1IbO2UeEl_HsAX0CDEdbWptMKnMAgCdPt)
 - [ ] An announcement has been made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channel that the cut of [`knative.dev/pkg`](https://github.com/knative/pkg) is imminent
 - [ ] Check the status of the nightly builds. See the badge against each core repo in Phase 1. Let the [working group leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) know about failures and ask them to investigate.Repeat this process throughout the week. This should not be a blocker to start cutting the supporting repositories mentioned below.
 
