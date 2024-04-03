@@ -98,6 +98,7 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/eventing-ceph](https://github.com/knative-extensions/eventing-ceph) | [![Releases][eventing-ceph-version-badge]][eventing-ceph-release-page]  | [![Releasability][eventing-ceph-release-badge]][eventing-ceph-release-workflow]  | [![Nightly][eventing-ceph-nightly-badge]][eventing-ceph-nightly-page]  | [![Release][eventing-ceph-prow-badge]][eventing-ceph-prow-job]  |
 | [knative.dev/eventing-kogito](https://github.com/knative-extensions/eventing-kogito) | [![Releases][eventing-kogito-version-badge]][eventing-kogito-release-page]  | [![Releasability][eventing-kogito-release-badge]][eventing-kogito-release-workflow]  | [![Nightly][eventing-kogito-nightly-badge]][eventing-kogito-nightly-page]  | [![Release][eventing-kogito-prow-badge]][eventing-kogito-prow-job]  |
+| [knative.dev/eventing-rabbitmq](https://github.com/knative-extensions/eventing-rabbitmq) | [![Releases][eventing-rabbitmq-version-badge]][eventing-rabbitmq-release-page]  | [![Releasability][eventing-rabbitmq-release-badge]][eventing-rabbitmq-release-workflow]  | [![Nightly][eventing-rabbitmq-nightly-badge]][eventing-rabbitmq-nightly-page]  | [![Release][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]  |
 | [knative.dev/sample-source](https://github.com/knative-extensions/sample-source) | [![Releases][sample-source-version-badge]][sample-source-release-page]  | [![Releasability][sample-source-release-badge]][sample-source-release-workflow]  | [![Nightly][sample-source-nightly-badge]][sample-source-nightly-page]  | [![Release][sample-source-prow-badge]][sample-source-prow-job]  |
 
 
@@ -301,6 +302,15 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [eventing-kogito-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kogito_main_periodic
 [eventing-kogito-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kogito_main_periodic
 [eventing-kogito-prow-job]: https://prow.knative.dev?job=release_eventing-kogito_main_periodic
+
+[eventing-rabbitmq-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-rabbitmq.svg?sort=semver
+[eventing-rabbitmq-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-rabbitmq/badge.svg
+[eventing-rabbitmq-release-page]: https://github.com/knative-extensions/eventing-rabbitmq/releases
+[eventing-rabbitmq-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-rabbitmq.yaml
+[eventing-rabbitmq-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-rabbitmq_main_periodic
+[eventing-rabbitmq-nightly-page]: https://prow.knative.dev?job=nightly_eventing-rabbitmq_main_periodic
+[eventing-rabbitmq-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-rabbitmq_main_periodic
+[eventing-rabbitmq-prow-job]: https://prow.knative.dev?job=release_eventing-rabbitmq_main_periodic
 
 [eventing-redis-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-redis.svg?sort=semver
 [eventing-redis-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-redis/badge.svg
