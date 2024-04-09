@@ -21,7 +21,7 @@ on:
         required: false
 
 env:
-  DEFAULT_RELEASE: "1.13" # make sure this is quoted
+  DEFAULT_RELEASE: "1.14" # make sure this is quoted
   CHECK_MESSAGE: ""
   VERIFY_MESSAGE: ""
 
