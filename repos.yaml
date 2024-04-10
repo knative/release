@@ -15,6 +15,7 @@
 - name: knative-extensions/eventing-kafka
 - name: knative-extensions/eventing-kafka-broker
 - name: knative-extensions/eventing-kogito
+- name: knative-extensions/eventing-natss
 - name: knative-extensions/eventing-rabbitmq
 - name: knative-extensions/eventing-redis
 - name: knative-extensions/kn-plugin-admin

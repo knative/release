@@ -233,6 +233,14 @@ Notes
     - Prow Release Job [![Prow][eventing-gitlab-prow-badge]][eventing-gitlab-prow-job]
     - Latest Version [![Releases][eventing-gitlab-version-badge]][eventing-gitlab-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-extensions/eventing-natss](https://github.com/knative-extensions/eventing-natss)
+  - [ ] Nightly Job [![Nightly][eventing-natss-nightly-badge]][eventing-natss-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][eventing-natss-release-badge]][eventing-natss-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job [![Prow][eventing-natss-prow-badge]][eventing-natss-prow-job]
+    - Latest Version [![Releases][eventing-natss-version-badge]][eventing-natss-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Phase 5 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
 
@@ -471,6 +479,15 @@ Notes
 [eventing-kogito-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kogito_main_periodic
 [eventing-kogito-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kogito_main_periodic
 [eventing-kogito-prow-job]: https://prow.knative.dev?job=release_eventing-kogito_main_periodic
+
+[eventing-natss-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-natss.svg?sort=semver
+[eventing-natss-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-natss.yaml/badge.svg
+[eventing-natss-release-page]: https://github.com/knative-extensions/eventing-natss/releases
+[eventing-natss-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-natss.yaml
+[eventing-natss-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-natss_main_periodic
+[eventing-natss-nightly-page]: https://prow.knative.dev?job=nightly_eventing-natss_main_periodic
+[eventing-natss-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-natss_main_periodic
+[eventing-natss-prow-job]: https://prow.knative.dev?job=release_eventing-natss_main_periodic
 
 [eventing-rabbitmq-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-rabbitmq.svg?sort=semver
 [eventing-rabbitmq-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-rabbitmq.yaml/badge.svg
