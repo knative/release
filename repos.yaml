@@ -12,7 +12,6 @@
 - name: knative-extensions/eventing-github
 - name: knative-extensions/eventing-gitlab
 - name: knative-extensions/eventing-istio
-- name: knative-extensions/eventing-kafka
 - name: knative-extensions/eventing-kafka-broker
 - name: knative-extensions/eventing-kogito
 - name: knative-extensions/eventing-natss

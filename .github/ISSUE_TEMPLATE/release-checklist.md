@@ -193,14 +193,6 @@ Notes
     - Prow Release Job [![Prow][client-prow-badge]][client-prow-job]
     - Latest Version [![Releases][client-version-badge]][client-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/eventing-kafka](https://github.com/knative-extensions/eventing-kafka)
-  - [ ] Nightly Job [![Nightly][eventing-kafka-nightly-badge]][eventing-kafka-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-release-badge]][eventing-kafka-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
-    - Latest Version [![Releases][eventing-kafka-version-badge]][eventing-kafka-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/eventing-kafka-broker](https://github.com/knative-extensions/eventing-kafka-broker)
   - [ ] Nightly Job [![Nightly][eventing-kafka-broker-nightly-badge]][eventing-kafka-broker-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
@@ -452,15 +444,6 @@ Notes
 [eventing-istio-nightly-page]: https://prow.knative.dev?job=nightly_eventing-istio_main_periodic
 [eventing-istio-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-istio_main_periodic
 [eventing-istio-prow-job]: https://prow.knative.dev?job=release_eventing-istio_main_periodic
-
-[eventing-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kafka.svg?sort=semver
-[eventing-kafka-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka.yaml/badge.svg
-[eventing-kafka-release-page]: https://github.com/knative-extensions/eventing-kafka/releases
-[eventing-kafka-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka.yaml
-[eventing-kafka-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-kafka_main_periodic
-[eventing-kafka-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kafka_main_periodic
-[eventing-kafka-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kafka_main_periodic
-[eventing-kafka-prow-job]: https://prow.knative.dev?job=release_eventing-kafka_main_periodic
 
 [eventing-kafka-broker-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kafka-broker.svg?sort=semver
 [eventing-kafka-broker-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kafka-broker.yaml/badge.svg
