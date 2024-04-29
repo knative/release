@@ -92,14 +92,6 @@ Notes
     - Prow Release Job [![Prow][eventing-prow-badge]][eventing-prow-job]
     - Latest Version [![Releases][eventing-version-badge]][eventing-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/net-certmanager](https://github.com/knative-extensions/net-certmanager)
-  - [ ] Nightly Job [![Nightly][net-certmanager-nightly-badge]][net-certmanager-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][net-certmanager-release-badge]][net-certmanager-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release [![Prow][net-certmanager-prow-badge]][net-certmanager-prow-job]
-    - Latest Version [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/net-contour](https://github.com/knative-extensions/net-contour)
   - [ ] Nightly Job [![Nightly][net-contour-nightly-badge]][net-contour-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][net-contour-release-badge]][net-contour-release-workflow]
@@ -534,15 +526,6 @@ Notes
 [kn-plugin-source-kamelet-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kamelet_main_periodic
-
-[net-certmanager-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-certmanager.svg?sort=semver
-[net-certmanager-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-certmanager.yaml/badge.svg
-[net-certmanager-release-page]: https://github.com/knative-extensions/net-certmanager/releases
-[net-certmanager-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-certmanager.yaml
-[net-certmanager-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-certmanager_main_periodic
-[net-certmanager-nightly-page]: https://prow.knative.dev?job=nightly_net-certmanager_main_periodic
-[net-certmanager-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-certmanager_main_periodic
-[net-certmanager-prow-job]: https://prow.knative.dev?job=release_net-certmanager_main_periodic
 
 [net-contour-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-contour.svg?sort=semver
 [net-contour-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-contour.yaml/badge.svg

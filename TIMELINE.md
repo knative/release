@@ -81,7 +81,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | Repo   | Version | Releasability   | Nightly Job   |  Release Job
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/serving](https://github.com/knative/serving) | [![Releases][serving-version-badge]][serving-release-page]  | [![Releasability][serving-release-badge]][serving-release-workflow]  | [![Nightly][serving-nightly-badge]][serving-nightly-page]  | [![Release][serving-prow-badge]][serving-prow-job]  |
-| [knative.dev/net-certmanager](https://github.com/knative-extensions/net-certmanager) | [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]  | [![Releasability][net-certmanager-release-badge]][net-certmanager-release-workflow]  | [![Nightly][net-certmanager-nightly-badge]][net-certmanager-nightly-page]  | [![Release][net-certmanager-prow-badge]][net-certmanager-prow-job]  |
 | [knative.dev/net-contour](https://github.com/knative-extensions/net-contour) | [![Releases][net-contour-version-badge]][net-contour-release-page]  | [![Releasability][net-contour-release-badge]][net-contour-release-workflow]  | [![Nightly][net-contour-nightly-badge]][net-contour-nightly-page]  | [![Release][net-contour-prow-badge]][net-contour-prow-job]  |
 | [knative.dev/net-gateway-api](https://github.com/knative-extensions/net-gateway-api) | [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]  | [![Releasability][net-gateway-api-release-badge]][net-gateway-api-release-workflow]  | [![Nightly][net-gateway-api-nightly-badge]][net-gateway-api-nightly-page]  | [![Release][net-gateway-api-prow-badge]][net-gateway-api-prow-job]  |
 | [knative.dev/net-istio](https://github.com/knative-extensions/net-istio) | [![Releases][net-istio-version-badge]][net-istio-release-page]  | [![Releasability][net-istio-release-badge]][net-istio-release-workflow]  | [![Nightly][net-istio-nightly-badge]][net-istio-nightly-page]  | [![Release][net-istio-prow-badge]][net-istio-prow-job]  |
@@ -365,15 +364,6 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [kn-plugin-source-kamelet-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kamelet_main_periodic
-
-[net-certmanager-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-certmanager.svg?sort=semver
-[net-certmanager-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-certmanager/badge.svg
-[net-certmanager-release-page]: https://github.com/knative-extensions/net-certmanager/releases
-[net-certmanager-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-net-certmanager.yaml
-[net-certmanager-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_net-certmanager_main_periodic
-[net-certmanager-nightly-page]: https://prow.knative.dev?job=nightly_net-certmanager_main_periodic
-[net-certmanager-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-certmanager_main_periodic
-[net-certmanager-prow-job]: https://prow.knative.dev?job=release_net-certmanager_main_periodic
 
 [net-contour-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-contour.svg?sort=semver
 [net-contour-release-badge]: https://github.com/knative/release/workflows/knative-extensions/net-contour/badge.svg
