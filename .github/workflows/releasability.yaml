@@ -125,7 +125,7 @@ jobs:
       - name: Post status to Slack
         # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
         if: env.SLACK_WEBHOOK != '' && inputs.post-to-slack
-        uses: rtCamp/action-slack-notify@v2.2.0
+        uses: rtCamp/action-slack-notify@v2.3.0
         env:
           SLACK_CHANNEL: knative-release
           SLACK_USERNAME: knative/release
