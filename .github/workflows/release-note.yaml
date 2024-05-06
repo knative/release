@@ -55,7 +55,7 @@ jobs:
       run: go install k8s.io/release/cmd/release-notes@latest
 
     - name: Check out code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         # fetch-depth of 0 indicates all history for all branches and tags.
         fetch-depth: 0
