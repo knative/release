@@ -25,7 +25,7 @@ We release each repository of `knative.dev` roughly every 3 months. Please check
 - [ ] Update release version in the following workflows
 
   - [ ] Releasability (see: [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-releasability-defaults))
-  - [ ] Update Dependency (see: [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
+  - [ ] Check if Dependency Updates are working and the Knobots update-deps job has been bumped to the next release version (see: [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
 
 - [ ] An announcement has been made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channel that [`knative.dev/pkg`](https://github.com/knative/pkg) will be released in a week
 
@@ -306,6 +306,7 @@ Notes
 - [ ] Collect release notes into the blog post and publish it (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-release-schedule))
 - [ ] Knobots update-deps job has been bumped to the next release version (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
 - [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channels that the new Knative release is out
+- [ ] Revoke release leads permissions for the current release (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#permissions-for-release-leads))
 - [ ] Document any change(s) needed to improve the release process
 
 [release-note-workflow]: https://github.com/knative/release/actions/workflows/release-note.yaml
