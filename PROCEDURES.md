@@ -168,6 +168,15 @@ You can manually trigger a release for a repository by re-running its release jo
 
 Repos that don't require release artifacts (such as release tags and GitHub release for example) naturally don't need a release note and this step can be skipped for those. All of the [supporting repos](PROCEDURES.md#supporting-repos) fit these criteria.
 
+#### Github's release notes generator
+
+There's an org wide release notes [template](https://github.com/knative/.github/blob/main/.github/release.yml) configured to enable Github's native [release notes generator](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#example-configurations). Navigate to repository's releases, `edit` newly created release. In the edit view click `Generate release notes`, content is added to release body. In addition, you can check latest new tag is recognized, or correct it accordingly.
+
+
+#### Alternative release notes generator
+
+This is a former way we used to generate release notes, still usable as a fallback.
+
 To create release note for each repo, run the [Release Notes workflow](https://github.com/knative/release/actions/workflows/release-note.yaml). Afterwards the release note markdown will be a downloadable artifact.
 
 ## Releasing a new version of the Knative documentation
