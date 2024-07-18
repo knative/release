@@ -239,13 +239,9 @@ Netlify build is configured via [netlify.toml](https://github.com/knative/docs/b
 
 After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
 
-- Copy `kn.rb` to the `kn@${PREV_RELEASE}.rb` with `$PREV_RELEASE` to be replace with the latest release (e.g. `0.19`).
-- In `kn@${PREV_RELEASE}.rb` replace `class Kn` with `class KnAT${PREV_RELEASE_DIGITS}`, e.g `class KnAT019` for an previous release `0.19`.
-- In `kn.rb`:
-  - Replace the old version number in `v` with the released version (e.g. `v = "v0.20.0"`)
-  - Replace the `sha256` checksums with the values from the [client release page](https://github.com/knative/client/releases). The checksums have been released too (e.g. [checksums.txt](https://github.com/knative/client/releases/download/v0.22.0/checksums.txt))
-
-✅ Open a PR and merge the changes. Prow is not enabled for the homebrew repo, so the merge needs to be performed manually.
+- Trigger `Update Homebrew Tap` [action](https://github.com/knative/homebrew-client/actions/workflows/knative-update-release.yaml) 
+- A new PR should be produced from the action automatically - check the queue.
+- Homebrew install check is in place - usual PR workflow applies green tests + `/lgtm`. Done.
 
 ## Administrative work
 
