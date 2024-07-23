@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 start_marker="<!-- autogen start -->"
 end_marker="<!-- autogen end -->"
 

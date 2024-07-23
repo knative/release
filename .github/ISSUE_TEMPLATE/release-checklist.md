@@ -124,6 +124,14 @@ Notes
     - Prow Release [![Releases][net-kourier-prow-badge]][net-kourier-prow-job]
     - Latest Version [![Releases][net-kourier-version-badge]][net-kourier-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-extensions/autoscaler-keda](https://github.com/knative-extensions/autoscaler-keda)
+  - [ ] Nightly Job [![Nightly][autoscaler-keda-nightly-badge]][autoscaler-keda-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][autoscaler-keda-release-badge]][autoscaler-keda-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release [![Releases][autoscaler-keda-prow-badge]][autoscaler-keda-prow-job]
+    - Latest Version [![Releases][autoscaler-keda-version-badge]][autoscaler-keda-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/sample-controller](https://github.com/knative-extensions/sample-controller)
   - [ ] Nightly Job [![Nightly][sample-controller-nightly-badge]][sample-controller-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][sample-controller-release-badge]][sample-controller-release-workflow]
@@ -590,5 +598,14 @@ Notes
 [sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
 [sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
 [sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
+
+[autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/autoscaler-keda.svg?sort=semver
+[autoscaler-keda-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-autoscaler-keda.yaml/badge.svg
+[autoscaler-keda-release-page]: https://github.com/knative-extensions/autoscaler-keda/releases
+[autoscaler-keda-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-autoscaler-keda.yaml
+[autoscaler-keda-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_autoscaler-keda_main_periodic
+[autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_autoscaler-keda_main_periodic
+[autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_autoscaler-keda_main_periodic
+[autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_autoscaler-keda_main_periodic
 
 <!-- autogen end -->
