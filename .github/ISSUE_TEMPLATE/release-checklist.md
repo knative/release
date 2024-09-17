@@ -300,6 +300,14 @@ Notes
     - Prow Release Job [![Prow][func-prow-badge]][func-prow-job]
     - Latest Version [![Releases][func-version-badge]][func-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-extensions/backstage-plugins](https://github.com/knative-extensions/backstage-plugins)
+  - [ ] Nightly Job [![Nightly][backstage-plugins-nightly-badge]][backstage-plugins-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][backstage-plugins-release-badge]][backstage-plugins-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release Job [![Prow][backstage-plugins-prow-badge]][backstage-plugins-prow-job]
+    - Latest Version [![Releases][backstage-plugins-version-badge]][backstage-plugins-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Final Phase
 
@@ -607,5 +615,14 @@ Notes
 [autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_autoscaler-keda_main_periodic
 [autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_autoscaler-keda_main_periodic
 [autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_autoscaler-keda_main_periodic
+
+[backstage-plugins-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/backstage-plugins.svg?sort=semver
+[backstage-plugins-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-backstage-plugins.yaml/badge.svg
+[backstage-plugins-release-page]: https://github.com/knative-extensions/backstage-plugins/releases
+[backstage-plugins-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-backstage-plugins.yaml
+[backstage-plugins-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_backstage-plugins_main_periodic
+[backstage-plugins-nightly-page]: https://prow.knative.dev?job=nightly_backstage-plugins_main_periodic
+[backstage-plugins-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_backstage-plugins_main_periodic
+[backstage-plugins-prow-job]: https://prow.knative.dev?job=release_backstage-plugins_main_periodic
 
 <!-- autogen end -->

@@ -137,6 +137,7 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 | [knative.dev/kn-plugin-source-kamelet](https://github.com/knative-extensions/kn-plugin-source-kamelet) | [![Releases][kn-plugin-source-kamelet-version-badge]][kn-plugin-source-kamelet-release-page] | [![Releasability][kn-plugin-source-kamelet-release-badge]][kn-plugin-source-kamelet-release-workflow] | [![Nightly][kn-plugin-source-kamelet-nightly-badge]][kn-plugin-source-kamelet-nightly-page]  | [![Release][kn-plugin-source-kamelet-prow-badge]][kn-plugin-source-kamelet-prow-job] |
 | [knative.dev/kn-plugin-quickstart](https://github.com/knative-extensions/kn-plugin-quickstart)         | [![Releases][kn-plugin-quickstart-version-badge]][kn-plugin-quickstart-release-page]         | [![Releasability][kn-plugin-quickstart-release-badge]][kn-plugin-quickstart-release-workflow]         | [![Nightly][kn-plugin-quickstart-nightly-badge]][kn-plugin-quickstart-nightly-page]  | [![Release][kn-plugin-quickstart-prow-badge]][kn-plugin-quickstart-prow-job]         |
 | [knative.dev/func](https://github.com/knative/func)                                                 | [![Releases][func-version-badge]][func-release-page]                                         | [![Releasability][func-release-badge]][func-release-workflow]                                         | [![Nightly][func-nightly-badge]][func-nightly-page]  | [![Release][func-prow-badge]][func-prow-job]                                         |
+| [knative.dev/backstage-plugins](https://github.com/knative-extensions/backstage-plugins)                                                 | [![Releases][backstage-plugins-version-badge]][backstage-plugins-release-page]                                         | [![Releasability][backstage-plugins-release-badge]][backstage-plugins-release-workflow]                                         | [![Nightly][backstage-plugins-nightly-badge]][backstage-plugins-nightly-page]  | [![Release][backstage-plugins-prow-badge]][backstage-plugins-prow-job]                                         |
 
 
 ## Post-release
@@ -427,5 +428,14 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
 [sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
 [sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
+
+[backstage-plugins-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/backstage-plugins.svg?sort=semver
+[backstage-plugins-release-badge]: https://github.com/knative/release/workflows/knative-extensions/backstage-plugins/badge.svg
+[backstage-plugins-release-page]: https://github.com/knative-extensions/backstage-plugins/releases
+[backstage-plugins-release-workflow]: https://github.com/knative/release/actions/workflows/knative-backstage-plugins.yaml
+[backstage-plugins-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_backstage-plugins_main_periodic
+[backstage-plugins-nightly-page]: https://prow.knative.dev?job=nightly_backstage-plugins_main_periodic
+[backstage-plugins-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_backstage-plugins_main_periodic
+[backstage-plugins-prow-job]: https://prow.knative.dev?job=release_backstage-plugins_main_periodic
 
 <!-- autogen end -->

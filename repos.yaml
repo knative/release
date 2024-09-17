@@ -30,3 +30,4 @@
 - name: knative-extensions/sample-controller
 - name: knative-extensions/sample-source
 - name: knative-extensions/autoscaler-keda
+- name: knative-extensions/backstage-plugins
