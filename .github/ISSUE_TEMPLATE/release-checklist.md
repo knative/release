@@ -151,14 +151,6 @@ Notes
     - Prow Release Job [![Prow][eventing-ceph-prow-badge]][eventing-ceph-prow-job]
     - Latest Version [![Releases][eventing-ceph-version-badge]][eventing-ceph-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/eventing-kogito](https://github.com/knative-extensions/eventing-kogito)
-  - [ ] Nightly Job [![Nightly][eventing-kogito-nightly-badge]][eventing-kogito-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][eventing-kogito-release-badge]][eventing-kogito-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][eventing-kogito-prow-badge]][eventing-kogito-prow-job]
-    - Latest Version [![Releases][eventing-kogito-version-badge]][eventing-kogito-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/eventing-rabbitmq](https://github.com/knative-extensions/eventing-rabbitmq)
   - [ ] Nightly Job [![Nightly][eventing-rabbitmq-nightly-badge]][eventing-rabbitmq-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][eventing-rabbitmq-release-badge]][eventing-rabbitmq-release-workflow]
@@ -462,15 +454,6 @@ Notes
 [eventing-kafka-broker-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kafka-broker_main_periodic
 [eventing-kafka-broker-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kafka-broker_main_periodic
 [eventing-kafka-broker-prow-job]: https://prow.knative.dev?job=release_eventing-kafka-broker_main_periodic
-
-[eventing-kogito-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-kogito.svg?sort=semver
-[eventing-kogito-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kogito.yaml/badge.svg
-[eventing-kogito-release-page]: https://github.com/knative-extensions/eventing-kogito/releases
-[eventing-kogito-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-kogito.yaml
-[eventing-kogito-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-kogito_main_periodic
-[eventing-kogito-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kogito_main_periodic
-[eventing-kogito-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kogito_main_periodic
-[eventing-kogito-prow-job]: https://prow.knative.dev?job=release_eventing-kogito_main_periodic
 
 [eventing-natss-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-natss.svg?sort=semver
 [eventing-natss-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-natss.yaml/badge.svg
