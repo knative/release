@@ -136,7 +136,7 @@ jobs:
     - name: Post status to Slack
       # Note: using env.SLACK_WEBHOOK here because secrets are not allowed in the if block.
       if: ${{ always() && env.SLACK_WEBHOOK != '' }}
-      uses: rtCamp/action-slack-notify@v2.3.1
+      uses: rtCamp/action-slack-notify@v2.3.2
       env:
         SLACK_CHANNEL: knative-release
         SLACK_USERNAME: knative/release
