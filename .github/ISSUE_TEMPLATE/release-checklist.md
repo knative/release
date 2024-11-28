@@ -313,6 +313,7 @@ Notes
 - [ ] Release schedule has been updated in [RELEASE-SCHEDULE.md](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md) and [README.md](https://github.com/knative/release/blob/main/README.md)
 - [ ] Collect release notes into the blog post and publish it (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-release-schedule))
 - [ ] Knobots update-deps job has been bumped to the next release version (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
+- [ ] Knative Functions version used for Backstage template generation has been bumped to newly released version on main ([file](https://github.com/knative-extensions/backstage-plugins/blob/main/hack/func-version.txt)) 
 - [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channels that the new Knative release is out
 - [ ] Revoke release leads permissions for the current release (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#permissions-for-release-leads))
 - [ ] Document any change(s) needed to improve the release process
