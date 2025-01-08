@@ -13,14 +13,15 @@ The Knative project releases quarterly, on Tuesday of the 4th week of January, A
 
 **NOTE**: *Minor deviances from above schedule are possible, but they must be accepted by the [TOC committee](https://github.com/knative/community/blob/main/TECH-OVERSIGHT-COMMITTEE.md). Exact dates will always be updated in table(s) below.*
 
-### Release schedule for 2024
+### Release schedule for 2025
 
 | Release | Release Date | Release Leads                                                     | PKG cut    | Unpin repos |
 |---------|--------------|-------------------------------------------------------------------|------------|-------------|
-| v1.14   | 2024-04-23   | Cali0707, izabelacg, dsimansk                                     | 2024-04-16 | 2024-04-24  |
-| v1.15   | 2024-07-23   | ReToCode, skonto, Cali0707, Leo6Leo, dsimansk                     | 2024-07-16 | 2024-07-24  |
-| v1.16   | 2024-10-22   | ReToCode, skonto, dsimansk                                        | 2024-10-15 | 2024-10-23  |
-| v1.17   | 2025-01-21   | TBD                                                               | 2025-01-14 | 2025-01-21  |
+| v1.17   | 2025-01-21   | skonto, dsimansk, dprotaso                                        | 2025-01-14 | 2025-01-22  |
+| v1.18   | 2025-04-22   | TBD                                                               | 2025-04-15 | 2025-04-23  |
+| v1.19   | 2025-07-22   | TBD                                                               | 2025-07-15 | 2025-07-23  |
+| v1.20   | 2025-10-21   | TBD                                                               | 2025-10-14 | 2025-10-22  |
+
 
 ## Release leads
 The current pool of Knative release lead volunteers are listed in the [release roster](./ROSTER.md). If you would like to be a Knative release lead, please open a PR to add your name to the list! Please note: Before volunteering to lead a specific release, please look over the [release timeline](TIMELINE.md) to ensure your availability during the various checkpoints for that release is going to be a match.
