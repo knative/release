@@ -309,6 +309,7 @@ Notes
 
 ### Post Release - after operator is cut
 
+- [ ] Update the supported version(s) of Serving/Eventing in the [operator page in the Knative docs](https://github.com/knative/docs/blob/main/docs/install/operator/knative-with-operators.md)
 - [ ] Release the knative.dev/docs (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-new-version-of-the-knative-documentation))
 - [ ] Release schedule has been updated in [RELEASE-SCHEDULE.md](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md) and [README.md](https://github.com/knative/release/blob/main/README.md)
 - [ ] Collect release notes into the blog post and publish it (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-release-schedule))
