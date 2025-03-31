@@ -124,14 +124,6 @@ Notes
     - Prow Release [![Releases][net-kourier-prow-badge]][net-kourier-prow-job]
     - Latest Version [![Releases][net-kourier-version-badge]][net-kourier-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/autoscaler-keda](https://github.com/knative-extensions/autoscaler-keda)
-  - [ ] Nightly Job [![Nightly][autoscaler-keda-nightly-badge]][autoscaler-keda-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][autoscaler-keda-release-badge]][autoscaler-keda-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release [![Releases][autoscaler-keda-prow-badge]][autoscaler-keda-prow-job]
-    - Latest Version [![Releases][autoscaler-keda-version-badge]][autoscaler-keda-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/sample-controller](https://github.com/knative-extensions/sample-controller)
   - [ ] Nightly Job [![Nightly][sample-controller-nightly-badge]][sample-controller-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][sample-controller-release-badge]][sample-controller-release-workflow]
@@ -299,6 +291,14 @@ Notes
   - [ ] Release
     - Prow Release Job [![Prow][backstage-plugins-prow-badge]][backstage-plugins-prow-job]
     - Latest Version [![Releases][backstage-plugins-version-badge]][backstage-plugins-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+- [knative-extensions/autoscaler-keda](https://github.com/knative-extensions/autoscaler-keda)
+  - [ ] Nightly Job [![Nightly][autoscaler-keda-nightly-badge]][autoscaler-keda-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][autoscaler-keda-release-badge]][autoscaler-keda-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release [![Releases][autoscaler-keda-prow-badge]][autoscaler-keda-prow-job]
+    - Latest Version [![Releases][autoscaler-keda-version-badge]][autoscaler-keda-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Final Phase

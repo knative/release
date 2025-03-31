@@ -214,7 +214,7 @@ Check the following components for the new release:
 To generate the new version of the docs, you must update the [`hack/build.sh`](https://github.com/knative/docs/blob/main/hack/build.sh)
 script in the main branch to reference the new release.
 
-We keep the last 4 releases available per [our support window](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md#knative-community-support-window-principle).
+We keep the last 2 releases available per [our support window](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md#knative-community-support-window-principle).
 
 To generate the new docs version:
 
