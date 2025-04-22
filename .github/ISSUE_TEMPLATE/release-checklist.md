@@ -104,7 +104,7 @@ Notes
   - [ ] Nightly Job [![Nightly][net-gateway-api-nightly-badge]][net-gateway-api-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][net-gateway-api-release-badge]][net-gateway-api-release-workflow]
   - [ ] Branch Cut
-  - [ ] Release https://app.slack.com/client/T08PSQ7BQ/C050X5BGNNS
+  - [ ] Release
     - Prow Release [![Releases][net-gateway-api-prow-badge]][net-gateway-api-prow-job]
     - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
