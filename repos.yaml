@@ -11,6 +11,7 @@
 - name: knative-extensions/eventing-ceph
 - name: knative-extensions/eventing-github
 - name: knative-extensions/eventing-gitlab
+- name: knative-extensions/eventing-integrations
 - name: knative-extensions/eventing-istio
 - name: knative-extensions/eventing-kafka-broker
 - name: knative-extensions/eventing-natss

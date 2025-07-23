@@ -41,7 +41,7 @@ Notes
 - Some of the supporting repos can be cut in parallel. Refer [Aligning dependencies](https://github.com/knative/release/blob/main/PROCEDURES.md/#Aligning-dependencies).
 - The release branch for each supporting repos must be done only after the branch for their dependencies is cut.
 
-#### Cut Supporting Repositories
+#### Cut Supporting Repositories _(Cut these in descending order (top to bottom) if unsure)_
 
 - [knative/hack](https://github.com/knative/hack)
   - [ ] Branch Cut
@@ -74,7 +74,18 @@ Notes
 - The prow job web page is very slow to respond and you need to click only once to rerun the job.
 - Some repos can be released in parallel.Refer [Aligning dependencies](https://github.com/knative/release/blob/main/PROCEDURES.md#Aligning-dependencies).
 
-#### Phase 1 - Core Repositories _(Can be started after all the supporting repos have been successfully released)_
+#### Phase 0 - Core-Required Repositories _(Can be started after `knative/hack` branch has been cut)_
+
+- [knative-extensions/eventing-integrations](https://github.com/knative-extensions/eventing-integrations)
+  - [ ] Nightly Job [![Nightly][eventing-integrations-nightly-badge]][eventing-integrations-nightly-page]
+  - [ ] Dependencies up to date - [![releasabilty][eventing-integrations-release-badge]][eventing-integrations-release-workflow]
+  - [ ] Branch Cut
+  - [ ] Release
+    - Prow Release [![Releases][eventing-integrations-prow-badge]][eventing-integrations-prow-job]
+    - Latest Version [![Releases][eventing-integrations-version-badge]][eventing-integrations-release-page]
+  - [ ] Release Notes ([run workflow][release-note-workflow])
+
+#### Phase 1 - Core Repositories _(Can be started after all the supporting and core-required repos have been successfully released)_
 
 - [knative/serving](https://github.com/knative/serving)
   - [ ] Nightly Job [![Nightly][serving-nightly-badge]][serving-nightly-page]
@@ -437,6 +448,15 @@ Notes
 [eventing-gitlab-nightly-page]: https://prow.knative.dev?job=nightly_eventing-gitlab_main_periodic
 [eventing-gitlab-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-gitlab_main_periodic
 [eventing-gitlab-prow-job]: https://prow.knative.dev?job=release_eventing-gitlab_main_periodic
+
+[eventing-integrations-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-integrations.svg?sort=semver
+[eventing-integrations-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-integrations.yaml/badge.svg
+[eventing-integrations-release-page]: https://github.com/knative-extensions/eventing-integrations/releases
+[eventing-integrations-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-integrations.yaml
+[eventing-integrations-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-integrations_main_periodic
+[eventing-integrations-nightly-page]: https://prow.knative.dev?job=nightly_eventing-integrations_main_periodic
+[eventing-integrations-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-integrations_main_periodic
+[eventing-integrations-prow-job]: https://prow.knative.dev?job=release_eventing-integrations_main_periodic
 
 [eventing-istio-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-istio.svg?sort=semver
 [eventing-istio-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-istio.yaml/badge.svg
