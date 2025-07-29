@@ -316,7 +316,7 @@ Notes
 
 - [ ] Talk to Vincent (Operator WG Lead) and have him cut (or help you cut) the [knative/operator](https://github.com/knative/operator) [![Releases][operator-version-badge]][operator-release-page]
 - [ ] Knative Client Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-client))
-- [ ] Knative Client Plugins Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-kn-plugins))
+- [ ] Knative Client Plugins Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-client))
 
 ### Post Release - after operator is cut
 

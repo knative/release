@@ -5,7 +5,11 @@ start_marker="<!-- autogen start -->"
 end_marker="<!-- autogen end -->"
 
 filename=".github/ISSUE_TEMPLATE/release-checklist.md"
+
 sed -i '' "/${start_marker}/,/${end_marker}/d"  $filename
+# Note if doesn't work:
+# if using Linux (or not using Mac), try switching for this (the empty '' removed)
+# sed -i "/${start_marker}/,/${end_marker}/d"  $filename
 
 echo "${start_marker}" >> $filename
 for repo in $(yq '.[] | .name' repos.yaml); do
