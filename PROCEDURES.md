@@ -239,9 +239,10 @@ Netlify build is configured via [netlify.toml](https://github.com/knative/docs/b
 
 After the client release, the [Homebrew tap](https://github.com/knative/homebrew-client) needs to be updated with the new release:
 
-- Trigger `Update Homebrew Tap` [action](https://github.com/knative/homebrew-client/actions/workflows/knative-update-release.yaml) 
+- Trigger `Update Homebrew Tap` [action](https://github.com/knative/homebrew-client/actions/workflows/knative-update-release.yaml)
 - A new PR should be produced from the action automatically - check the queue.
 - Homebrew install check is in place - usual PR workflow applies green tests + `/lgtm`. Done.
+- Rinse and repeat for [Homebrew Tap Plugins](https://github.com/knative-extensions/homebrew-kn-plugins)
 
 ## Administrative work
 
@@ -284,37 +285,36 @@ style P fill:red
 style P color:white
 style A fill:blue
 style A color:white
-style N fill: Orange
+style N fill:orange
 style N color:white
-style R fill: green
-style R color: white
-style C fill: purple
-style C color: white
-linkStyle 0 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 1 stroke-width:1px,fill:none,stroke:red;
-linkStyle 2 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 3 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 4 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 5 stroke-width:1px,fill:none,stroke:red;
-linkStyle 6 stroke-width:1px,fill:none,stroke:red;
+style R fill:green
+style R color:white
+style C fill:purple
+style C color:white
+linkStyle 0 stroke-width:1px,fill:none,stroke:blue
+linkStyle 1 stroke-width:1px,fill:none,stroke:red
+linkStyle 2 stroke-width:1px,fill:none,stroke:blue
+linkStyle 3 stroke-width:1px,fill:none,stroke:blue
+linkStyle 4 stroke-width:1px,fill:none,stroke:blue
+linkStyle 5 stroke-width:1px,fill:none,stroke:red
+linkStyle 6 stroke-width:1px,fill:none,stroke:red
 ```
 
 ## Core Repo Dependencies
 
 ```mermaid
 graph LR
-A[Hack]
-A[Hack] -->  S[Serving]
-A[Hack] --> E[Eventing]
-A[Hack] --> CM(Cert-Manager)
-A[Hack] --> NC(Net-Contour)
-A[Hack] --> NGA(Net-Gateway-API)
-A[Hack] --> NS(Net-Istio)
-A[Hack] --> NK(Net-Kourier)
 
-P(Pkg)
-P(Pkg) ---->S[Serving]
-P(Pkg) ---->E[Eventing]
+A(Hack) -->  S(Serving)
+A(Hack) --> E(Eventing)
+A(Hack) --> CM(Cert-Manager)
+A(Hack) --> NC(Net-Contour)
+A(Hack) --> NGA(Net-Gateway-API)
+A(Hack) --> NS(Net-Istio)
+A(Hack) --> NK(Net-Kourier)
+
+P(Pkg) ---->S(Serving)
+P(Pkg) ---->E(Eventing)
 P(Pkg) ---->CM(Cert-Manager)
 P(Pkg) ---->NC(Net-Contour)
 P(Pkg) ---->NGA(Net-Gateway-API)
@@ -335,73 +335,72 @@ HS(Hack/Schema)---------->E(Eventing)
 HS(Hack/Schema)-------->SC(Sample-Controller)
 
 P(Pkg) ---->SC(Sample-Controller)
-A[Hack]---> SC(Sample-Controller)
+A(Hack)---> SC(Sample-Controller)
 
 style P fill:teal
 style P color:white
 style A fill:blue
 style A color:white
-style N fill: Orange
+style N fill:orange
 style N color:white
-style R fill: saddlebrown
-style R color: white
-style C fill: purple
-style C color: white
+style R fill:saddlebrown
+style R color:white
+style C fill:purple
+style C color:white
 style E fill:salmon
-style E color: white
-style S fill: salmon
-style S color: white
-style CM fill: salmon
-style CM color: white
-style NC fill: salmon
-style NC color: white
-style NGA fill: salmon
-style NGA color: white
-style NH fill: salmon
-style NH color: white
-style NS fill: salmon
-style NS color: white
-style NK fill: salmon
-style NK color: White
-style HS fill: tomato
-style HS color: white
-style SC fill: salmon
-style SC color: white
+style E color:white
+style S fill:salmon
+style S color:white
+style CM fill:salmon
+style CM color:white
+style NC fill:salmon
+style NC color:white
+style NGA fill:salmon
+style NGA color:white
+style NS fill:salmon
+style NS color:white
+style NK fill:salmon
+style NK color:white
+style HS fill:tomato
+style HS color:white
+style SC fill:salmon
+style SC color:white
 
-linkStyle 0 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 1 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 2 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 3 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 4 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 5 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 5 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 6 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 7 stroke-width:1px,fill:none,stroke:blue;
-linkStyle 28 stroke-width:2px,fill:none,stroke:blue
+%% Hack
+linkStyle 0 stroke-width:1px,fill:none,stroke:blue
+linkStyle 1 stroke-width:1px,fill:none,stroke:blue
+linkStyle 2 stroke-width:1px,fill:none,stroke:blue
+linkStyle 3 stroke-width:1px,fill:none,stroke:blue
+linkStyle 4 stroke-width:1px,fill:none,stroke:blue
+linkStyle 5 stroke-width:1px,fill:none,stroke:blue
+linkStyle 6 stroke-width:1px,fill:none,stroke:blue
+linkStyle 25 stroke-width:1px,fill:none,stroke:blue
 
-
+%% Pkg
+linkStyle 7 stroke-width:1px,fill:none,stroke:teal
 linkStyle 8 stroke-width:1px,fill:none,stroke:teal
 linkStyle 9 stroke-width:1px,fill:none,stroke:teal
 linkStyle 10 stroke-width:1px,fill:none,stroke:teal
 linkStyle 11 stroke-width:1px,fill:none,stroke:teal
 linkStyle 12 stroke-width:1px,fill:none,stroke:teal
 linkStyle 13 stroke-width:1px,fill:none,stroke:teal
-linkStyle 14 stroke-width:1px,fill:none,stroke:teal
-linkStyle 15 stroke-width:1px,fill:none,stroke:teal
+linkStyle 24 stroke-width:1px,fill:none,stroke:teal
 
+%% Caching
+linkStyle 14 stroke-width:1px,fill:none,stroke:purple
 
-linkStyle 16 stroke-width:px,fill:none,stroke:purple
+%% Networking
+linkStyle 15 stroke-width:1px,fill:none,stroke:orange
+linkStyle 16 stroke-width:1px,fill:none,stroke:orange
+linkStyle 17 stroke-width:1px,fill:none,stroke:orange
+linkStyle 18 stroke-width:1px,fill:none,stroke:orange
+linkStyle 19 stroke-width:1px,fill:none,stroke:orange
+linkStyle 20 stroke-width:1px,fill:none,stroke:orange
 
-linkStyle 17 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 18 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 19 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 20 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 21 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 22 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 23 stroke-width:1px,fill:none,stroke:Orange
-linkStyle 24 stroke-width:1px,fill:none,stroke:saddlebrown
+%% Reconciler-test
+linkStyle 21 stroke-width:1px,fill:none,stroke:saddlebrown
 
-linkStyle 25 stroke-width:2px,fill:none,stroke:tomato
-linkStyle 26 stroke-width:2px,fill:none,stroke:tomato
-linkStyle 27 stroke-width:1px,fill:none,stroke:teal;
+%% Hack/Schema
+linkStyle 22 stroke-width:1px,fill:none,stroke:tomato
+linkStyle 23 stroke-width:1px,fill:none,stroke:tomato
 ```
