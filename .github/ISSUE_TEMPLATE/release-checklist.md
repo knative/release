@@ -171,14 +171,7 @@ Notes
     - Latest Version [![Releases][sample-source-version-badge]][sample-source-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 3 - Sub-Supporting Repositories _(Can be started after `knative/eventing` & `knative/serving` have been successfully released)_
-
-- [knative/client-pkg](https://github.com/knative/client-pkg)
-  - [ ] Nightly Job [n/a]
-  - [ ] Dependencies up to date - [![releasabilty][client-pkg-release-badge]][client-pkg-release-workflow]
-  - [ ] Branch Cut
-
-#### Phase 4 - Client-pkg Dependant Repositories _(Can be started after `knative/client-pkg` has been successfully released)_
+#### Phase 3 - Serving and Eventing Dependant Repositories _(Can be started after `knative/eventing` & `knative/serving` have been successfully released)_
 
 - [knative/client](https://github.com/knative/client)
   - [ ] Nightly Job [![Nightly][client-nightly-badge]][client-nightly-page]
@@ -229,7 +222,7 @@ Notes
     - Latest Version [![Releases][eventing-natss-version-badge]][eventing-natss-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 5 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
+#### Phase 4 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
 
 - [knative-extensions/eventing-istio](https://github.com/knative-extensions/eventing-istio)
   - [ ] Nightly Job [![Nightly][eventing-istio-nightly-badge]][eventing-istio-nightly-page]
