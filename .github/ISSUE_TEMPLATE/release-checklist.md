@@ -271,14 +271,6 @@ Notes
     - Prow Release Job [![Prow][kn-plugin-source-kafka-prow-badge]][kn-plugin-source-kafka-prow-job]
     - Latest Version [![Releases][kn-plugin-source-kafka-version-badge]][kn-plugin-source-kafka-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/kn-plugin-source-kamelet](https://github.com/knative-extensions/kn-plugin-source-kamelet)
-  - [ ] Nightly Job [![Nightly][kn-plugin-source-kamelet-nightly-badge]][kn-plugin-source-kamelet-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][kn-plugin-source-kamelet-release-badge]][kn-plugin-source-kamelet-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][kn-plugin-source-kamelet-prow-badge]][kn-plugin-source-kamelet-prow-job]
-    - Latest Version [![Releases][kn-plugin-source-kamelet-version-badge]][kn-plugin-source-kamelet-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/kn-plugin-quickstart](https://github.com/knative-extensions/kn-plugin-quickstart)
   - [ ] Nightly Job [![Nightly][kn-plugin-quickstart-nightly-badge]][kn-plugin-quickstart-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-quickstart-release-badge]][kn-plugin-quickstart-release-workflow]
@@ -538,15 +530,6 @@ Notes
 [kn-plugin-source-kafka-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kafka_main_periodic
 [kn-plugin-source-kafka-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kafka_main_periodic
 [kn-plugin-source-kafka-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kafka_main_periodic
-
-[kn-plugin-source-kamelet-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/kn-plugin-source-kamelet.svg?sort=semver
-[kn-plugin-source-kamelet-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kamelet.yaml/badge.svg
-[kn-plugin-source-kamelet-release-page]: https://github.com/knative-extensions/kn-plugin-source-kamelet/releases
-[kn-plugin-source-kamelet-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-kn-plugin-source-kamelet.yaml
-[kn-plugin-source-kamelet-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_kn-plugin-source-kamelet_main_periodic
-[kn-plugin-source-kamelet-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kamelet_main_periodic
-[kn-plugin-source-kamelet-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kamelet_main_periodic
-[kn-plugin-source-kamelet-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kamelet_main_periodic
 
 [net-contour-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/net-contour.svg?sort=semver
 [net-contour-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-net-contour.yaml/badge.svg
