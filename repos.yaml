@@ -21,7 +21,6 @@
 - name: knative-extensions/kn-plugin-event
 - name: knative-extensions/kn-plugin-quickstart
 - name: knative-extensions/kn-plugin-source-kafka
-- name: knative-extensions/kn-plugin-source-kamelet
 - name: knative-extensions/net-contour
 - name: knative-extensions/net-gateway-api
 - name: knative-extensions/net-istio
