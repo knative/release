@@ -117,7 +117,7 @@ jobs:
         cat release-notes.md >> $GITHUB_STEP_SUMMARY
 
     - name: Archive Release Notes
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: ${{ env.ORG }}-${{ env.REPO }}-${{ env.BRANCH }}.md
         path: release-notes.md
