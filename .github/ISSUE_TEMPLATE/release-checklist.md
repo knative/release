@@ -335,15 +335,6 @@ Notes
 [client-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client_main_periodic
 [client-prow-job]: https://prow.knative.dev?job=release_client_main_periodic
 
-[client-pkg-version-badge]: https://img.shields.io/github/release-pre/knative/client-pkg.svg?sort=semver
-[client-pkg-release-badge]: https://github.com/knative/release/actions/workflows/knative-client-pkg.yaml/badge.svg
-[client-pkg-release-page]: https://github.com/knative/client-pkg/releases
-[client-pkg-release-workflow]: https://github.com/knative/release/actions/workflows/knative-client-pkg.yaml
-[client-pkg-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_client-pkg_main_periodic
-[client-pkg-nightly-page]: https://prow.knative.dev?job=nightly_client-pkg_main_periodic
-[client-pkg-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client-pkg_main_periodic
-[client-pkg-prow-job]: https://prow.knative.dev?job=release_client-pkg_main_periodic
-
 [eventing-version-badge]: https://img.shields.io/github/release-pre/knative/eventing.svg?sort=semver
 [eventing-release-badge]: https://github.com/knative/release/actions/workflows/knative-eventing.yaml/badge.svg
 [eventing-release-page]: https://github.com/knative/eventing/releases

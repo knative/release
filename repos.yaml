@@ -1,6 +1,5 @@
 - name: knative/caching
 - name: knative/client
-- name: knative/client-pkg
 - name: knative/eventing
 - name: knative/func
 - name: knative/networking
