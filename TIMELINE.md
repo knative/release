@@ -104,15 +104,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 
 ### This group can be started after both `knative.dev/eventing` and `knative.dev/serving` have been successfully published.
 
-Note that `client-pkg` is a supporting library and thus does **NOT** have a release job on Prow.
-
-| Repo   | Version | Releasability   | Nightly Job   | Release Job
-| ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| [knative.dev/client-pkg](https://github.com/knative/client-pkg) | n/a  | [![Releasability][client-pkg-release-badge]][client-pkg-release-workflow]  | n/a | n/a
-
-
-### This group can be started after `knative.dev/client-pkg` has been successfully cut.
-
 | Repo   | Version | Releasability   | Nightly Job  | Release Job
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/client](https://github.com/knative/client) | [![Releases][client-version-badge]][client-release-page]  | [![Releasability][client-release-badge]][client-release-workflow]  | [![Nightly][client-nightly-badge]][client-nightly-page]  | [![Release][client-prow-badge]][client-prow-job]  |
@@ -165,15 +156,6 @@ Note that `client-pkg` is a supporting library and thus does **NOT** have a rele
 [client-nightly-page]: https://prow.knative.dev?job=nightly_client_main_periodic
 [client-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client_main_periodic
 [client-prow-job]: https://prow.knative.dev?job=release_client_main_periodic
-
-[client-pkg-version-badge]: https://img.shields.io/github/release-pre/knative/client-pkg.svg?sort=semver
-[client-pkg-release-badge]: https://github.com/knative/release/workflows/knative/client-pkg/badge.svg
-[client-pkg-release-page]: https://github.com/knative/client-pkg/releases
-[client-pkg-release-workflow]: https://github.com/knative/release/actions/workflows/knative-client-pkg.yaml
-[client-pkg-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_client-pkg_main_periodic
-[client-pkg-nightly-page]: https://prow.knative.dev?job=nightly_client-pkg_main_periodic
-[client-pkg-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client-pkg_main_periodic
-[client-pkg-prow-job]: https://prow.knative.dev?job=release_client-pkg_main_periodic
 
 [eventing-version-badge]: https://img.shields.io/github/release-pre/knative/eventing.svg?sort=semver
 [eventing-release-badge]: https://github.com/knative/release/workflows/knative/eventing/badge.svg
