@@ -14,7 +14,7 @@ jobs:
     outputs:
       repos: ${{ steps.set-matrix.outputs.repos }}
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - id: set-matrix
       run: |
         set -x
