@@ -43,6 +43,8 @@ Notes
 
 #### Cut Supporting Repositories _(Cut these in descending order (top to bottom) if unsure)_
 
+Check the [update-deps workflow](https://github.com/knative-extensions/knobots/actions/workflows/auto-update-deps.yaml) to monitor dependency updates across repos.
+
 - [knative/hack](https://github.com/knative/hack)
   - [ ] Branch Cut
 - [knative/pkg](https://github.com/knative/pkg)
@@ -68,6 +70,7 @@ Notes
 
 - If no acknowledgement is received from any of the WGL, send another message on slack and start working on the release after sometime.
 - Review the [PROCEDURE](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-repository) on how to release a repo.
+- Check the [update-deps workflow](https://github.com/knative-extensions/knobots/actions/workflows/auto-update-deps.yaml) to monitor dependency updates across repos.
   Notes
 - It is not required that all repos in the included sub-sections be released on the same day the release is scheduled to start.
 - The release notes of a dependency are not a blocker for proceeding to cut a release for a repo.
