@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
+sedi() { gsed --version &>/dev/null && gsed -i "$@" || sed -i '' "$@"; }
 
 start_marker="<!-- autogen start -->"
 end_marker="<!-- autogen end -->"
 
 filename=".github/ISSUE_TEMPLATE/release-checklist.md"
 
-sed -i '' "/${start_marker}/,/${end_marker}/d"  $filename
+sedi  "/${start_marker}/,/${end_marker}/d"  $filename
+
 # Note if doesn't work:
 # if using Linux (or not using Mac), try switching for this (the empty '' removed)
 # sed -i "/${start_marker}/,/${end_marker}/d"  $filename

@@ -563,24 +563,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
 [reconciler-test-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_reconciler-test_main_periodic
 [reconciler-test-prow-job]: https://prow.knative.dev?job=release_reconciler-test_main_periodic
 
-[sample-controller-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-controller.svg?sort=semver
-[sample-controller-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-controller.yaml/badge.svg
-[sample-controller-release-page]: https://github.com/knative-extensions/sample-controller/releases
-[sample-controller-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-controller.yaml
-[sample-controller-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-controller_main_periodic
-[sample-controller-nightly-page]: https://prow.knative.dev?job=nightly_sample-controller_main_periodic
-[sample-controller-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-controller_main_periodic
-[sample-controller-prow-job]: https://prow.knative.dev?job=release_sample-controller_main_periodic
-
-[sample-source-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-source.svg?sort=semver
-[sample-source-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-source.yaml/badge.svg
-[sample-source-release-page]: https://github.com/knative-extensions/sample-source/releases
-[sample-source-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-source.yaml
-[sample-source-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-source_main_periodic
-[sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
-[sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
-[sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
-
 [autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/autoscaler-keda.svg?sort=semver
 [autoscaler-keda-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-autoscaler-keda.yaml/badge.svg
 [autoscaler-keda-release-page]: https://github.com/knative-extensions/autoscaler-keda/releases
