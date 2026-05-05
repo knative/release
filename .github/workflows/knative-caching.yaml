@@ -1,7 +1,6 @@
-# Copyright 2023 The Knative Authors.
+# Copyright The Knative Authors.
 # SPDX-License-Identifier: Apache-2.0
-
-# This file is automagically generation from ./hack/update-workflows.sh
+# This file is automagically generated from ./hack/update-workflows.sh
 
 name: 'knative/caching'
 

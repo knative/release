@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+sedi() { gsed --version &>/dev/null && gsed -i "$@" || sed -i '' "$@"; }
+
+find ".github/workflows" -type f -name "*.yaml" | while read -r f; do
+  grep -qF "This file is automagically generation from ./hack/update-workflows.sh" "$f" && rm "$f"
+done
 
 for repo in $(yq '.[] | .name' repos.yaml); do
   cat <<EOF >".github/workflows/${repo/\//-}.yaml"
-# Copyright 2025 The Knative Authors.
+# Copyright The Knative Authors.
 # SPDX-License-Identifier: Apache-2.0
-
-# This file is automagically generation from ./hack/update-workflows.sh
+# This file is automagically generated from ./hack/update-workflows.sh
 
 name: '$repo'
 

@@ -139,6 +139,7 @@ We have a few repos inside of Knative that are not handled in the standard relea
 
 
 <!-- autogen start -->
+
 [caching-version-badge]: https://img.shields.io/github/release-pre/knative/caching.svg?sort=semver
 [caching-release-badge]: https://github.com/knative/release/workflows/knative/caching/badge.svg
 [caching-release-page]: https://github.com/knative/caching/releases
