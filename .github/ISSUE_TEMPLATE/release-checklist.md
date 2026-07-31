@@ -138,14 +138,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
     - Prow Release [![Releases][net-kourier-prow-badge]][net-kourier-prow-job]
     - Latest Version [![Releases][net-kourier-version-badge]][net-kourier-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/sample-controller](https://github.com/knative-extensions/sample-controller)
-  - [ ] Nightly Job [![Nightly][sample-controller-nightly-badge]][sample-controller-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][sample-controller-release-badge]][sample-controller-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release [![Releases][sample-controller-prow-badge]][sample-controller-prow-job]
-    - Latest Version [![Releases][sample-controller-version-badge]][sample-controller-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Phase 2 - Eventing Dependant Repositories _(Can be started after `knative/eventing` has been successfully released)_
 
@@ -164,14 +156,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
   - [ ] Release
     - Prow Release Job [![Prow][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]
     - Latest Version [![Releases][eventing-rabbitmq-version-badge]][eventing-rabbitmq-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/sample-source](https://github.com/knative-extensions/sample-source)
-  - [ ] Nightly Job [![Nightly][sample-source-nightly-badge]][sample-source-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][sample-source-release-badge]][sample-source-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][sample-source-prow-badge]][sample-source-prow-job]
-    - Latest Version [![Releases][sample-source-version-badge]][sample-source-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Phase 3 - Serving and Eventing Dependant Repositories _(Can be started after `knative/eventing` & `knative/serving` have been successfully released)_
