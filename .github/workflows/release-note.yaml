@@ -34,21 +34,7 @@ jobs:
 
     steps:
     - name: Set up Go
-      uses: actions/setup-go@v7
-      with:
-        cache: false # installing deps doesn't have a go.sum
-        go-version: 1.24.x
-
-    - name: Restore module cache
-      uses: actions/cache@v6
-      with:
-        path: |
-          ~/go/pkg/mod
-          ~/.cache/go-build
-        key: |
-          ${{ runner.os }}-golang-
-        restore-keys: |
-          ${{ runner.os }}-golang-
+      uses: knative/actions/setup-go@main
 
     - name: Install Dependencies
       # https://github.com/kubernetes/release/tree/master/cmd/release-notes
@@ -107,7 +93,6 @@ jobs:
         fi
 
         release-notes \
-         --required-author="" \
          --output=release-notes.md \
          --repo-path="$PWD" \
 
