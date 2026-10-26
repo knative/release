@@ -205,63 +205,21 @@ Check the following components for the new release:
 1. Check on the `#knative-documentation` Slack channel to make sure the release is ready.
    _In the future, we should automate this so the check isn't needed._
 
-2. In the `knative/docs` repository, use the GitHub UI to create a `release-X.Y`
-   branch based on `main` (for example, `release-1.24`). Create this branch before
-   adding the version to the published release list below.
+2. Using the GitHub UI, create a `release-X.Y` branch based on `main`.
 
    - ![branch](https://user-images.githubusercontent.com/35748459/87461583-804c4c80-c5c3-11ea-8105-f9b34988c9af.png)
 
 ### Generate the new docs version
 
-The published release list is maintained in
-[`config/versions.txt`](https://github.com/knative/docs/blob/main/config/versions.txt)
-in `knative/docs`. Both the production build and local versioned previews read
-this file; do not edit the `VERSIONS` array in `hack/build.sh`.
-
-To generate the new docs version:
-
-1. On the `main` branch, update `config/versions.txt` to add the new version at
-   the top and remove the oldest entry. Use one `X.Y` version per line, newest
-   first, without a `v` or `release-` prefix, quotes, or blank lines. Each entry
-   must have a corresponding `release-X.Y` branch in `knative/docs`.
-
-   For example, when releasing 1.24, replace `1.23`, `1.22`, `1.21` with:
-
-   ```text
-   1.24
-   1.23
-   1.22
-   ```
-
-   This preserves the current three-version documentation list. Availability of
-   older documentation does not imply that a release is still supported; see the
-   [community support window](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md#knative-community-support-window-principle).
-
-2. Open a PR against `main` in `knative/docs` with this change and merge it after
-   the checks pass. Netlify deploy previews build only the PR checkout at
-   `/docs/`; they do not build the release branches or validate the published
-   version list.
-
-3. After the production deployment completes, verify that `/docs/` shows the
-   new release and that the version selector includes the retained releases and
-   the pre-release documentation. The first entry in `config/versions.txt` is
-   published at `/docs/`, subsequent entries at `/vX.Y-docs/`, and `main` at
-   `/development/`.
+1. In `knative/docs`, update
+   [`config/versions.txt`](https://github.com/knative/docs/blob/main/config/versions.txt)
+   on `main`: add the new `X.Y` version at the top and remove the oldest entry.
+   Keep one version per line, newest first.
+2. Open a PR against `main` with this change.
 
 ### How GitHub and Netlify are hooked up
 
-Netlify builds are configured via
-[`netlify.toml`](https://github.com/knative/docs/blob/main/netlify.toml), which runs
-`hack/build.sh`. Production builds assemble the release branches listed in
-`config/versions.txt` along with the development documentation from `main`.
-Deploy previews set `BUILD_VERSIONS=no` to build only the PR checkout.
-
-Pushes to `release-1.*` branches trigger the
-[dot-release workflow](https://github.com/knative/docs/blob/main/.github/workflows/knative-dot-release-build.yaml),
-which requests a Netlify rebuild so documentation fixes on retained release
-branches are published. The
-[nightly workflow](https://github.com/knative/docs/blob/main/.github/workflows/knative-nightly-site-build.yaml)
-also requests a rebuild.
+Netlify build is configured via [netlify.toml](https://github.com/knative/docs/blob/main/netlify.toml)
 
 ## Homebrew updates
 
