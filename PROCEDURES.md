@@ -211,23 +211,11 @@ Check the following components for the new release:
 
 ### Generate the new docs version
 
-To generate the new version of the docs, you must update the [`hack/build.sh`](https://github.com/knative/docs/blob/main/hack/build.sh)
-script in the main branch to reference the new release.
-
-We keep the last 2 releases available per [our support window](https://github.com/knative/community/blob/main/mechanics/RELEASE-VERSIONING-PRINCIPLES.md#knative-community-support-window-principle).
-
-To generate the new docs version:
-
-1.  In `hack/build.sh` on the main branch, update `VERSIONS`
-    to include the new version, and remove the oldest. Order matters, most recent first.
-
-        For example:
-
-        ```
-        VERSIONS=("1.10" "1.9" "1.8")
-        ```
-
-2.  PR the result to main.
+1. In `knative/docs`, update
+   [`config/versions.txt`](https://github.com/knative/docs/blob/main/config/versions.txt)
+   on `main`: add the new `X.Y` version at the top and remove the oldest entry.
+   Keep one version per line, newest first.
+2. Open a PR against `main` with this change.
 
 ### How GitHub and Netlify are hooked up
 
