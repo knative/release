@@ -36,9 +36,10 @@ Please ensure that there are no outstanding PRs for each repo before proceeding 
 Since eventing has a couple of different repositories, you can use the following script to create a Github search query for open PRs in the eventing repos from the `knative-automation` or `knative-prow-robot` users:
 
 ```bash
-$ for org in knative knative-extensions; do for repo in $(curl -s https://api.github.com/orgs/${org}/repos\?per_page\=100 | jq -r '.[] | select(.archived == false) | .full_name' | grep eventing); do echo repo:$repo; done; done | tr '\n' ' '| cat - <(echo "repo:knative-extensions/reconciler-test repo:knative-extensions/sample-source repo:knative-extensions/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot")
-
-repo:knative/eventing repo:knative-extensions/eventing-kafka repo:knative-extensions/eventing-rabbitmq repo:knative-extensions/eventing-kafka-broker repo:knative-extensions/eventing-autoscaler-keda repo:knative-extensions/eventing-github repo:knative-extensions/eventing-prometheus repo:knative-extensions/eventing-couchdb repo:knative-extensions/eventing-gitlab repo:knative-extensions/eventing-natss repo:knative-extensions/eventing-awssqs repo:knative-extensions/eventing-ceph repo:knative-extensions/eventing-redis repo:knative-extensions/eventing-istio repo:knative-extensions/reconciler-test repo:knative-extensions/sample-source repo:knative-extensions/sample-controller is:open is:pr archived:false author:knative-automation author:knative-prow-robot
+{
+  yq -r '.[] | select(.name | test("/eventing($|-)|/reconciler-test$")) | "repo:" + .name' repos.yaml | tr '\n' ' '
+  echo 'is:open is:pr archived:false author:knative-automation author:knative-prow-robot'
+}
 ```
 The resulting query can then be used on https://github.com/search.
 
@@ -118,7 +119,7 @@ Otherwise, you can do it by hand on your local machine.
 In case you cut a branch before it was ready (e.g. some deps misalignment, a failing test, etc), then follow the steps below:
 
 1. Mark the broken release as a `pre-release`
-1. Create a dot release by waiting until the job triggers (once a week on Tue) or [on demand](https://github.com/knative/test-infra/blob/main/guides/manual_release.md#creating-a-dot-release-on-demand).
+1. Create a dot release by waiting until the job triggers (once a week on Tue) or [on demand](https://github.com/knative/infra/blob/main/guides/manual_release.md#creating-a-dot-release-on-demand).
 1. Repeat the steps for a release for the new dot release
 
 ## Release automation check

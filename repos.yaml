@@ -6,7 +6,6 @@
 - name: knative/pkg
 - name: knative/serving
 - name: knative/operator
-- name: knative-extensions/eventing-autoscaler-keda
 - name: knative-extensions/eventing-ceph
 - name: knative-extensions/eventing-github
 - name: knative-extensions/eventing-gitlab
@@ -25,5 +24,3 @@
 - name: knative-extensions/net-istio
 - name: knative-extensions/net-kourier
 - name: knative-extensions/reconciler-test
-- name: knative-extensions/autoscaler-keda
-- name: knative-extensions/backstage-plugins

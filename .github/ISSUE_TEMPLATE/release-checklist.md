@@ -219,14 +219,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
     - Prow Release Job [![Prow][eventing-istio-prow-badge]][eventing-istio-prow-job]
     - Latest Version [![Releases][eventing-istio-version-badge]][eventing-istio-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/eventing-autoscaler-keda](https://github.com/knative-extensions/eventing-autoscaler-keda)
-  - [ ] Nightly Job [![Nightly][eventing-autoscaler-keda-nightly-badge]][eventing-autoscaler-keda-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job]
-    - Latest Version [![Releases][eventing-autoscaler-keda-version-badge]][eventing-autoscaler-keda-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-extensions/kn-plugin-admin](https://github.com/knative-extensions/kn-plugin-admin)
   - [ ] Nightly Job [![Nightly][kn-plugin-admin-nightly-badge]][kn-plugin-admin-nightly-page]
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-admin-release-badge]][kn-plugin-admin-release-workflow]
@@ -266,22 +258,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
   - [ ] Release
     - Prow Release Job [![Prow][func-prow-badge]][func-prow-job]
     - Latest Version [![Releases][func-version-badge]][func-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/backstage-plugins](https://github.com/knative-extensions/backstage-plugins)
-  - [ ] Nightly Job [![Nightly][backstage-plugins-nightly-badge]][backstage-plugins-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][backstage-plugins-release-badge]][backstage-plugins-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release Job [![Prow][backstage-plugins-prow-badge]][backstage-plugins-prow-job]
-    - Latest Version [![Releases][backstage-plugins-version-badge]][backstage-plugins-release-page]
-  - [ ] Release Notes ([run workflow][release-note-workflow])
-- [knative-extensions/autoscaler-keda](https://github.com/knative-extensions/autoscaler-keda)
-  - [ ] Nightly Job [![Nightly][autoscaler-keda-nightly-badge]][autoscaler-keda-nightly-page]
-  - [ ] Dependencies up to date - [![releasabilty][autoscaler-keda-release-badge]][autoscaler-keda-release-workflow]
-  - [ ] Branch Cut
-  - [ ] Release
-    - Prow Release [![Releases][autoscaler-keda-prow-badge]][autoscaler-keda-prow-job]
-    - Latest Version [![Releases][autoscaler-keda-version-badge]][autoscaler-keda-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Final Phase
@@ -376,15 +352,6 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
 [operator-nightly-page]: https://prow.knative.dev?job=nightly_operator_main_periodic
 [operator-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_operator_main_periodic
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
-
-[eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-autoscaler-keda.svg?sort=semver
-[eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-autoscaler-keda.yaml/badge.svg
-[eventing-autoscaler-keda-release-page]: https://github.com/knative-extensions/eventing-autoscaler-keda/releases
-[eventing-autoscaler-keda-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-autoscaler-keda.yaml
-[eventing-autoscaler-keda-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_eventing-autoscaler-keda_main_periodic
 
 [eventing-ceph-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-ceph.svg?sort=semver
 [eventing-ceph-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-ceph.yaml/badge.svg
@@ -547,23 +514,5 @@ Check the [update-deps workflow](https://github.com/knative-extensions/knobots/a
 [reconciler-test-nightly-page]: https://prow.knative.dev?job=nightly_reconciler-test_main_periodic
 [reconciler-test-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_reconciler-test_main_periodic
 [reconciler-test-prow-job]: https://prow.knative.dev?job=release_reconciler-test_main_periodic
-
-[autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/autoscaler-keda.svg?sort=semver
-[autoscaler-keda-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-autoscaler-keda.yaml/badge.svg
-[autoscaler-keda-release-page]: https://github.com/knative-extensions/autoscaler-keda/releases
-[autoscaler-keda-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-autoscaler-keda.yaml
-[autoscaler-keda-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_autoscaler-keda_main_periodic
-[autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_autoscaler-keda_main_periodic
-[autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_autoscaler-keda_main_periodic
-[autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_autoscaler-keda_main_periodic
-
-[backstage-plugins-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/backstage-plugins.svg?sort=semver
-[backstage-plugins-release-badge]: https://github.com/knative/release/actions/workflows/knative-extensions-backstage-plugins.yaml/badge.svg
-[backstage-plugins-release-page]: https://github.com/knative-extensions/backstage-plugins/releases
-[backstage-plugins-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-backstage-plugins.yaml
-[backstage-plugins-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_backstage-plugins_main_periodic
-[backstage-plugins-nightly-page]: https://prow.knative.dev?job=nightly_backstage-plugins_main_periodic
-[backstage-plugins-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_backstage-plugins_main_periodic
-[backstage-plugins-prow-job]: https://prow.knative.dev?job=release_backstage-plugins_main_periodic
 
 <!-- autogen end -->

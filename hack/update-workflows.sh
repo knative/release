@@ -3,7 +3,7 @@
 sedi() { gsed --version &>/dev/null && gsed -i "$@" || sed -i '' "$@"; }
 
 find ".github/workflows" -type f -name "*.yaml" | while read -r f; do
-  grep -qF "This file is automagically generation from ./hack/update-workflows.sh" "$f" && rm "$f"
+  grep -qF "This file is automagically generated from ./hack/update-workflows.sh" "$f" && rm "$f"
 done
 
 for repo in $(yq '.[] | .name' repos.yaml); do

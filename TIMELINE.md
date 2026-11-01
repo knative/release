@@ -86,7 +86,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | [knative.dev/net-istio](https://github.com/knative-extensions/net-istio) | [![Releases][net-istio-version-badge]][net-istio-release-page]  | [![Releasability][net-istio-release-badge]][net-istio-release-workflow]  | [![Nightly][net-istio-nightly-badge]][net-istio-nightly-page]  | [![Release][net-istio-prow-badge]][net-istio-prow-job]  |
 | [knative.dev/net-kourier](https://github.com/knative-extensions/net-kourier) | [![Releases][net-kourier-version-badge]][net-kourier-release-page]  | [![Releasability][net-kourier-release-badge]][net-kourier-release-workflow]  | [![Nightly][net-kourier-nightly-badge]][net-kourier-nightly-page]  | [![Release][net-kourier-prow-badge]][net-kourier-prow-job]  |
 | [knative.dev/eventing](https://github.com/knative/eventing) | [![Releases][eventing-version-badge]][eventing-release-page]  | [![Releasability][eventing-release-badge]][eventing-release-workflow]  | [![Nightly][eventing-nightly-badge]][eventing-nightly-page]  | [![Release][eventing-prow-badge]][eventing-prow-job]  |
-| [knative.dev/sample-controller](https://github.com/knative-extensions/sample-controller) | [![Releases][sample-controller-version-badge]][sample-controller-release-page]  | [![Releasability][sample-controller-release-badge]][sample-controller-release-workflow]  | [![Nightly][sample-controller-nightly-badge]][sample-controller-nightly-page]  | [![Release][sample-controller-prow-badge]][sample-controller-prow-job]  |
 
 
 
@@ -97,7 +96,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | [knative.dev/eventing-ceph](https://github.com/knative-extensions/eventing-ceph) | [![Releases][eventing-ceph-version-badge]][eventing-ceph-release-page]  | [![Releasability][eventing-ceph-release-badge]][eventing-ceph-release-workflow]  | [![Nightly][eventing-ceph-nightly-badge]][eventing-ceph-nightly-page]  | [![Release][eventing-ceph-prow-badge]][eventing-ceph-prow-job]  |
 | [knative.dev/eventing-rabbitmq](https://github.com/knative-extensions/eventing-rabbitmq) | [![Releases][eventing-rabbitmq-version-badge]][eventing-rabbitmq-release-page]  | [![Releasability][eventing-rabbitmq-release-badge]][eventing-rabbitmq-release-workflow]  | [![Nightly][eventing-rabbitmq-nightly-badge]][eventing-rabbitmq-nightly-page]  | [![Release][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]  |
-| [knative.dev/sample-source](https://github.com/knative-extensions/sample-source) | [![Releases][sample-source-version-badge]][sample-source-release-page]  | [![Releasability][sample-source-release-badge]][sample-source-release-workflow]  | [![Nightly][sample-source-nightly-badge]][sample-source-nightly-page]  | [![Release][sample-source-prow-badge]][sample-source-prow-job]  |
 
 
 
@@ -120,13 +118,11 @@ We have a few repos inside of Knative that are not handled in the standard relea
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------| ---------------------- |--------------------------------------------------------------------------------------|
 | [knative.dev/eventing-kafka-broker](https://github.com/knative-extensions/eventing-kafka-broker)       | [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]       | [![Releasability][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]       | [![Nightly][eventing-kafka-broker-nightly-badge]][eventing-kafka-broker-nightly-page]  | [![Release][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]       |
 | [knative.dev/eventing-istio](https://github.com/knative-extensions/eventing-istio)                     | [![Releases][eventing-istio-version-badge]][eventing-istio-release-page]                     | [![Releasability][eventing-istio-release-badge]][eventing-istio-release-workflow]                     | [![Nightly][eventing-istio-nightly-badge]][eventing-istio-nightly-page]  | [![Release][eventing-istio-prow-badge]][eventing-istio-prow-job]              |
-| [knative.dev/eventing-autoscaler-keda](https://github.com/knative-extensions/eventing-autoscaler-keda) | [![Releases][eventing-autoscaler-keda-version-badge]][eventing-autoscaler-keda-release-page] | [![Releasability][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow] | [![Nightly][eventing-autoscaler-keda-nightly-badge]][eventing-autoscaler-keda-nightly-page]  | [![Release][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job] |
 | [knative.dev/kn-plugin-admin](https://github.com/knative-extensions/kn-plugin-admin)                   | [![Releases][kn-plugin-admin-version-badge]][kn-plugin-admin-release-page]                   | [![Releasability][kn-plugin-admin-release-badge]][kn-plugin-admin-release-workflow]                   | [![Nightly][kn-plugin-admin-nightly-badge]][kn-plugin-admin-nightly-page]  | [![Release][kn-plugin-admin-prow-badge]][kn-plugin-admin-prow-job]                   |
 | [knative.dev/kn-plugin-event](https://github.com/knative-extensions/kn-plugin-event)                   | [![Releases][kn-plugin-event-version-badge]][kn-plugin-event-release-page]                   | [![Releasability][kn-plugin-event-release-badge]][kn-plugin-event-release-workflow]                   | [![Nightly][kn-plugin-event-nightly-badge]][kn-plugin-event-nightly-page]  | [![Release][kn-plugin-event-prow-badge]][kn-plugin-event-prow-job]                   |
 | [knative.dev/kn-plugin-source-kafka](https://github.com/knative-extensions/kn-plugin-source-kafka)     | [![Releases][kn-plugin-source-kafka-version-badge]][kn-plugin-source-kafka-release-page]     | [![Releasability][kn-plugin-source-kafka-release-badge]][kn-plugin-source-kafka-release-workflow]     | [![Nightly][kn-plugin-source-kafka-nightly-badge]][kn-plugin-source-kafka-nightly-page]  | [![Release][kn-plugin-source-kafka-prow-badge]][kn-plugin-source-kafka-prow-job]     |
 | [knative.dev/kn-plugin-quickstart](https://github.com/knative-extensions/kn-plugin-quickstart)         | [![Releases][kn-plugin-quickstart-version-badge]][kn-plugin-quickstart-release-page]         | [![Releasability][kn-plugin-quickstart-release-badge]][kn-plugin-quickstart-release-workflow]         | [![Nightly][kn-plugin-quickstart-nightly-badge]][kn-plugin-quickstart-nightly-page]  | [![Release][kn-plugin-quickstart-prow-badge]][kn-plugin-quickstart-prow-job]         |
 | [knative.dev/func](https://github.com/knative/func)                                                 | [![Releases][func-version-badge]][func-release-page]                                         | [![Releasability][func-release-badge]][func-release-workflow]                                         | [![Nightly][func-nightly-badge]][func-nightly-page]  | [![Release][func-prow-badge]][func-prow-job]                                         |
-| [knative.dev/backstage-plugins](https://github.com/knative-extensions/backstage-plugins)                                                 | [![Releases][backstage-plugins-version-badge]][backstage-plugins-release-page]                                         | [![Releasability][backstage-plugins-release-badge]][backstage-plugins-release-workflow]                                         | [![Nightly][backstage-plugins-nightly-badge]][backstage-plugins-nightly-page]  | [![Release][backstage-plugins-prow-badge]][backstage-plugins-prow-job]                                         |
 
 
 ## Post-release
@@ -211,15 +207,6 @@ We have a few repos inside of Knative that are not handled in the standard relea
 [operator-nightly-page]: https://prow.knative.dev?job=nightly_operator_main_periodic
 [operator-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_operator_main_periodic
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
-
-[eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-autoscaler-keda.svg?sort=semver
-[eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-autoscaler-keda/badge.svg
-[eventing-autoscaler-keda-release-page]: https://github.com/knative-extensions/eventing-autoscaler-keda/releases
-[eventing-autoscaler-keda-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-eventing-autoscaler-keda.yaml
-[eventing-autoscaler-keda-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-autoscaler-keda_main_periodic
-[eventing-autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_eventing-autoscaler-keda_main_periodic
 
 [eventing-ceph-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/eventing-ceph.svg?sort=semver
 [eventing-ceph-release-badge]: https://github.com/knative/release/workflows/knative-extensions/eventing-ceph/badge.svg
@@ -373,32 +360,5 @@ We have a few repos inside of Knative that are not handled in the standard relea
 [reconciler-test-nightly-page]: https://prow.knative.dev?job=nightly_reconciler-test_main_periodic
 [reconciler-test-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_reconciler-test_main_periodic
 [reconciler-test-prow-job]: https://prow.knative.dev?job=release_reconciler-test_main_periodic
-
-[sample-controller-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-controller.svg?sort=semver
-[sample-controller-release-badge]: https://github.com/knative/release/workflows/knative-extensions/sample-controller/badge.svg
-[sample-controller-release-page]: https://github.com/knative-extensions/sample-controller/releases
-[sample-controller-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-controller.yaml
-[sample-controller-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-controller_main_periodic
-[sample-controller-nightly-page]: https://prow.knative.dev?job=nightly_sample-controller_main_periodic
-[sample-controller-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-controller_main_periodic
-[sample-controller-prow-job]: https://prow.knative.dev?job=release_sample-controller_main_periodic
-
-[sample-source-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/sample-source.svg?sort=semver
-[sample-source-release-badge]: https://github.com/knative/release/workflows/knative-extensions/sample-source/badge.svg
-[sample-source-release-page]: https://github.com/knative-extensions/sample-source/releases
-[sample-source-release-workflow]: https://github.com/knative/release/actions/workflows/knative-extensions-sample-source.yaml
-[sample-source-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_sample-source_main_periodic
-[sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
-[sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
-[sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
-
-[backstage-plugins-version-badge]: https://img.shields.io/github/release-pre/knative-extensions/backstage-plugins.svg?sort=semver
-[backstage-plugins-release-badge]: https://github.com/knative/release/workflows/knative-extensions/backstage-plugins/badge.svg
-[backstage-plugins-release-page]: https://github.com/knative-extensions/backstage-plugins/releases
-[backstage-plugins-release-workflow]: https://github.com/knative/release/actions/workflows/knative-backstage-plugins.yaml
-[backstage-plugins-nightly-badge]: https://prow.knative.dev/badge.svg?jobs=nightly_backstage-plugins_main_periodic
-[backstage-plugins-nightly-page]: https://prow.knative.dev?job=nightly_backstage-plugins_main_periodic
-[backstage-plugins-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_backstage-plugins_main_periodic
-[backstage-plugins-prow-job]: https://prow.knative.dev?job=release_backstage-plugins_main_periodic
 
 <!-- autogen end -->
