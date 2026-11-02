@@ -333,10 +333,6 @@ N(Networking)--------->NK(Net-Kourier)
 
 R(Reconciler-test)------>E(Eventing)
 HS(Hack/Schema)---------->E(Eventing)
-HS(Hack/Schema)-------->SC(Sample-Controller)
-
-P(Pkg) ---->SC(Sample-Controller)
-A(Hack)---> SC(Sample-Controller)
 
 style P fill:teal
 style P color:white
@@ -364,8 +360,6 @@ style NK fill:salmon
 style NK color:white
 style HS fill:tomato
 style HS color:white
-style SC fill:salmon
-style SC color:white
 
 %% Hack
 linkStyle 0 stroke-width:1px,fill:none,stroke:blue
@@ -375,7 +369,6 @@ linkStyle 3 stroke-width:1px,fill:none,stroke:blue
 linkStyle 4 stroke-width:1px,fill:none,stroke:blue
 linkStyle 5 stroke-width:1px,fill:none,stroke:blue
 linkStyle 6 stroke-width:1px,fill:none,stroke:blue
-linkStyle 25 stroke-width:1px,fill:none,stroke:blue
 
 %% Pkg
 linkStyle 7 stroke-width:1px,fill:none,stroke:teal
@@ -385,7 +378,6 @@ linkStyle 10 stroke-width:1px,fill:none,stroke:teal
 linkStyle 11 stroke-width:1px,fill:none,stroke:teal
 linkStyle 12 stroke-width:1px,fill:none,stroke:teal
 linkStyle 13 stroke-width:1px,fill:none,stroke:teal
-linkStyle 24 stroke-width:1px,fill:none,stroke:teal
 
 %% Caching
 linkStyle 14 stroke-width:1px,fill:none,stroke:purple
@@ -403,5 +395,4 @@ linkStyle 21 stroke-width:1px,fill:none,stroke:saddlebrown
 
 %% Hack/Schema
 linkStyle 22 stroke-width:1px,fill:none,stroke:tomato
-linkStyle 23 stroke-width:1px,fill:none,stroke:tomato
 ```
