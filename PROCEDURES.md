@@ -2,13 +2,13 @@
 
 ## Supporting Repos
 
-| Repo                                                                                |
-| ----------------------------------------------------------------------------------- |
-| [knative.dev/hack](https://github.com/knative/hack)                                 |
-| [knative.dev/pkg](https://github.com/knative/pkg)                                   |
-| [knative.dev/networking](https://github.com/knative/networking)                     |
-| [knative.dev/caching](https://github.com/knative/caching)                           |
-| [knative.dev/reconciler-test](https://github.com/knative-extensions/reconciler-test)   |
+| Repo                                                                                 |
+| ------------------------------------------------------------------------------------ |
+| [knative.dev/hack](https://github.com/knative/hack)                                  |
+| [knative.dev/pkg](https://github.com/knative/pkg)                                    |
+| [knative.dev/networking](https://github.com/knative/networking)                      |
+| [knative.dev/caching](https://github.com/knative/caching)                            |
+| [knative.dev/reconciler-test](https://github.com/knative-extensions/reconciler-test) |
 
 ## Releasing a repository
 
@@ -41,6 +41,7 @@ Since eventing has a couple of different repositories, you can use the following
   echo 'is:open is:pr archived:false author:knative-automation author:knative-prow-robot'
 }
 ```
+
 The resulting query can then be used on https://github.com/search.
 
 ## Build health check
@@ -172,7 +173,6 @@ Repos that don't require release artifacts (such as release tags and GitHub rele
 #### Github's release notes generator
 
 There's an org wide release notes [template](https://github.com/knative/.github/blob/main/.github/release.yml) configured to enable Github's native [release notes generator](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#example-configurations). Navigate to repository's releases, `edit` newly created release. In the edit view click `Generate release notes`, content is added to release body. In addition, you can check latest new tag is recognized, or correct it accordingly.
-
 
 #### Alternative release notes generator
 
